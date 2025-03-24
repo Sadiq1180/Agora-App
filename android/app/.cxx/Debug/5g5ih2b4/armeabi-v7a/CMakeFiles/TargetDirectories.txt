@@ -1,0 +1,2 @@
+C:/Users/msadi/StudioProjects/Agora/android/app/.cxx/Debug/5g5ih2b4/armeabi-v7a/CMakeFiles/edit_cache.dir
+C:/Users/msadi/StudioProjects/Agora/android/app/.cxx/Debug/5g5ih2b4/armeabi-v7a/CMakeFiles/rebuild_cache.dir
