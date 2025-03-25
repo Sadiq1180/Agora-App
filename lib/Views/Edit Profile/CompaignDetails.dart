@@ -239,7 +239,7 @@ class _CompaignDetailsState extends State<CompaignDetails>
                     TabBar(
                       controller: tabController4,
                       labelColor: Colors.black,
-                      unselectedLabelColor: Colors.grey,
+                      unselectedLabelColor: Colors.grey, 
                       indicatorColor: Colors.blue,
                       tabs: const [
                         Tab(text: "All"),

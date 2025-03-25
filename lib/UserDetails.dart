@@ -1,4 +1,5 @@
 import 'package:agora/ProfileSetting.dart';
+import 'package:agora/Views/Edit%20Profile/Add%20Group/Location.dart';
 import 'package:agora/Views/Edit%20Profile/Analytics.dart';
 import 'package:agora/Views/Edit%20Profile/EditProfile.dart';
 import 'package:agora/Views/TabBar%20View/Prompts.dart';
@@ -59,7 +60,13 @@ class _UserDetailsState extends State<UserDetails>
         ),
         backgroundColor: Colors.lightBlueAccent,
         actions: [
-          SvgPicture.asset("assets/images/Svg/add.svg"),
+          GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => Location()));},
+              child: SvgPicture.asset("assets/images/Svg/add.svg")),
           SizedBox(width: 2),
           Padding(
             padding: const EdgeInsets.only(bottom: 5.0),
