@@ -11,6 +11,7 @@ class CircularAvatar extends StatelessWidget {
   final String? name;
   final String? initials;
   final TextStyle? textStyle;
+  final String? userName;
   // Constructor with required parameters
   const CircularAvatar(
       {super.key,
@@ -24,7 +25,9 @@ class CircularAvatar extends StatelessWidget {
       this.initials,
       this.name,
       this.textStyle,
-      this.onTap});
+      this.onTap,
+      this.userName
+      });
 
   final VoidCallback? onTap;
 

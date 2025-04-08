@@ -1,10 +1,11 @@
-import 'package:agora/Chats.dart';
+import 'package:agora/Views/HomeScreens/Chats.dart';
 import 'package:agora/Discover.dart';
 import 'package:agora/Follow.dart';
-import 'package:agora/HomePage.dart';
 import 'package:agora/ProfileSetting.dart';
 import 'package:agora/UserDetails.dart';
 import 'package:flutter/material.dart';
+
+import 'Views/HomeScreens/HomePage.dart';
 
 class BottomNavigation extends StatefulWidget {
   const BottomNavigation({super.key});

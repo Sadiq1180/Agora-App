@@ -1,6 +1,8 @@
 import 'package:agora/widgets/CircularAvatar.dart';
 import 'package:flutter/material.dart';
 
+import '../Admin List/AdminsView.dart';
+
 class GroupsMainContainer extends StatelessWidget {
   final String image;
   final String title;
@@ -100,10 +102,9 @@ class GroupsMainContainer extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           // Left Side: Admins
-                          _buildAvatarSection("Admins", admins),
-
+                          buildAvatarSection('Admins', admins),
                           // Right Side: Members
-                          _buildAvatarSection("Members", members),
+                          buildAvatarSection('Members', members),
                         ],
                       ),
                     ],
@@ -118,7 +119,7 @@ class GroupsMainContainer extends StatelessWidget {
   }
 
 
-  Widget _buildAvatarSection(String title, List<String> avatars) {
+  Widget buildAvatarSection(String title, List<String> avatars) {
     int extraCount = avatars.length > maxVisibleAvatars
         ? avatars.length - maxVisibleAvatars
         : 0;

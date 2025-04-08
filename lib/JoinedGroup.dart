@@ -1,3 +1,4 @@
+import 'package:agora/Admin%20List/AdminsView.dart';
 import 'package:agora/widgets/CircularAvatar.dart';
 import 'package:agora/widgets/GroupsMainContainer.dart';
 import 'package:flutter/material.dart';
@@ -39,28 +40,34 @@ class _GroupViewState extends State<JoinedGroup> {
               padding: EdgeInsets.symmetric(vertical: 10.0),
               child: Column(
                 children: [
-                  GroupsMainContainer(
-                    image: 'assets/images/Event Images/event.png',
-                    title: "Asif Wedding Program",
-                    description:
-                        "So Guys here I have created this group and we will discuss things here."
-                        " So every Plan will be discussed here and then executed by the mentioned person."
-                        " Things will be shared here, or else I will expel him from this group. Be professional and be humble to everyone.",
-                    location: "Karachi, Pakistan. Private Group",
-                    membersCount: 100,
-                    admins: [
-                      "assets/images/follow images/Abdullah.png",
-                      "assets/images/follow images/Ahmad.png",
-                      "assets/images/follow images/Ali.png"
-                    ],
-                    members: [
-                      "assets/images/follow images/img_1.png",
-                      "assets/images/follow images/img.png",
-                      "assets/images/follow images/person1.png",
-                      "assets/images/follow images/person1.png",
-                      "assets/images/follow images/person1.png",
-                      "assets/images/follow images/person1.png",
-                    ],
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) =>  AdminView()));
+                    },
+                    child: GroupsMainContainer(
+                      image: 'assets/images/Event Images/event.png',
+                      title: "Asif Wedding Program",
+                      description:
+                          "So Guys here I have created this group and we will discuss things here."
+                          " So every Plan will be discussed here and then executed by the mentioned person."
+                          " Things will be shared here, or else I will expel him from this group. Be professional and be humble to everyone.",
+                      location: "Karachi, Pakistan. Private Group",
+                      membersCount: 100,
+                      admins: [
+                        "assets/images/follow images/Abdullah.png",
+                        "assets/images/follow images/Ahmad.png",
+                        "assets/images/follow images/Ali.png"
+                      ],
+                      members: [
+                        "assets/images/follow images/img_1.png",
+                        "assets/images/follow images/img.png",
+                        "assets/images/follow images/person1.png",
+                        "assets/images/follow images/person1.png",
+                        "assets/images/follow images/person1.png",
+                        "assets/images/follow images/person1.png",
+                      ],
+                    ),
                   ),
                   SizedBox(
                     height: 120,

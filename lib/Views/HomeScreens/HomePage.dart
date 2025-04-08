@@ -2,6 +2,9 @@ import 'package:agora/Notifications.dart';
 import 'package:agora/widgets/CustomAppBar.dart';
 import 'package:agora/widgets/PostUi.dart';
 import 'package:flutter/material.dart';
+import 'package:popover/popover.dart';
+import 'CreatePost.dart';
+import 'MenuItems.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -18,7 +21,41 @@ class _HomePageState extends State<HomePage> {
       appBar: CustomAppBar(
         title: "Agora",
         actionIcon: Icons.add,
-        onActionPressed: () {},
+        onActionPressed: () {
+          final RenderBox overlay =
+              Overlay.of(context).context.findRenderObject() as RenderBox;
+          showMenu(
+            context: context,
+            position: RelativeRect.fromLTRB(
+              overlay.size.width - 70,
+              kToolbarHeight,
+              80,
+              0,
+            ),
+            items: [
+              PopupMenuItem(
+                value: 'Post',
+                child: Text('Post'),
+              ),
+              PopupMenuItem(
+                value: 'Poll',
+                child: Text('Poll'),
+              ),
+              PopupMenuItem(
+                value: 'Groups',
+                child: Text('Groups'),
+              ),
+              PopupMenuItem(
+                value: 'Events',
+                child: Text('Events'),
+              ),
+            ],
+          ).then(
+            (value) {
+              if (value != null) {}
+            },
+          );
+        },
         onNotificationPressed: () {
           Navigator.push(
             context,

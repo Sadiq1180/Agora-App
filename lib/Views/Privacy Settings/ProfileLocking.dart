@@ -21,23 +21,25 @@ class _ProfileLockingState extends State<ProfileLocking> {
       appBar: AppBarCustom(title: 'Profile Locking'),
       body: Column(
         children: [
-          ...switchStates.keys.map((key) {
-            return SettingWidget(
-              title: key,
-              dividerColor: Colors.blue,
-              trailingWidget: Switch(
-                activeColor: Colors.blue,
-                inactiveThumbColor: Colors.grey,
-                thumbColor: MaterialStateProperty.all(Colors.white),
-                value: switchStates[key]!,
-                onChanged: (value) {
-                  setState(() {
-                    switchStates[key] = value;
-                  });
-                },
-              ),
-            );
-          }),
+          ...switchStates.keys.map(
+            (key) {
+              return SettingWidget(
+                title: key,
+                dividerColor: Colors.blue,
+                trailingWidget: Switch(
+                  activeColor: Colors.blue,
+                  inactiveThumbColor: Colors.grey,
+                  thumbColor: MaterialStateProperty.all(Colors.white),
+                  value: switchStates[key]!,
+                  onChanged: (value) {
+                    setState(() {
+                      switchStates[key] = value;
+                    });
+                  },
+                ),
+              );
+            },
+          ),
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Text(

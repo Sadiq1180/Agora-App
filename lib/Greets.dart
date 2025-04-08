@@ -1,5 +1,5 @@
 import 'package:agora/BottomNavigation.dart';
-import 'package:agora/HomePage.dart';
+
 import 'package:agora/widgets/CircularAvatar.dart';
 import 'package:agora/widgets/CommentContainer.dart';
 import 'package:agora/widgets/VisitorsAvatar.dart';

@@ -1,7 +1,6 @@
 import 'package:agora/BottomNavigation.dart';
 import 'package:agora/Follow.dart';
 import 'package:agora/Forgot.dart';
-import 'package:agora/HomePage.dart';
 import 'package:agora/register.dart';
 
 import 'package:flutter/foundation.dart';

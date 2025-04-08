@@ -15,7 +15,8 @@ class AppBarCustom extends StatelessWidget implements PreferredSizeWidget {
       this.backgroundColor,
       this.actions,
       this.rightIcon,
-      this.onRightIconPressed})
+      this.onRightIconPressed,
+      })
       : super(key: key);
 
   @override

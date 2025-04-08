@@ -165,6 +165,8 @@ class TextMessage extends StatelessWidget {
                 ),
                 Expanded(
                   child: TextField(
+                    // keyboardType: TextInputType.multiline,
+                    maxLines: null,
                     decoration: InputDecoration(
                       hintText: "Type a message...",
                       suffixIcon:
