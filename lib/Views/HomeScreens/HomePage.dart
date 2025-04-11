@@ -2,9 +2,9 @@ import 'package:agora/Notifications.dart';
 import 'package:agora/widgets/CustomAppBar.dart';
 import 'package:agora/widgets/PostUi.dart';
 import 'package:flutter/material.dart';
-import 'package:popover/popover.dart';
-import 'CreatePost.dart';
-import 'MenuItems.dart';
+import 'Create Events/EventDetails.dart';
+import 'CreatePoll/CreatePoll.dart';
+import 'CreatePost/CreatePost.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -22,22 +22,32 @@ class _HomePageState extends State<HomePage> {
         title: "Agora",
         actionIcon: Icons.add,
         onActionPressed: () {
-          final RenderBox overlay =
-              Overlay.of(context).context.findRenderObject() as RenderBox;
           showMenu(
             context: context,
             position: RelativeRect.fromLTRB(
-              overlay.size.width - 70,
+              MediaQuery.of(context).size.width - 70,
               kToolbarHeight,
               80,
               0,
             ),
             items: [
               PopupMenuItem(
+                onTap: (){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => CreatePost()),
+                  );
+                },
                 value: 'Post',
                 child: Text('Post'),
               ),
               PopupMenuItem(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => CreatePoll()),
+                  );
+                },
                 value: 'Poll',
                 child: Text('Poll'),
               ),
@@ -46,13 +56,20 @@ class _HomePageState extends State<HomePage> {
                 child: Text('Groups'),
               ),
               PopupMenuItem(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => EventDetails()),
+                  );
+                },
                 value: 'Events',
                 child: Text('Events'),
               ),
             ],
           ).then(
             (value) {
-              if (value != null) {}
+              if (value != null) {
+              }
             },
           );
         },

@@ -5,6 +5,7 @@ class VisitorsAvatar extends StatelessWidget {
   final String title;
   final List<String> avatars;
   final int maxVisibleAvatars;
+  final double avatarSize;
   final TextStyle? titleStyle;
 
   const  VisitorsAvatar({
@@ -12,6 +13,7 @@ class VisitorsAvatar extends StatelessWidget {
     required this.title,
     required this.avatars,
     this.maxVisibleAvatars = 4,
+    this.avatarSize = 18,
     this.titleStyle,
   });
 
@@ -43,7 +45,7 @@ class VisitorsAvatar extends StatelessWidget {
                   shape: BoxShape.circle,
                   border: Border.all(color: Colors.white, width: 2),
                 ),
-                child: CircularAvatar(size: 18, image: entry.value),
+                child: CircularAvatar(size: avatarSize, image: entry.value),
               ),
             )),
             if (extraCount > 0)
@@ -51,8 +53,8 @@ class VisitorsAvatar extends StatelessWidget {
                 offset: Offset(-maxVisibleAvatars * 10.0, 0),
                 child: Container(
                   width: 20,
-                  height: 20,
-                  alignment: Alignment.center,
+                  height: avatarSize,
+                  alignment: Alignment.centerLeft,
                   decoration: const BoxDecoration(
                     shape: BoxShape.circle,
                     color: Colors.grey,

@@ -7,6 +7,8 @@ class AppBarCustom extends StatelessWidget implements PreferredSizeWidget {
   final List<Widget>? actions;
   final Icon? rightIcon;
   final VoidCallback? onRightIconPressed;
+  final Widget? leading;
+
 
   const AppBarCustom(
       {Key? key,
@@ -16,6 +18,7 @@ class AppBarCustom extends StatelessWidget implements PreferredSizeWidget {
       this.actions,
       this.rightIcon,
       this.onRightIconPressed,
+        this.leading
       })
       : super(key: key);
 

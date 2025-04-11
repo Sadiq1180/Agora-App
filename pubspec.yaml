@@ -38,7 +38,8 @@ dependencies:
   pinput: ^5.0.1
   image_picker: ^1.1.2
   another_flushbar: ^1.10.28
-  popover: ^0.3.1
+  flutter_polls: ^0.1.6
+  logger: ^2.5.0
 
 dev_dependencies:
   flutter_test:
@@ -134,6 +135,13 @@ flutter:
     - assets/images/CompaignDetails.png
     - assets/images/chart.png
     - assets/images/spent.png
+    ###Create Post Images
+    - assets/images/CreatePostImag/crPost1.png
+    - assets/images/CreatePostImag/crPost2.png
+    - assets/images/CreatePostImag/crPost3.png
+    - assets/images/AsifWedd.png
+    ## CARD
+    - assets/images/CARD.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
@@ -150,10 +158,12 @@ flutter:
 
 
   fonts:
-     - family: Urbanist
-       fonts:
-         - asset: assets/fonts/Urbanist/Urbanist-Bold.ttf
-         - asset: assets/fonts/Urbanist/Urbanist-Medium.ttf
+    - family: Urbanist
+      fonts:
+        - asset: assets/fonts/Urbanist/Urbanist-Bold.ttf
+        - asset: assets/fonts/Urbanist/Urbanist-Medium.ttf
+
+
 #           style: italic
   #   - family: Trajan Pro
   #     fonts:

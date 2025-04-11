@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 class FeedBack extends StatelessWidget {
   const FeedBack({super.key});
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,14 +42,17 @@ class FeedBack extends StatelessWidget {
                   ),
                 ),
                 onPressed: () {},
-                child: Text("Give feedback at Email",style: TextStyle(fontSize: 14,fontWeight: FontWeight.w500,color: Colors.white),),
+                child: Text(
+                  "Give feedback at Email",
+                  style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.white),
+                ),
               ),
             ),
           ),
-
-
         ],
-
       ),
     );
   }

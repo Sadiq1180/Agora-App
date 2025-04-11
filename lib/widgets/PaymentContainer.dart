@@ -7,6 +7,7 @@ class PaymentContainer extends StatelessWidget {
   final String? subtitle;
   final String? connectionStatus;
   final bool isElevatedButton;
+  final Color? color;
 
 
   const PaymentContainer(
@@ -16,6 +17,8 @@ class PaymentContainer extends StatelessWidget {
       this.subtitle,
       this.connectionStatus,
       this.isElevatedButton = false,
+        this.color,
+
 
       });
 
@@ -29,7 +32,7 @@ class PaymentContainer extends StatelessWidget {
             width: 335,
             height: 72,
             decoration: BoxDecoration(
-              color: Colors.white,
+              color: color ?? Colors.white,
               borderRadius: BorderRadius.circular(10),
               boxShadow: [
                 BoxShadow(
