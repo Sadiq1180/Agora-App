@@ -1,9 +1,6 @@
 import 'package:agora/widgets/AppBarCustom.dart';
 import 'package:agora/widgets/PostUi.dart';
-import 'package:agora/widgets/TabBarImages.dart';
-import 'package:agora/widgets/TabItem.dart';
 import 'package:agora/widgets/VisitorsAvatar.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 

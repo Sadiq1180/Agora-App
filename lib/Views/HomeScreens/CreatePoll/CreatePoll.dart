@@ -1,8 +1,5 @@
-import 'package:agora/Views/Edit%20Profile/Add%20Group/Location.dart';
 import 'package:agora/widgets/CircularAvatar.dart';
-import 'package:agora/widgets/SettingWidget.dart';
 import 'package:flutter/material.dart';
-
 import '../../../widgets/AppBarCustom.dart';
 import 'PollLocation.dart';
 

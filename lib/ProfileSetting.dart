@@ -1,6 +1,5 @@
 import 'package:agora/MySaved.dart';
 import 'package:agora/ProfileNotifications.dart';
-import 'package:agora/UserDetails.dart';
 import 'package:agora/widgets/AppBarCustom.dart';
 import 'package:agora/widgets/SettingWidget.dart';
 import 'package:flutter/material.dart';
@@ -10,7 +9,6 @@ import 'Languages.dart';
 import 'DeActivate.dart';
 import 'PaymentMethods.dart';
 import 'PrivacyPolicy.dart';
-import 'Views/Edit Profile/MainProfileEdit.dart';
 import 'Views/Edit Profile/EditProfile.dart';
 import 'Views/Privacy Settings/PrivacySettings.dart';
 import 'TermsConditions.dart';

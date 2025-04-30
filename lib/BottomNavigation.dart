@@ -1,7 +1,5 @@
 import 'package:agora/Views/HomeScreens/Chats.dart';
 import 'package:agora/Discover.dart';
-import 'package:agora/Follow.dart';
-import 'package:agora/ProfileSetting.dart';
 import 'package:agora/UserDetails.dart';
 import 'package:flutter/material.dart';
 

@@ -2,8 +2,6 @@ import 'package:agora/widgets/AppBarCustom.dart';
 import 'package:agora/widgets/ElevatedButton.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:logger/logger.dart';
-
 import 'Sponsor Event/SponsorEvent.dart';
 
 class Livee extends StatelessWidget {

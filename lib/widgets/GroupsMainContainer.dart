@@ -1,8 +1,6 @@
 import 'package:agora/widgets/CircularAvatar.dart';
 import 'package:flutter/material.dart';
 
-import '../Admin List/AdminsView.dart';
-
 class GroupsMainContainer extends StatelessWidget {
   final String image;
   final String title;

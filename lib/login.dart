@@ -1,9 +1,6 @@
-import 'package:agora/BottomNavigation.dart';
 import 'package:agora/Follow.dart';
 import 'package:agora/Forgot.dart';
 import 'package:agora/register.dart';
-
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class login extends StatefulWidget {

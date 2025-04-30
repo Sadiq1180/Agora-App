@@ -4,7 +4,6 @@ import 'package:agora/Views/Edit%20Profile/Analytics.dart';
 import 'package:agora/Views/Edit%20Profile/EditProfile.dart';
 import 'package:agora/Views/TabBar%20View/Prompts.dart';
 import 'package:agora/Views/TabBar%20View/TabBarEvents.dart';
-import 'package:agora/widgets/AppBarCustom.dart';
 import 'package:agora/widgets/CircularAvatar.dart';
 import 'package:agora/widgets/GroupsUi.dart';
 import 'package:agora/widgets/TabBarImages.dart';

@@ -1,4 +1,3 @@
-import 'package:agora/Views/HomeScreens/CreatePoll/PollLocation.dart';
 import 'package:agora/widgets/CircularAvatar.dart';
 import 'package:flutter/material.dart';
 

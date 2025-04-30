@@ -1,5 +1,4 @@
 import 'package:agora/Views/Privacy%20Settings/widget/BlockedUsersCont.dart';
-import 'package:agora/widgets/CircularAvatar.dart';
 import 'package:flutter/material.dart';
 import '../../widgets/AppBarCustom.dart';
 

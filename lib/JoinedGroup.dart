@@ -2,7 +2,6 @@ import 'package:agora/Admin%20List/AdminsView.dart';
 import 'package:agora/widgets/CircularAvatar.dart';
 import 'package:agora/widgets/GroupsMainContainer.dart';
 import 'package:flutter/material.dart';
-import 'UserDetails.dart';
 
 class JoinedGroup extends StatefulWidget {
   const JoinedGroup({super.key});

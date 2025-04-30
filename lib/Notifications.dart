@@ -1,5 +1,3 @@
-import 'package:agora/widgets/CircularAvatar.dart';
-import 'package:agora/widgets/CustomAppBar.dart';
 import 'package:agora/widgets/NotificationsUI.dart';
 import 'package:flutter/material.dart';
 
