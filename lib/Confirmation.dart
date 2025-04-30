@@ -1,3 +1,4 @@
+import 'package:agora/constants/app_colors.dart';
 import 'package:agora/login.dart';
 import 'package:flutter/material.dart';
 
@@ -64,14 +65,14 @@ class Confirmation extends StatelessWidget {
             ),
             child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.lightBlue,
+                  backgroundColor: SColors.lightBlueAccent,
                   elevation: 3,
                 ),
                 onPressed: () {
                   Navigator.of(context)
                       .push(MaterialPageRoute(builder: (context) => login()));
                 },
-                child: Text("Back to login")),
+                child: Text("Back to login",style: TextStyle(color: SColors.white,fontWeight: FontWeight.w300),)),
           )
         ]),
       ),

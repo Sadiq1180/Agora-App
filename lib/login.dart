@@ -1,6 +1,8 @@
 import 'package:agora/Follow.dart';
 import 'package:agora/Forgot.dart';
+import 'package:agora/constants/app_colors.dart';
 import 'package:agora/register.dart';
+import 'package:agora/widgets/custom_divider.dart';
 import 'package:flutter/material.dart';
 
 class login extends StatefulWidget {
@@ -161,8 +163,8 @@ class _loginState extends State<login> {
               style: ElevatedButton.styleFrom(
                 // maximumSize: Size(50, 35),
                 padding: EdgeInsets.symmetric(horizontal: 140, vertical: 15),
-                foregroundColor: Colors.white,
-                backgroundColor: Colors.lightBlueAccent,
+                foregroundColor: SColors.white,
+                backgroundColor: SColors.lightBlueAccent,
                 elevation: 1,
               ),
               child: Text(
@@ -171,11 +173,12 @@ class _loginState extends State<login> {
               ),
             ),
             SizedBox(
-              height: 40,
+              height: 20,
             ),
-            Text("-------------  Or Sign in with  -------------"),
+            CustomDIvider(),
+
             SizedBox(
-              height: 40,
+              height: 20,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -187,9 +190,9 @@ class _loginState extends State<login> {
                     height: 72,
                     width: 125,
                     decoration: BoxDecoration(
-                      border: Border.all(color: Colors.black.withOpacity(0.2)),
+                      border: Border.all(color: SColors.black.withOpacity(0.2)),
                       borderRadius: BorderRadius.circular(10),
-                      color: Colors.black.withOpacity(0.05),
+                      color: SColors.black.withOpacity(0.05),
                     ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -221,9 +224,9 @@ class _loginState extends State<login> {
                     height: 72,
                     width: 125,
                     decoration: BoxDecoration(
-                      border: Border.all(color: Colors.black.withOpacity(0.1)),
+                      border: Border.all(color: SColors.black.withOpacity(0.1)),
                       borderRadius: BorderRadius.circular(10),
-                      color: Colors.black.withOpacity(0.05),
+                      color: SColors.black.withOpacity(0.05),
                     ),
                     child: Row(
                       children: [
@@ -247,7 +250,7 @@ class _loginState extends State<login> {
               ],
             ),
             SizedBox(
-              height: 20,
+              height: 10,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -269,6 +272,5 @@ class _loginState extends State<login> {
         ),
       ),
     );
-    //   Container(
   }
 }

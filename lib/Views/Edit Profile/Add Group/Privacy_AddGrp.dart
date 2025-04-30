@@ -1,7 +1,6 @@
 import 'package:agora/Views/Edit%20Profile/Add%20Group/InviteFriends.dart';
+import 'package:agora/widgets/Main_widgets/AppBarCustom.dart';
 import 'package:flutter/material.dart';
-
-import '../../../widgets/AppBarCustom.dart';
 
 class Privacy_AddGrp extends StatefulWidget {
   const Privacy_AddGrp({super.key});

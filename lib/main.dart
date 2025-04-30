@@ -1,3 +1,4 @@
+import 'package:agora/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'login.dart';
 
@@ -41,7 +42,7 @@ class _HomeState extends State<Home> {
               Text(
                 "Expand your Social Circle",
                 style: TextStyle(
-                  color: Colors.white,
+                  color: SColors.white,
                   fontSize: 24,
                   fontWeight: FontWeight.w600,
                 ),
@@ -81,8 +82,8 @@ class _HomeState extends State<Home> {
                   );
                 },
                 style: ElevatedButton.styleFrom(
-                  foregroundColor: Colors.white,  // Text color
-                  backgroundColor: Colors.lightBlueAccent, // Button color
+                  foregroundColor:SColors.white,  // Text color
+                  backgroundColor:SColors.lightBlueAccent, // Button color
                   padding: EdgeInsets.symmetric(horizontal: 130, vertical: 15), // Padding around the text
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30), // Rounded corners

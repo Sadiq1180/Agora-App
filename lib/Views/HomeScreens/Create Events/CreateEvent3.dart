@@ -1,4 +1,4 @@
-import 'package:agora/widgets/ElevatedButton.dart';
+import 'package:agora/widgets/Main_widgets/ElevatedButton.dart';
 import 'package:flutter/material.dart';
 
 import 'EventLocation.dart';

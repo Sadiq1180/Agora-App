@@ -1,8 +1,8 @@
-import 'package:agora/widgets/CircularAvatar.dart';
-import 'package:flutter/material.dart';
 
-import '../../../widgets/AppBarCustom.dart';
-import '../../../widgets/ElevatedButton.dart';
+import 'package:agora/widgets/Main_widgets/AppBarCustom.dart';
+import 'package:agora/widgets/Main_widgets/CircularAvatar.dart';
+import 'package:agora/widgets/Main_widgets/ElevatedButton.dart';
+import 'package:flutter/material.dart';
 import 'CreatePostLocation.dart';
 
 class CreatePost extends StatefulWidget {

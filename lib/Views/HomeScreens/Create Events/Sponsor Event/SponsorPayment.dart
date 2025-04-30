@@ -1,6 +1,7 @@
-import 'package:agora/widgets/AppBarCustom.dart';
-import 'package:agora/widgets/ElevatedButton.dart';
-import 'package:agora/widgets/PaymentContainer.dart';
+
+import 'package:agora/widgets/Main_widgets/AppBarCustom.dart';
+import 'package:agora/widgets/Main_widgets/ElevatedButton.dart';
+import 'package:agora/widgets/Main_widgets/PaymentContainer.dart';
 import 'package:flutter/material.dart';
 
 import 'SponsorCard.dart';

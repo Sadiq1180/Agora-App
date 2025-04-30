@@ -1,5 +1,6 @@
 import 'package:agora/Views/Edit%20Profile/Add%20Group/Topics.dart';
-import 'package:agora/widgets/AppBarCustom.dart';
+import 'package:agora/constants/app_colors.dart';
+import 'package:agora/widgets/Main_widgets/AppBarCustom.dart';
 import 'package:flutter/material.dart';
 
 class Location extends StatelessWidget {
@@ -52,7 +53,7 @@ class Location extends StatelessWidget {
           padding: const EdgeInsets.only(left: 20.0, right: 20, bottom: 20),
           child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.lightBlueAccent,
+                backgroundColor: SColors.lightBlueAccent,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(25),
                 ),
@@ -61,7 +62,7 @@ class Location extends StatelessWidget {
                 Navigator.of(context)
                     .push(MaterialPageRoute(builder: (context) => Topics()));
               },
-              child: Text("Next", style: TextStyle(color: Colors.white))),
+              child: Text("Next", style: TextStyle(color: SColors.white))),
         ),
       ),
     );

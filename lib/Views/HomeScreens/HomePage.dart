@@ -1,4 +1,5 @@
 import 'package:agora/Notifications.dart';
+import 'package:agora/constants/app_colors.dart';
 import 'package:agora/widgets/CustomAppBar.dart';
 import 'package:agora/widgets/PostUi.dart';
 import 'package:flutter/material.dart';
@@ -179,14 +180,14 @@ class _HomePageState extends State<HomePage> {
           Container(
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              border: Border.all(color: Colors.black12, width: 2),
+              border: Border.all(color: SColors.black.withOpacity(0.4), width: 2),
             ),
             child: CircleAvatar(
               radius: 35,
-              backgroundColor: Colors.white,
+              backgroundColor: SColors.white,
               backgroundImage: isAddStory ? null : AssetImage(image!),
               child: isAddStory
-                  ? Icon(Icons.add, size: 30, color: Colors.black)
+                  ? Icon(Icons.add, size: 30, color: SColors.black)
                   : null,
             ),
           ),

@@ -1,4 +1,6 @@
+
 import 'package:agora/Verification.dart';
+import 'package:agora/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class Forgot extends StatefulWidget {
@@ -24,7 +26,7 @@ class _ForgotState extends State<Forgot> {
                 height: 39,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    border: Border.all(color: Colors.black12,)),
+                    border: Border.all(color: SColors.black.withOpacity(0.1),)),
                 child: IconButton(
                     onPressed: () {
                       Navigator.of(context).pop();

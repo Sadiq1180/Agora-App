@@ -1,4 +1,4 @@
-import 'package:agora/widgets/AppBarCustom.dart';
+import 'package:agora/widgets/Main_widgets/AppBarCustom.dart';
 import 'package:flutter/material.dart';
 
 import 'CreatePoll1.dart';
@@ -65,30 +65,6 @@ class _PollLocationState extends State<PollLocation> {
               ),
             ],
           ),
-          //TextField in place of the search bar
-    //       SizedBox(
-    //       height: 47,
-    //       width: 275,
-    // child: TextField(
-    // decoration: InputDecoration(
-    // hintText: " Search Location",
-    // hintStyle: const TextStyle(fontSize: 10,fontWeight: FontWeight.w300),
-    // suffixIcon: const Icon(Icons.search,size: 20,),
-    // enabledBorder: OutlineInputBorder(
-    // borderRadius: BorderRadius.circular(10),
-    // borderSide: const BorderSide(color: Colors.grey),
-    // ),
-    // focusedBorder: OutlineInputBorder(
-    // borderRadius: BorderRadius.circular(10),
-    // borderSide: const BorderSide(color: Colors.lightBlueAccent),
-    // ),
-    // ),
-    // style: const TextStyle(fontSize: 12,fontWeight: FontWeight.w500),
-    // onChanged: (value) {
-    // // Handle text field changes here
-    // print("Search text changed to: $value");
-    // },
-    // ),
           SizedBox(height: 33),
           Padding(
             padding: const EdgeInsets.only(left: 20.0,right: 20),
@@ -171,14 +147,7 @@ class _PollLocationState extends State<PollLocation> {
             ),
           ),
           onPressed: () {
-            // Flushbar(
-            //   message: "Successfully Created a Poll",
-            //   duration: Duration(seconds: 3),
-            //   flushbarPosition: FlushbarPosition.TOP,
-            //   backgroundColor: Colors.green,
-            //   margin: EdgeInsets.all(8),
-            //   borderRadius: BorderRadius.circular(8),
-            // ).show(context);
+
             Navigator.of(context)
                 .push(MaterialPageRoute(builder: (context) =>CreatePoll1()));
           },
@@ -192,6 +161,3 @@ class _PollLocationState extends State<PollLocation> {
     );
   }
 }
-
-
-

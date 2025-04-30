@@ -1,7 +1,8 @@
 import 'package:agora/Views/Edit%20Profile/CompaignDetails.dart';
 import 'package:agora/Views/Edit%20Profile/widgets/AnalyticsCompaignView.dart';
-import 'package:agora/widgets/AppBarCustom.dart';
-import 'package:agora/widgets/TabItem.dart';
+import 'package:agora/constants/app_colors.dart';
+import 'package:agora/widgets/Main_widgets/AppBarCustom.dart';
+import 'package:agora/widgets/Main_widgets/TabItem.dart';
 import 'package:flutter/material.dart';
 
 class Analytics extends StatefulWidget {
@@ -52,9 +53,9 @@ class _AnalyticsState extends State<Analytics> with TickerProviderStateMixin {
                   child: TabBar(
                     controller: tabController3,
                     isScrollable: false,
-                    indicatorColor: Colors.blue,
-                    labelColor: Colors.blue,
-                    unselectedLabelColor: Colors.grey,
+                    indicatorColor: SColors.primary,
+                    labelColor: SColors.primary,
+                    unselectedLabelColor: SColors.grey,
                     tabs: [
                       TabItem(title: 'Posts'),
                       TabItem(title: 'Events'),
@@ -67,7 +68,7 @@ class _AnalyticsState extends State<Analytics> with TickerProviderStateMixin {
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 8),
                   decoration: BoxDecoration(
-                    color: Colors.grey[200],
+                    color: SColors.grey.withOpacity(0.4),
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: DropdownButtonHideUnderline(

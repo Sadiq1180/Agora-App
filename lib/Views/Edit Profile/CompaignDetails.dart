@@ -1,4 +1,5 @@
-import 'package:agora/widgets/AppBarCustom.dart';
+import 'package:agora/constants/app_colors.dart';
+import 'package:agora/widgets/Main_widgets/AppBarCustom.dart';
 import 'package:flutter/material.dart';
 
 class CompaignDetails extends StatefulWidget {
@@ -43,7 +44,7 @@ class _CompaignDetailsState extends State<CompaignDetails>
               child: Container(
                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 5),
                 decoration: BoxDecoration(
-                  color: Colors.grey[200],
+                  color: SColors.grey.withOpacity(0.4),
                   borderRadius: BorderRadius.circular(8),
                 ),
                 child: DropdownButtonHideUnderline(
@@ -76,10 +77,10 @@ class _CompaignDetailsState extends State<CompaignDetails>
                 width: 335,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15),
-                  color: Colors.white,
+                  color: SColors.white,
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.grey.withOpacity(0.5),
+                      color: SColors.grey.withOpacity(0.5),
                       spreadRadius: 1,
                       blurRadius: 1,
                       offset: const Offset(0, 1),
@@ -212,10 +213,10 @@ class _CompaignDetailsState extends State<CompaignDetails>
                 width: 335,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15),
-                  color: Colors.white,
+                  color: SColors.white,
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.grey.withOpacity(0.5),
+                      color: SColors.grey.withOpacity(0.5),
                       spreadRadius: 1,
                       blurRadius: 1,
                       offset: const Offset(0, 1),
@@ -238,9 +239,9 @@ class _CompaignDetailsState extends State<CompaignDetails>
                     // TabBar
                     TabBar(
                       controller: tabController4,
-                      labelColor: Colors.black,
-                      unselectedLabelColor: Colors.grey, 
-                      indicatorColor: Colors.blue,
+                      labelColor: SColors.black,
+                      unselectedLabelColor: SColors.grey,
+                      indicatorColor: SColors.primary,
                       tabs: const [
                         Tab(text: "All"),
                         Tab(text: "Women"),
@@ -256,7 +257,7 @@ class _CompaignDetailsState extends State<CompaignDetails>
                           Padding(
                             padding: const EdgeInsets.symmetric(horizontal: 20),
                             child: Column(
-                              children:[
+                              children: [
                                 // "Spent" Title
                                 Padding(
                                   padding: const EdgeInsets.only(left: 10.0),
@@ -264,7 +265,8 @@ class _CompaignDetailsState extends State<CompaignDetails>
                                     alignment: Alignment.centerLeft,
                                     child: Text("Spent",
                                         style: TextStyle(
-                                            fontSize: 12, fontWeight: FontWeight.w500)),
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.w500)),
                                   ),
                                 ),
                                 const SizedBox(height: 10),
@@ -274,7 +276,8 @@ class _CompaignDetailsState extends State<CompaignDetails>
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Row(
-                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
                                       children: [
                                         Image.asset("assets/images/chart.png",
                                             width: 230, height: 180),
@@ -288,7 +291,6 @@ class _CompaignDetailsState extends State<CompaignDetails>
                               ],
                             ),
                           ),
-
                         ],
                       ),
                     ),

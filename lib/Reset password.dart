@@ -1,4 +1,5 @@
 import 'package:agora/Confirmation.dart';
+import 'package:agora/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class ResetPassword extends StatefulWidget {
@@ -16,8 +17,10 @@ class _ResetPasswordState extends State<ResetPassword> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Align(
                   alignment: Alignment.topLeft,
@@ -27,7 +30,7 @@ class _ResetPasswordState extends State<ResetPassword> {
                     width: 39,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      border: Border.all(color: Colors.black12),
+                      border: Border.all(color: SColors.black.withOpacity(0.4)),
                     ),
                     child: IconButton(
                         onPressed: () {
@@ -49,7 +52,8 @@ class _ResetPasswordState extends State<ResetPassword> {
                   children: [
                     Text(
                       "Reset Password",
-                      style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
+                      style:
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
                     ),
                   ],
                 ),
@@ -64,9 +68,9 @@ class _ResetPasswordState extends State<ResetPassword> {
                 padding: const EdgeInsets.only(left: 19.0),
                 child: Column(
                   children: [
-                    Text("Please type something you’ll remember",
-                        style:
-                            TextStyle(fontSize: 16, fontWeight: FontWeight.w300)),
+                    Text("Please type something you'll remember",
+                        style: TextStyle(
+                            fontSize: 16, fontWeight: FontWeight.w300)),
                   ],
                 ),
               ),
@@ -87,7 +91,7 @@ class _ResetPasswordState extends State<ResetPassword> {
               height: 6,
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 20.0,right: 20),
+              padding: const EdgeInsets.only(left: 20.0, right: 20),
               child: SizedBox(
                 width: 350,
                 height: 70,
@@ -106,7 +110,8 @@ class _ResetPasswordState extends State<ResetPassword> {
                       borderRadius: BorderRadius.circular(10),
                     ),
                     hintText: "must be 8 characters",
-                    hintStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.w300),
+                    hintStyle:
+                        TextStyle(fontSize: 16, fontWeight: FontWeight.w300),
                     suffixIcon: IconButton(
                         onPressed: () {
                           setState(() {
@@ -117,14 +122,14 @@ class _ResetPasswordState extends State<ResetPassword> {
                           _passwordVisible1
                               ? Icons.visibility
                               : Icons.visibility_off,
-                          color: Colors.black45,
+                          color: SColors.black.withOpacity(0.4),
                         )),
                   ),
                 ),
               ),
             ),
             SizedBox(
-              height: 15,
+              height: 10,
             ),
             Align(
                 alignment: Alignment.topLeft,
@@ -139,7 +144,7 @@ class _ResetPasswordState extends State<ResetPassword> {
               height: 6,
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 20.0,right: 20),
+              padding: const EdgeInsets.only(left: 20.0, right: 20),
               child: SizedBox(
                 width: 350,
                 height: 70,
@@ -150,16 +155,16 @@ class _ResetPasswordState extends State<ResetPassword> {
                   decoration: InputDecoration(
                     enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(
-                          color: Colors.black12,
+                          color: SColors.black.withOpacity(0.4),
                           width: 2.0,
                         ),
                         borderRadius: BorderRadius.circular(10)),
                     border: OutlineInputBorder(
-
                       borderRadius: BorderRadius.circular(10),
                     ),
                     hintText: "repeat Password",
-                    hintStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.w300),
+                    hintStyle:
+                        TextStyle(fontSize: 16, fontWeight: FontWeight.w300),
                     suffixIcon: IconButton(
                         onPressed: () {
                           setState(() {
@@ -170,7 +175,7 @@ class _ResetPasswordState extends State<ResetPassword> {
                           _passwordVisible2
                               ? Icons.visibility
                               : Icons.visibility_off,
-                          color: Colors.black45,
+                          color: SColors.black.withOpacity(0.4),
                         )),
                   ),
                 ),
@@ -179,19 +184,22 @@ class _ResetPasswordState extends State<ResetPassword> {
             SizedBox(
               height: 6,
             ),
-            SizedBox(
-              height: 56,
-              width: 335,
-              child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.lightBlueAccent),
-                  onPressed: () {
-                   Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Confirmation()));
-                        
-                  },
-                  child: Text("Reset Password",
-                      style: TextStyle(
-                          color: Colors.white, fontWeight: FontWeight.w300))),
+            Padding(
+              padding: const EdgeInsets.only(left: 20.0, right: 20,top: 10),
+              child: SizedBox(
+                height: 56,
+                width: 335,
+                child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        backgroundColor: SColors.lightBlueAccent),
+                    onPressed: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => Confirmation()));
+                    },
+                    child: Text("Reset Password",
+                        style: TextStyle(
+                            color: SColors.white, fontWeight: FontWeight.w300))),
+              ),
             )
           ],
         ),

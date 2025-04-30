@@ -1,8 +1,9 @@
 import 'dart:typed_data';
-import 'package:agora/widgets/AppBarCustom.dart';
+import 'package:agora/constants/app_colors.dart';
+import 'package:agora/image_picker.dart';
+import 'package:agora/widgets/Main_widgets/AppBarCustom.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-import '../../utils.dart';
 
 class EditProfile extends StatefulWidget {
   const EditProfile({super.key});
@@ -44,14 +45,14 @@ class _EditProfileState extends State<EditProfile> {
                 children: [
                   _image != null
                       ? CircleAvatar(
-                    backgroundImage: MemoryImage(_image!),
-                    radius: 62,
-                  )
+                          backgroundImage: MemoryImage(_image!),
+                          radius: 62,
+                        )
                       : CircleAvatar(
-                    backgroundImage: AssetImage(
-                        "assets/images/follow images/unknown profile.jpg"),
-                    radius: 62,
-                  ),
+                          backgroundImage: AssetImage(
+                              "assets/images/follow images/unknown profile.jpg"),
+                          radius: 62,
+                        ),
                   Positioned(
                     bottom: -10,
                     left: 80,
@@ -59,7 +60,7 @@ class _EditProfileState extends State<EditProfile> {
                       onPressed: selectImage,
                       icon: Icon(
                         Icons.add_a_photo,
-                        color: Colors.black,
+                        color: SColors.black,
                         size: 30,
                       ),
                     ),
@@ -85,7 +86,7 @@ class _EditProfileState extends State<EditProfile> {
                     maxWidth: 335,
                     maxHeight: 48,
                   ),
-                  fillColor: Colors.white,
+                  fillColor: SColors.white,
                   filled: true,
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8),
@@ -93,7 +94,7 @@ class _EditProfileState extends State<EditProfile> {
                   ),
                   hintText: "Name",
                   hintStyle:
-                  TextStyle(fontSize: 14, fontWeight: FontWeight.w300),
+                      TextStyle(fontSize: 14, fontWeight: FontWeight.w300),
                 ),
               ),
             ),
@@ -115,14 +116,14 @@ class _EditProfileState extends State<EditProfile> {
                     maxWidth: 335,
                     maxHeight: 48,
                   ),
-                  fillColor: Colors.white,
+                  fillColor: SColors.white,
                   filled: true,
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8),
                     borderSide: BorderSide(color: Colors.grey),
                   ),
                   hintStyle:
-                  TextStyle(fontSize: 14, fontWeight: FontWeight.w300),
+                      TextStyle(fontSize: 14, fontWeight: FontWeight.w300),
                 ),
               ),
             ),
@@ -155,14 +156,14 @@ class _EditProfileState extends State<EditProfile> {
                     maxWidth: 335,
                     maxHeight: 48,
                   ),
-                  fillColor: Colors.white,
+                  fillColor: SColors.white,
                   filled: true,
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8),
-                    borderSide: BorderSide(color: Colors.grey),
+                    borderSide: BorderSide(color: SColors.grey),
                   ),
                   hintStyle:
-                  TextStyle(fontSize: 14, fontWeight: FontWeight.w300),
+                      TextStyle(fontSize: 14, fontWeight: FontWeight.w300),
                 ),
               ),
             ),
@@ -195,14 +196,14 @@ class _EditProfileState extends State<EditProfile> {
                     maxWidth: 335,
                     maxHeight: 48,
                   ),
-                  fillColor: Colors.white,
+                  fillColor: SColors.white,
                   filled: true,
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8),
-                    borderSide: BorderSide(color: Colors.grey),
+                    borderSide: BorderSide(color: SColors.grey),
                   ),
                   hintStyle:
-                  TextStyle(fontSize: 14, fontWeight: FontWeight.w300),
+                      TextStyle(fontSize: 14, fontWeight: FontWeight.w300),
                 ),
               ),
             ),
@@ -223,14 +224,14 @@ class _EditProfileState extends State<EditProfile> {
                     maxWidth: 335,
                     maxHeight: 48,
                   ),
-                  fillColor: Colors.white,
+                  fillColor: SColors.white,
                   filled: true,
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8),
-                    borderSide: BorderSide(color: Colors.grey),
+                    borderSide: BorderSide(color: SColors.grey),
                   ),
                   hintStyle:
-                  TextStyle(fontSize: 14, fontWeight: FontWeight.w300),
+                      TextStyle(fontSize: 14, fontWeight: FontWeight.w300),
                 ),
               ),
             ),
@@ -253,13 +254,14 @@ class _EditProfileState extends State<EditProfile> {
                   keyboardType: TextInputType.multiline,
                   maxLines: 15,
                   decoration: InputDecoration(
-                    fillColor: Colors.white,
+                    fillColor: SColors.white,
                     filled: true,
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(12),
-                      borderSide: BorderSide(color: Colors.grey),
+                      borderSide: BorderSide(color: SColors.grey),
                     ),
-                    hintStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.w300),
+                    hintStyle:
+                        TextStyle(fontSize: 16, fontWeight: FontWeight.w300),
                     contentPadding: EdgeInsets.all(15),
                   ),
                 ),
@@ -282,7 +284,7 @@ class _EditProfileState extends State<EditProfile> {
                 width: double.infinity,
                 padding: EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                  border: Border.all(color: Colors.blue.shade200),
+                  border: Border.all(color: SColors.primary),
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Wrap(
@@ -291,20 +293,22 @@ class _EditProfileState extends State<EditProfile> {
                   children: interests
                       .map(
                         (interest) => Chip(
-                          padding: EdgeInsets.symmetric(horizontal: 8, vertical: 5),
-                      label: Text(interest, style: TextStyle(color: Colors.white)),
+                          padding:
+                              EdgeInsets.symmetric(horizontal: 8, vertical: 5),
+                          label: Text(interest,
+                              style: TextStyle(color: SColors.white)),
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15)
-                          ),
-                      backgroundColor: Colors.lightBlueAccent,
-                      deleteIcon: Icon(Icons.close, color: Colors.white, size: 18),
-                      onDeleted: () {
-                        setState(() {
-                          interests.remove(interest);
-                        });
-                      },
-                    ),
-                  )
+                              borderRadius: BorderRadius.circular(15)),
+                          backgroundColor: SColors.lightBlueAccent,
+                          deleteIcon:
+                              Icon(Icons.close, color: SColors.white, size: 18),
+                          onDeleted: () {
+                            setState(() {
+                              interests.remove(interest);
+                            });
+                          },
+                        ),
+                      )
                       .toList(),
                 ),
               ),
@@ -314,18 +318,16 @@ class _EditProfileState extends State<EditProfile> {
         ),
       ),
       bottomNavigationBar: Padding(
-        padding: EdgeInsets.only(left: 20.0,right: 20.0,bottom: 10.0),
+        padding: EdgeInsets.only(left: 20.0, right: 20.0, bottom: 10.0),
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
             fixedSize: Size(310, 45),
-            backgroundColor: Colors.lightBlueAccent,
+            backgroundColor: SColors.lightBlueAccent,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(25),
             ),
           ),
-          onPressed: (
-
-              ) {
+          onPressed: () {
             ScaffoldMessenger.of(context).showSnackBar(
               const SnackBar(
                 content: Row(
@@ -333,17 +335,20 @@ class _EditProfileState extends State<EditProfile> {
                   children: [
                     Icon(
                       Icons.check_circle,
-                      color: Colors.white,
+                      color: SColors.white,
                       size: 30,
                     ),
                     SizedBox(width: 10),
                     Text(
                       'Profile Updated Successfully! Go back',
-                      style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500, color: Colors.white),
+                      style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w500,
+                          color: SColors.white),
                     ),
                   ],
                 ),
-                backgroundColor: Colors.green,
+                backgroundColor: SColors.green,
                 behavior: SnackBarBehavior.floating,
                 margin: EdgeInsets.all(20),
                 elevation: 6,
@@ -357,7 +362,8 @@ class _EditProfileState extends State<EditProfile> {
           },
           child: Text(
             "Update Profile",
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500, color: Colors.white),
+            style: TextStyle(
+                fontSize: 16, fontWeight: FontWeight.w500, color: SColors.white),
           ),
         ),
       ),

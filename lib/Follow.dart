@@ -1,4 +1,5 @@
 import 'package:agora/BottomNavigation.dart';
+import 'package:agora/constants/app_colors.dart';
 import 'package:agora/widgets/FollowRequest.dart';
 import 'package:flutter/material.dart';
 
@@ -27,7 +28,7 @@ class _FollowState extends State<Follow> {
                   child: Text(
                     "Skip",
                     style: TextStyle(
-                        color: Colors.black,
+                        color: SColors.black,
                         fontSize: 14,
                         fontWeight: FontWeight.w300),
                   )),
@@ -58,7 +59,7 @@ class _FollowState extends State<Follow> {
               height: 20,
             ),
             FollowRequest(
-              name: "Ihsan Ali khan ali jan khan",
+              name: "Ihsan Ali khan",
               username: "@sadiqali",
               bio:
                   "Ui designer with one month of experience at the section soft",
@@ -90,7 +91,7 @@ class _FollowState extends State<Follow> {
                     ),
                     child: Text(
                       "Continue",
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(color: SColors.white),
                     )),
               ],
             )

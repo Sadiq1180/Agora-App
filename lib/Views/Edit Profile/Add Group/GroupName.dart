@@ -1,6 +1,6 @@
+import 'package:agora/constants/app_colors.dart';
+import 'package:agora/widgets/Main_widgets/AppBarCustom.dart';
 import 'package:flutter/material.dart';
-
-import '../../../widgets/AppBarCustom.dart';
 import 'Privacy_AddGrp.dart';
 
 class GroupName extends StatelessWidget {
@@ -47,7 +47,7 @@ class GroupName extends StatelessWidget {
           padding: const EdgeInsets.only(left: 20.0, right: 20, bottom: 20),
           child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.lightBlueAccent,
+                backgroundColor: SColors.lightBlueAccent,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(25),
                 ),
@@ -56,7 +56,7 @@ class GroupName extends StatelessWidget {
                 Navigator.of(context)
                     .push(MaterialPageRoute(builder: (context) => Privacy_AddGrp()));
               },
-              child: Text("Next", style: TextStyle(color: Colors.white))),
+              child: Text("Next", style: TextStyle(color: SColors.white))),
         ),
       ),
     );

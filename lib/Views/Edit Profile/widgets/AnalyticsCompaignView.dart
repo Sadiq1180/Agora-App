@@ -1,3 +1,4 @@
+import 'package:agora/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class CampaignCard extends StatelessWidget {
@@ -43,16 +44,16 @@ class CampaignCard extends StatelessWidget {
                       ),
                       const Text(
                         "Post",
-                        style: TextStyle(fontSize: 12, color: Colors.grey),
+                        style: TextStyle(fontSize: 12, color: SColors.grey),
                       ),
                       const Text(
                         "Active Now",
-                        style: TextStyle(fontSize: 12, color: Colors.green),
+                        style: TextStyle(fontSize: 12, color: SColors.green),
                       ),
                     ],
                   ),
                 ),
-                const Icon(Icons.more_vert, color: Colors.black),
+                const Icon(Icons.more_vert, color: SColors.black),
               ],
             ),
             const SizedBox(height: 15),
@@ -78,7 +79,7 @@ class CampaignCard extends StatelessWidget {
       children: [
         Text(
           label,
-          style: const TextStyle(fontSize: 12, color: Colors.black),
+          style: const TextStyle(fontSize: 12, color: SColors.black),
         ),
         const SizedBox(height: 5),
         Text(

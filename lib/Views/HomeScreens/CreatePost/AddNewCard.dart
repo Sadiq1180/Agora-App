@@ -1,10 +1,11 @@
 import 'package:agora/BottomNavigation.dart';
+import 'package:agora/widgets/Main_widgets/AppBarCustom.dart';
+import 'package:agora/widgets/Main_widgets/ElevatedButton.dart';
+import 'package:agora/widgets/Main_widgets/card_number_formater.dart';
 import 'package:another_flushbar/flushbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '../../../widgets/AppBarCustom.dart';
-import '../../../widgets/ElevatedButton.dart';
 
 class AddNewCard extends StatelessWidget {
   const AddNewCard({super.key});
@@ -162,8 +163,6 @@ class AddNewCard extends StatelessWidget {
                     SizedBox(width: 20,),
                   ],
                 ),
-        
-        
               ],
             )
           ],
@@ -190,26 +189,6 @@ class AddNewCard extends StatelessWidget {
           color: Colors.lightBlueAccent,
         ),
       ),
-    );
-  }
-}
-
-class CardNumberInputFormatter extends TextInputFormatter {
-  @override
-  TextEditingValue formatEditUpdate(
-      TextEditingValue oldValue, TextEditingValue newValue) {
-    final newText = newValue.text.replaceAll(' ', '');
-
-    final buffer = StringBuffer();
-    for (int i = 0; i < newText.length; i++) {
-      buffer.write(newText[i]);
-      final isEndOfGroup = (i + 1) % 4 == 0 && i + 1 != newText.length;
-      if (isEndOfGroup) buffer.write(' ');
-    }
-    final newSelectionIndex = buffer.length;
-    return TextEditingValue(
-      text: buffer.toString(),
-      selection: TextSelection.collapsed(offset: newSelectionIndex),
     );
   }
 }

@@ -1,10 +1,10 @@
 import 'package:agora/Views/HomeScreens/CreatePoll/widget/PostHeaderSection.dart';
-import 'package:agora/widgets/AppBarCustom.dart';
-import 'package:agora/widgets/CircularAvatar.dart';
+import 'package:agora/widgets/Main_widgets/AppBarCustom.dart';
+import 'package:agora/widgets/Main_widgets/CircularAvatar.dart';
+import 'package:agora/widgets/Main_widgets/VisitorsAvatar.dart';
 import 'package:another_flushbar/flushbar.dart';
 import 'package:flutter/material.dart';
 
-import '../../../widgets/VisitorsAvatar.dart';
 
 class CreatePoll1 extends StatefulWidget {
   const CreatePoll1({super.key});

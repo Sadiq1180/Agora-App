@@ -1,6 +1,9 @@
-import 'package:agora/widgets/CircularAvatar.dart';
-import 'package:agora/widgets/TabBarImages.dart';
-import 'package:agora/widgets/TabItem.dart';
+import 'package:agora/constants/app_colors.dart';
+import 'package:agora/widgets/Main_widgets/CircularAvatar.dart';
+import 'package:agora/widgets/Main_widgets/TabBarImages.dart';
+import 'package:agora/widgets/Main_widgets/TabItem.dart';
+import 'package:agora/widgets/Main_widgets/interests_custom.dart';
+import 'package:agora/widgets/Main_widgets/main_profile_widget.dart';
 import 'package:flutter/material.dart';
 
 import '../../Greets.dart';
@@ -32,139 +35,16 @@ class _UserDetailsState extends State<MainProfileEdit>
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Container(
-              height: 314,
-              width: double.maxFinite,
-              decoration: const BoxDecoration(
-                color: Colors.lightBlueAccent,
-                borderRadius: BorderRadius.vertical(
-                  bottom: Radius.circular(30),
-                ),
-              ),
-              child: Padding(
-                padding:
-                const EdgeInsets.symmetric(horizontal: 20, vertical: 45),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        IconButton(
-                          icon: const Icon(Icons.arrow_back_ios,
-                              color: Colors.white),
-                          onPressed: () {
-                            Navigator.pop(context);
-                          },
-                        ),
-                        const Text(
-                          "Profile",
-                          style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          ),
-                        ),
-                        const SizedBox(width: 48),
-                      ],
-                    ),
-                    const SizedBox(height: 10),
-                    // Row(
-                    //   children: [
-                    //     CircularAvatar(
-                    //       size: 45,
-                    //       image: widget.userImage,
-                    //     ),
-                    //     const SizedBox(width: 12),
-                    //     Column(
-                    //       crossAxisAlignment: CrossAxisAlignment.start,
-                    //       children: [
-                    //         Text(
-                    //           widget.userName,
-                    //           style: const TextStyle(
-                    //             fontSize: 16,
-                    //             fontWeight: FontWeight.w500,
-                    //             color: Colors.white,
-                    //           ),
-                    //         ),
-                    //         Text(
-                    //           widget.userDescription,
-                    //           style: const TextStyle(
-                    //             fontSize: 12,
-                    //             color: Colors.white70,
-                    //           ),
-                    //         ),
-                    //         const SizedBox(height: 10),
-                    //         Container(
-                    //           width: 200,
-                    //           height: 35,
-                    //           padding: const EdgeInsets.symmetric(
-                    //               horizontal: 8, vertical: 5),
-                    //           decoration: BoxDecoration(
-                    //             color: Colors.white.withOpacity(0.2),
-                    //             borderRadius: BorderRadius.circular(15),
-                    //           ),
-                    //           child: Row(
-                    //             mainAxisAlignment:
-                    //             MainAxisAlignment.spaceEvenly,
-                    //             children: [
-                    //               _followers("2.5k", "Foll."),
-                    //               _followers("1.2k", "Frnds."),
-                    //               _followers("512", "Follow."),
-                    //             ],
-                    //           ),
-                    //         ),
-                    //       ],
-                    //     ),
-                    //   ],
-                    // ),
-                    SizedBox(height: 20),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
-                        Text(
-                          "Landed on 12 December",
-                          style: TextStyle(
-                              fontSize: 10,
-                              fontWeight: FontWeight.w300,
-                              color: Colors.white),
-                        ),
-                        Text(
-                          "Upcoming Programmer",
-                          style: TextStyle(
-                              fontSize: 10,
-                              fontWeight: FontWeight.w300,
-                              color: Colors.white),
-                        ),
-                        Text(
-                          "Python Developer",
-                          style: TextStyle(
-                              fontSize: 10,
-                              fontWeight: FontWeight.w300,
-                              color: Colors.white),
-                        ),
-                        Text(
-                          "#coding #python #Artificialintelligence",
-                          style: TextStyle(
-                              fontSize: 10,
-                              fontWeight: FontWeight.w300,
-                              color: Colors.white),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-            ),
+            MainProfileCustomWidgett(),
             const SizedBox(height: 20),
             DefaultTabController(
               length: 5,
               child: TabBar(
                   controller: tabController1,
                   labelPadding: EdgeInsets.symmetric(horizontal: 7),
-                  indicatorColor: Colors.lightBlueAccent,
-                  labelColor: Colors.lightBlueAccent,
-                  unselectedLabelColor: Colors.black38,
+                  indicatorColor: SColors.lightBlueAccent,
+                  labelColor: SColors.lightBlueAccent,
+                  unselectedLabelColor: SColors.black.withOpacity(0.4),
                   tabs: [
                     TabItem(
                       title: 'Abouts',
@@ -186,131 +66,7 @@ class _UserDetailsState extends State<MainProfileEdit>
                     ),
                   ]),
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 20, top: 10),
-              child: Align(
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  "Interests",
-                  style: TextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w500,
-                    color: Colors.black,
-                  ),
-                ),
-              ),
-            ),
-            Row(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(left: 20, top: 10),
-                  child: Container(
-                    height: 30,
-                    width: 90,
-                    decoration: BoxDecoration(
-                      color: Colors.grey[200],
-                      borderRadius: BorderRadius.circular(5),
-                    ),
-                    child: Center(
-                      child: Text("New Tech"),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 5, top: 10),
-                  child: Container(
-                    height: 30,
-                    width: 90,
-                    decoration: BoxDecoration(
-                      color: Colors.grey[200],
-                      borderRadius: BorderRadius.circular(5),
-                    ),
-                    child: Center(
-                      child: Text("Farmer.ai"),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 5, top: 10),
-                  child: Container(
-                    height: 30,
-                    width: 90,
-                    decoration: BoxDecoration(
-                      color: Colors.grey[200],
-                      borderRadius: BorderRadius.circular(5),
-                    ),
-                    child: Center(
-                      child: Text("Programming"),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            Row(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(left: 20, top: 10),
-                  child: Container(
-                    height: 30,
-                    width: 90,
-                    decoration: BoxDecoration(
-                      color: Colors.grey[200],
-                      borderRadius: BorderRadius.circular(5),
-                    ),
-                    child: Center(
-                      child: Text("Python"),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 5, top: 10),
-                  child: Container(
-                    height: 30,
-                    width: 90,
-                    decoration: BoxDecoration(
-                      color: Colors.grey[200],
-                      borderRadius: BorderRadius.circular(5),
-                    ),
-                    child: Center(
-                      child: Text("Learning"),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 5, top: 10),
-                  child: Container(
-                    height: 30,
-                    width: 90,
-                    decoration: BoxDecoration(
-                      color: Colors.grey[200],
-                      borderRadius: BorderRadius.circular(5),
-                    ),
-                    child: Center(
-                      child: Text("Business"),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            Row(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(left: 20, top: 10),
-                  child: Container(
-                    height: 30,
-                    width: 90,
-                    decoration: BoxDecoration(
-                      color: Colors.grey[200],
-                      borderRadius: BorderRadius.circular(5),
-                    ),
-                    child: Center(
-                      child:
-                      Text("+6 More", style: TextStyle(color: Colors.blue)),
-                    ),
-                  ),
-                ),
-              ],
-            ),
+            InterestsCustomWidget(),
             SizedBox(
               height: 10,
             ),
@@ -321,7 +77,7 @@ class _UserDetailsState extends State<MainProfileEdit>
                   labelPadding: EdgeInsets.symmetric(horizontal: 7),
                   indicatorColor: Colors.lightBlueAccent,
                   labelColor: Colors.lightBlueAccent,
-                  unselectedLabelColor: Colors.black38,
+                  unselectedLabelColor: SColors.black.withOpacity(0.4),
                   tabs: [
                     TabItem(
                       title: 'Photos',
@@ -354,7 +110,7 @@ class _UserDetailsState extends State<MainProfileEdit>
                 style: TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.w500,
-                    color: Colors.black),
+                    color: SColors.black),
               ),
             ),
             SingleChildScrollView(
@@ -367,7 +123,7 @@ class _UserDetailsState extends State<MainProfileEdit>
                       height: 179,
                       width: 142,
                       decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: SColors.white,
                         borderRadius: BorderRadius.circular(20),
                       ),
                       child: Column(
@@ -386,7 +142,7 @@ class _UserDetailsState extends State<MainProfileEdit>
                             style: TextStyle(
                                 fontSize: 13,
                                 fontWeight: FontWeight.w500,
-                                color: Colors.black),
+                                color: SColors.black),
                           ),
                           ElevatedButton(
                               style: ElevatedButton.styleFrom(
@@ -398,7 +154,7 @@ class _UserDetailsState extends State<MainProfileEdit>
                               onPressed: () {},
                               child: Text(
                                 "Follow",
-                                style: TextStyle(color: Colors.white),
+                                style: TextStyle(color: SColors.white),
                               ))
                         ],
                       ),
@@ -408,7 +164,7 @@ class _UserDetailsState extends State<MainProfileEdit>
                       height: 179,
                       width: 142,
                       decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: SColors.white,
                         borderRadius: BorderRadius.circular(20),
                       ),
                       child: Column(
@@ -427,11 +183,11 @@ class _UserDetailsState extends State<MainProfileEdit>
                             style: TextStyle(
                                 fontSize: 13,
                                 fontWeight: FontWeight.w500,
-                                color: Colors.black),
+                                color: SColors.black),
                           ),
                           ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                backgroundColor: Colors.lightBlueAccent,
+                                backgroundColor: SColors.lightBlueAccent,
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(20),
                                 ),
@@ -439,7 +195,7 @@ class _UserDetailsState extends State<MainProfileEdit>
                               onPressed: () {},
                               child: Text(
                                 "Follow",
-                                style: TextStyle(color: Colors.white),
+                                style: TextStyle(color: SColors.white),
                               ))
                         ],
                       ),
@@ -449,7 +205,7 @@ class _UserDetailsState extends State<MainProfileEdit>
                       height: 179,
                       width: 142,
                       decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: SColors.white,
                         borderRadius: BorderRadius.circular(20),
                       ),
                       child: Column(
@@ -468,11 +224,11 @@ class _UserDetailsState extends State<MainProfileEdit>
                             style: TextStyle(
                                 fontSize: 13,
                                 fontWeight: FontWeight.w500,
-                                color: Colors.black),
+                                color: SColors.black),
                           ),
                           ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                backgroundColor: Colors.lightBlueAccent,
+                                backgroundColor: SColors.lightBlueAccent,
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(20),
                                 ),
@@ -480,7 +236,7 @@ class _UserDetailsState extends State<MainProfileEdit>
                               onPressed: () {},
                               child: Text(
                                 "Follow",
-                                style: TextStyle(color: Colors.white),
+                                style: TextStyle(color: SColors.white),
                               ))
                         ],
                       ),
@@ -506,7 +262,7 @@ class _UserDetailsState extends State<MainProfileEdit>
           style: TextStyle(
             fontSize: 12,
             fontWeight: FontWeight.w600,
-            color: Colors.white,
+            color: SColors.white,
           ),
         ),
         SizedBox(width: 4),
@@ -515,7 +271,7 @@ class _UserDetailsState extends State<MainProfileEdit>
           style: TextStyle(
             fontSize: 12,
             fontWeight: FontWeight.w300,
-            color: Colors.white70,
+            color: SColors.white.withOpacity(0.7),
           ),
         ),
       ],
