@@ -1,3 +1,4 @@
+import 'package:agora/constants/app_colors.dart';
 import 'package:agora/widgets/Main_widgets/CircularAvatar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -20,7 +21,7 @@ class memberContainer extends StatelessWidget {
         width: 335,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
-          border: Border.all(color: Colors.white),
+          border: Border.all(color: SColors.white),
           color: Colors.white,
           boxShadow: [
             BoxShadow(
@@ -76,7 +77,7 @@ class memberContainer extends StatelessWidget {
                       padding: const EdgeInsets.all(16),
                       height: 180,
                       decoration: const BoxDecoration(
-                        color: Colors.white,
+                        color: SColors.white,
                         borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(20),
                           topRight: Radius.circular(20),
@@ -102,7 +103,7 @@ class memberContainer extends StatelessWidget {
                                       message: "Successfully make admin",
                                       duration: Duration(seconds: 3),
                                       flushbarPosition: FlushbarPosition.TOP,
-                                      backgroundColor: Colors.green,
+                                      backgroundColor: SColors.secondaryDarkGreen,
                                       margin: EdgeInsets.all(8),
                                       borderRadius: BorderRadius.circular(8),
                                     ).show(context);
@@ -117,7 +118,7 @@ class memberContainer extends StatelessWidget {
                                     "Make Group Admin",
                                     style: TextStyle(
                                         fontSize: 16,
-                                        color: Colors.black,
+                                        color: SColors.black,
                                         fontWeight: FontWeight.w500),
                                   ),
                                 ),
@@ -143,7 +144,7 @@ class memberContainer extends StatelessWidget {
                                       message: "Successfully removed member",
                                       duration: Duration(seconds: 3),
                                       flushbarPosition: FlushbarPosition.TOP,
-                                      backgroundColor: Colors.red,
+                                      backgroundColor: SColors.error,
                                       margin: EdgeInsets.all(8),
                                       borderRadius: BorderRadius.circular(8),
                                     ).show(context);
@@ -157,7 +158,7 @@ class memberContainer extends StatelessWidget {
                                     "Remove From Group",
                                     style: TextStyle(
                                         fontSize: 16,
-                                        color: Colors.red,
+                                        color: SColors.error,
                                         fontWeight: FontWeight.w500),
                                   ),
                                 ),

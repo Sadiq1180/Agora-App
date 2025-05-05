@@ -1,5 +1,5 @@
+import 'package:agora/widgets/Main_widgets/CircularAvatar.dart';
 import 'package:flutter/material.dart';
-import '../../../widgets/CircularAvatar.dart';
 
 class BlockedUsersCont extends StatelessWidget {
   const BlockedUsersCont({super.key});

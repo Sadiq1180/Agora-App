@@ -1,3 +1,4 @@
+import 'package:agora/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class GroupsUi extends StatelessWidget {
@@ -23,7 +24,7 @@ class GroupsUi extends StatelessWidget {
                 margin: EdgeInsets.symmetric(horizontal: 15),
                 width: 213,
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: SColors.white,
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Column(

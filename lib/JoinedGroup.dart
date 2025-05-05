@@ -1,6 +1,7 @@
 import 'package:agora/Admin%20List/AdminsView.dart';
-import 'package:agora/widgets/CircularAvatar.dart';
-import 'package:agora/widgets/GroupsMainContainer.dart';
+import 'package:agora/constants/app_colors.dart';
+import 'package:agora/widgets/Main_widgets/CircularAvatar.dart';
+import 'package:agora/widgets/Main_widgets/GroupsMainContainer.dart';
 import 'package:flutter/material.dart';
 
 class JoinedGroup extends StatefulWidget {
@@ -71,58 +72,6 @@ class _GroupViewState extends State<JoinedGroup> {
                   SizedBox(
                     height: 120,
                   ),
-                  // First Discussion Container
-                  // InkWell(
-                  //   onTap: () {
-                  //     Navigator.push(
-                  //       context,
-                  //       MaterialPageRoute(
-                  //         builder: (context) => UserDetails(
-                  //           userName: "Ahmad Ali",
-                  //           userImage: "assets/images/follow images/Ahmad.png",
-                  //           userDescription: "@Ahmad",
-                  //         ),
-                  //       ),
-                  //     );
-                  //   },
-                  //   child: discussionContainer(
-                  //       "Ahmad Ali", "assets/images/follow images/Ahmad.png"),
-                  // ),
-                  // // Second Discussion Container
-                  // InkWell(
-                  //   onTap: () {
-                  //     Navigator.push(
-                  //       context,
-                  //       MaterialPageRoute(
-                  //         builder: (context) => UserDetails(
-                  //           userName: "Abdullah Khan",
-                  //           userImage:
-                  //               "assets/images/follow images/Abdullah.png",
-                  //           userDescription: "@Abdullah",
-                  //         ),
-                  //       ),
-                  //     );
-                  //   },
-                  //   child: discussionContainer("Abdullah Khan",
-                  //       "assets/images/follow images/Abdullah.png"),
-                  // ),
-                  // // Third Discussion Container
-                  // InkWell(
-                  //   onTap: () {
-                  //     Navigator.push(
-                  //       context,
-                  //       MaterialPageRoute(
-                  //         builder: (context) => UserDetails(
-                  //           userName: "Ali Khan",
-                  //           userImage: "assets/images/follow images/Ali.png",
-                  //           userDescription: "@Ali khan",
-                  //         ),
-                  //       ),
-                  //     );
-                  //   },
-                  //   child: discussionContainer(
-                  //       "Ali Khan", "assets/images/follow images/Ali.png"),
-                  // ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -160,7 +109,7 @@ class _GroupViewState extends State<JoinedGroup> {
                                   Text(
                                     "Abdullah",
                                     style: TextStyle(
-                                      color: Colors.black,
+                                      color: SColors.black,
                                       fontSize: 16,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -179,7 +128,7 @@ class _GroupViewState extends State<JoinedGroup> {
                                     style: TextStyle(
                                       fontSize: 14,
                                       fontWeight: FontWeight.w500,
-                                      color: Colors.grey[700],
+                                      color: SColors.grey.withOpacity(0.7),
                                     ),
                                   ),
                                 ],
@@ -191,7 +140,7 @@ class _GroupViewState extends State<JoinedGroup> {
                                 "Excited for this amazing event",
                                 style: TextStyle(
                                   fontSize: 14,
-                                  color: Colors.black87,
+                                  color: SColors.black.withOpacity(0.87),
                                 ),
                               ),
                               SizedBox(height: 10),
@@ -205,7 +154,7 @@ class _GroupViewState extends State<JoinedGroup> {
                                     image: AssetImage("assets/images/Event Images/event.png"),
                                     fit: BoxFit.cover,
                                   ),
-                                  color: Colors.grey,
+                                  color: SColors.grey,
                                   borderRadius: BorderRadius.circular(12),
                                 ),
                               ),
@@ -228,7 +177,7 @@ class _GroupViewState extends State<JoinedGroup> {
                                   Text(
                                     "Ahmad",
                                     style: TextStyle(
-                                      color: Colors.black,
+                                      color: SColors.black,
                                       fontSize: 16,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -247,7 +196,7 @@ class _GroupViewState extends State<JoinedGroup> {
                                     style: TextStyle(
                                       fontSize: 14,
                                       fontWeight: FontWeight.w500,
-                                      color: Colors.grey[700],
+                                      color: SColors.grey.withOpacity(0.7),
                                     ),
                                   ),
                                 ],
@@ -259,7 +208,7 @@ class _GroupViewState extends State<JoinedGroup> {
                                 "Excited for this amazing event",
                                 style: TextStyle(
                                   fontSize: 14,
-                                  color: Colors.black87,
+                                  color: SColors.black.withOpacity(0.87),
                                 ),
                               ),
                               SizedBox(height: 10),
@@ -273,7 +222,7 @@ class _GroupViewState extends State<JoinedGroup> {
                                     image: AssetImage("assets/images/Banners.png"),
                                     fit: BoxFit.cover,
                                   ),
-                                  color: Colors.grey,
+                                  color: SColors.grey,
                                   borderRadius: BorderRadius.circular(12),
                                 ),
                               ),
@@ -304,7 +253,7 @@ class _GroupViewState extends State<JoinedGroup> {
                                   Text(
                                     "Abdullah",
                                     style: TextStyle(
-                                      color: Colors.black,
+                                      color: SColors.black,
                                       fontSize: 16,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -323,7 +272,7 @@ class _GroupViewState extends State<JoinedGroup> {
                                     style: TextStyle(
                                       fontSize: 14,
                                       fontWeight: FontWeight.w500,
-                                      color: Colors.grey[700],
+                                      color: SColors.grey.withOpacity(0.7),
                                     ),
                                   ),
                                 ],
@@ -335,7 +284,7 @@ class _GroupViewState extends State<JoinedGroup> {
                                 "Excited for this amazing event",
                                 style: TextStyle(
                                   fontSize: 14,
-                                  color: Colors.black87,
+                                  color: SColors.black.withOpacity(0.87),
                                 ),
                               ),
                               SizedBox(height: 10),
@@ -372,7 +321,7 @@ class _GroupViewState extends State<JoinedGroup> {
                                   Text(
                                     "Ahmad",
                                     style: TextStyle(
-                                      color: Colors.black,
+                                      color: SColors.black,
                                       fontSize: 16,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -391,7 +340,7 @@ class _GroupViewState extends State<JoinedGroup> {
                                     style: TextStyle(
                                       fontSize: 14,
                                       fontWeight: FontWeight.w500,
-                                      color: Colors.grey[700],
+                                      color: SColors.grey.withOpacity(0.7),
                                     ),
                                   ),
                                 ],
@@ -403,7 +352,7 @@ class _GroupViewState extends State<JoinedGroup> {
                                 "Excited for this amazing event",
                                 style: TextStyle(
                                   fontSize: 14,
-                                  color: Colors.black87,
+                                  color: SColors.black.withOpacity(0.87),
                                 ),
                               ),
                               SizedBox(height: 10),
@@ -417,7 +366,7 @@ class _GroupViewState extends State<JoinedGroup> {
                                     image: AssetImage("assets/images/Banners.png"),
                                     fit: BoxFit.cover,
                                   ),
-                                  color: Colors.grey,
+                                  color: SColors.grey,
                                   borderRadius: BorderRadius.circular(12),
                                 ),
                               ),
@@ -427,9 +376,6 @@ class _GroupViewState extends State<JoinedGroup> {
                       ],
                     ),
                   )
-
-
-
                 ],
               ),
             ),

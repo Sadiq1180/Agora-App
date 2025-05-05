@@ -1,5 +1,6 @@
-import 'package:agora/widgets/AppBarCustom.dart';
-import 'package:agora/widgets/SettingWidget.dart';
+
+import 'package:agora/widgets/Main_widgets/AppBarCustom.dart';
+import 'package:agora/widgets/Main_widgets/SettingWidget.dart';
 import 'package:flutter/material.dart';
 
 class Languages extends StatefulWidget {

@@ -1,4 +1,4 @@
-import 'package:agora/widgets/NotificationsUI.dart';
+import 'package:agora/widgets/Main_widgets/NotificationsUI.dart';
 import 'package:flutter/material.dart';
 
 class Notifications extends StatefulWidget {
@@ -72,10 +72,6 @@ class _NotificationsState extends State<Notifications> {
                 subtitle: "Sami has followed you you can follow back",
                 timestamp: "09:50",
               ),
-
-
-
-
             ],
           ),
         ));

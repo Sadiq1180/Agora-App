@@ -1,4 +1,5 @@
-import 'package:agora/widgets/CircularAvatar.dart';
+import 'package:agora/constants/app_colors.dart';
+import 'package:agora/widgets/Main_widgets/CircularAvatar.dart' show CircularAvatar;
 import 'package:flutter/material.dart';
 
 class GroupsMainContainer extends StatelessWidget {
@@ -48,10 +49,10 @@ class GroupsMainContainer extends StatelessWidget {
                   width: 335,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: Colors.white,
+                    color: SColors.white,
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.black.withOpacity(0.2),
+                        color: SColors.black.withOpacity(0.2),
                         blurRadius: 10,
                       ),
                     ],

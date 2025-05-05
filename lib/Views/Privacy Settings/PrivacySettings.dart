@@ -1,9 +1,7 @@
 import 'package:agora/Views/Privacy%20Settings/OnlineStatus.dart';
-import 'package:agora/widgets/AppBarCustom.dart';
-import 'package:agora/widgets/SettingWidget.dart';
+import 'package:agora/widgets/Main_widgets/AppBarCustom.dart';
+import 'package:agora/widgets/Main_widgets/SettingWidget.dart';
 import 'package:flutter/material.dart';
-
-import '../../Greets.dart';
 import 'BlockedUsers.dart';
 import 'Greetss.dart';
 import 'Groupss.dart';

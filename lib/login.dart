@@ -2,7 +2,7 @@ import 'package:agora/Follow.dart';
 import 'package:agora/Forgot.dart';
 import 'package:agora/constants/app_colors.dart';
 import 'package:agora/register.dart';
-import 'package:agora/widgets/custom_divider.dart';
+import 'package:agora/widgets/Main_widgets/custom_divider.dart';
 import 'package:flutter/material.dart';
 
 class login extends StatefulWidget {

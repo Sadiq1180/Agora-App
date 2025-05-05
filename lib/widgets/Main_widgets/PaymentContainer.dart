@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+import 'package:agora/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class PaymentContainer extends StatelessWidget {
@@ -9,18 +9,15 @@ class PaymentContainer extends StatelessWidget {
   final bool isElevatedButton;
   final Color? color;
 
-
-  const PaymentContainer(
-      {super.key,
-      required this.imagePath,
-      required this.title,
-      this.subtitle,
-      this.connectionStatus,
-      this.isElevatedButton = false,
-        this.color,
-
-
-      });
+  const PaymentContainer({
+    super.key,
+    required this.imagePath,
+    required this.title,
+    this.subtitle,
+    this.connectionStatus,
+    this.isElevatedButton = false,
+    this.color,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -32,11 +29,11 @@ class PaymentContainer extends StatelessWidget {
             width: 335,
             height: 72,
             decoration: BoxDecoration(
-              color: color ?? Colors.white,
+              color: color ?? SColors.white,
               borderRadius: BorderRadius.circular(10),
               boxShadow: [
                 BoxShadow(
-                  color: Colors.grey.withOpacity(0.3),
+                  color: SColors.grey.withOpacity(0.3),
                   spreadRadius: 1,
                   blurRadius: 1,
                   offset: Offset(0, 1),
@@ -66,7 +63,7 @@ class PaymentContainer extends StatelessWidget {
                           style: TextStyle(
                               fontSize: 12,
                               fontWeight: FontWeight.w300,
-                              color: Colors.grey)),
+                              color: SColors.grey)),
                     ]
                   ],
                 ),
@@ -76,14 +73,14 @@ class PaymentContainer extends StatelessWidget {
                       style: TextStyle(
                           fontSize: 10,
                           fontWeight: FontWeight.w300,
-                          color: Colors.grey)),
+                          color: SColors.grey)),
                 ],
                 SizedBox(width: 14),
                 if (isElevatedButton)
                   ElevatedButton(
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.red,
+                          backgroundColor: SColors.error,
                           padding:
                               EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                           textStyle: TextStyle(
@@ -92,9 +89,8 @@ class PaymentContainer extends StatelessWidget {
                               borderRadius: BorderRadius.circular(6))),
                       child: Text(
                         "Connect",
-                        style: TextStyle(color: Colors.white),
-                      )
-                  ),
+                        style: TextStyle(color: SColors.white),
+                      )),
                 SizedBox(width: 13),
               ],
             ),

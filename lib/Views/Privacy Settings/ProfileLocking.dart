@@ -1,8 +1,8 @@
-import 'package:agora/widgets/AppBarCustom.dart';
+import 'package:agora/widgets/Main_widgets/AppBarCustom.dart';
+import 'package:agora/widgets/Main_widgets/SettingWidget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../../widgets/SettingWidget.dart';
 
 class ProfileLocking extends StatefulWidget {
   const ProfileLocking({super.key});

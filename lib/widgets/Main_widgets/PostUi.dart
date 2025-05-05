@@ -1,3 +1,4 @@
+import 'package:agora/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class PostUi extends StatelessWidget {
@@ -64,7 +65,7 @@ class PostUi extends StatelessWidget {
                           style: TextStyle(
                               fontSize: 12,
                               fontWeight: FontWeight.w400,
-                              color: Colors.grey),
+                              color: SColors.grey),
                         ),
                         SizedBox(width: 2),
                          if (onElevatedButtonPressed != null)
@@ -74,7 +75,7 @@ class PostUi extends StatelessWidget {
                                 onPressed: onElevatedButtonPressed,
                                 child: Text("Follow"),
                                 style: ElevatedButton.styleFrom(
-                                    backgroundColor: Colors.lightBlueAccent)),
+                                    backgroundColor: SColors.lightBlueAccent)),
                           ),
                         SizedBox(width: 2),
                         Text(
@@ -82,7 +83,7 @@ class PostUi extends StatelessWidget {
                           style: TextStyle(
                               fontSize: 12,
                               fontWeight: FontWeight.w500,
-                              color: Colors.black),
+                              color: SColors.black),
                         ),
                       ],
                     ),
@@ -123,11 +124,11 @@ class PostUi extends StatelessWidget {
               width: postImageWidth ?? double.infinity,
               height: postImageHeight ?? 367,
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: SColors.white,
                 borderRadius: BorderRadius.circular(20),
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.black.withOpacity(0.1),
+                    color: SColors.black.withOpacity(0.1),
                     spreadRadius: 2,
                     blurRadius: 5,
                     offset: Offset(0, 3),
@@ -194,7 +195,7 @@ class PostUi extends StatelessWidget {
                   child: TextFormField(
                     decoration: InputDecoration(
                       contentPadding: EdgeInsets.symmetric(vertical: 10),
-                      fillColor: Colors.white,
+                      fillColor: SColors.white,
                       filled: true,
                       hintText: "Write your comment",
                       hintStyle:
@@ -212,7 +213,7 @@ class PostUi extends StatelessWidget {
                   child: Text(
                     "Post",
                     style: TextStyle(
-                      color: Colors.blueAccent,
+                      color: SColors.info,
                       fontWeight: FontWeight.w500,
                     ),
                   ),

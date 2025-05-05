@@ -1,7 +1,8 @@
 import 'package:agora/MySaved.dart';
 import 'package:agora/ProfileNotifications.dart';
-import 'package:agora/widgets/AppBarCustom.dart';
-import 'package:agora/widgets/SettingWidget.dart';
+import 'package:agora/constants/app_colors.dart';
+import 'package:agora/widgets/Main_widgets/AppBarCustom.dart';
+import 'package:agora/widgets/Main_widgets/SettingWidget.dart';
 import 'package:flutter/material.dart';
 import 'FeedBack.dart';
 import 'Help.dart';
@@ -182,7 +183,7 @@ class ProfileSetting extends StatelessWidget {
               },
               child: SettingWidget(
                 title: "Log Out",
-                titleColor: Colors.red,
+                titleColor: SColors.error,
                 weight: FontWeight.w500,
                 onTap: () {},
               ),

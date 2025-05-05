@@ -1,6 +1,8 @@
-import 'package:agora/widgets/CircularAvatar.dart';
-import 'package:agora/widgets/GroupsMainContainer.dart';
-import 'package:agora/widgets/PostUi.dart';
+
+import 'package:agora/constants/app_colors.dart';
+import 'package:agora/widgets/Main_widgets/CircularAvatar.dart';
+import 'package:agora/widgets/Main_widgets/GroupsMainContainer.dart';
+import 'package:agora/widgets/Main_widgets/PostUi.dart';
 import 'package:flutter/material.dart';
 
 import 'JoinedGroup.dart';
@@ -369,7 +371,7 @@ class _GroupViewState extends State<GroupView> {
                               style: TextStyle(
                                   fontSize: 14,
                                   fontWeight: FontWeight.w500,
-                                  color: Colors.blueAccent),
+                                  color: SColors.lightBlue),
                             )),
                       ],
                     ),

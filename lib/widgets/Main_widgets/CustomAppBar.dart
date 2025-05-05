@@ -1,3 +1,4 @@
+import 'package:agora/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -15,8 +16,8 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar({
     super.key,
     required this.title,
-    this.backgroundColor = Colors.lightBlueAccent,
-    this.titleColor = Colors.white,
+    this.backgroundColor = SColors.lightBlueAccent,
+    this.titleColor = SColors.white,
     this.elevation = 4,
     this.centerTitle = true,
     required this.actionIcon,
@@ -52,12 +53,12 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                 height: 30,
                 width: 30,
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: SColors.white,
                   borderRadius: BorderRadius.circular(8),
                 ),
                 child: IconButton(
                   onPressed: onActionPressed,
-                  icon: Icon(actionIcon, color: Colors.black, size: 18),
+                  icon: Icon(actionIcon, color: SColors.black, size: 18),
                   padding: EdgeInsets.zero,
                   constraints: const BoxConstraints(),
                 ),
@@ -65,7 +66,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
             ),
             IconButton(
               onPressed: onNotificationPressed,
-              icon: Icon(notificationIcon, color: Colors.white, size: 30),
+              icon: Icon(notificationIcon, color: SColors.white, size: 30),
             ),
           ],
         ),

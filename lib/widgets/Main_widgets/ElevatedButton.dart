@@ -1,3 +1,4 @@
+import 'package:agora/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class CustomElevatedButton extends StatelessWidget {
@@ -11,7 +12,7 @@ class CustomElevatedButton extends StatelessWidget {
     super.key,
     required this.text,
     required this.onPressed,
-    this.color = Colors.lightBlue,
+    this.color = SColors.lightBlue,
     this.width = 335,
     this.height = 50,
   });
@@ -29,7 +30,7 @@ class CustomElevatedButton extends StatelessWidget {
       onPressed: onPressed,
       child: Text(
         text,
-        style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500,color: Colors.white),
+        style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500,color: SColors.white),
       ),
     );
   }

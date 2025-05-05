@@ -1,6 +1,8 @@
 import 'package:agora/BottomNavigation.dart';
-import 'package:agora/widgets/CommentContainer.dart';
-import 'package:agora/widgets/VisitorsAvatar.dart';
+import 'package:agora/constants/app_colors.dart';
+import 'package:agora/widgets/Main_widgets/CommentContainer.dart';
+import 'package:agora/widgets/Main_widgets/VisitorsAvatar.dart';
+
 import 'package:flutter/material.dart';
 
 class Greets extends StatelessWidget {
@@ -227,7 +229,7 @@ class Greets extends StatelessWidget {
               TextField(
                 decoration: InputDecoration(
                   filled: true,
-                  fillColor: Colors.white,
+                  fillColor: SColors.white,
                   hintText: 'Write your Comment',
                   suffixIcon: Icon(Icons.send),
                   border: OutlineInputBorder(
@@ -265,7 +267,7 @@ class Greets extends StatelessWidget {
                           onPressed: () {},
                         ),
                         hitTestBehavior: HitTestBehavior.translucent,
-                        backgroundColor: Colors.red,
+                        backgroundColor: SColors.error,
                         duration: Duration(seconds: 2),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.only(
@@ -278,15 +280,15 @@ class Greets extends StatelessWidget {
                         content: Text(
                           "Network Error Go back",
                           style: TextStyle(
-                              color: Colors.white, fontWeight: FontWeight.w600),
+                              color: SColors.white, fontWeight: FontWeight.w600),
                         ),
                       ));
                     },
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.white,
+                      backgroundColor: SColors.white,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
-                        side: BorderSide(color: Colors.lightBlueAccent),
+                        side: BorderSide(color: SColors.lightBlueAccent),
                       ),
                       padding: EdgeInsets.zero,
                     ),
@@ -294,7 +296,7 @@ class Greets extends StatelessWidget {
                       "See more",
                       maxLines: 1,
                       style: TextStyle(
-                          color: Colors.lightBlueAccent,
+                          color: SColors.lightBlueAccent,
                           fontSize: 10,
                           fontWeight: FontWeight.w300),
                     ),
@@ -310,7 +312,7 @@ class Greets extends StatelessWidget {
        child: ElevatedButton(
          style: ElevatedButton.styleFrom(
            fixedSize: Size(310, 45),
-           backgroundColor: Colors.lightBlueAccent,
+           backgroundColor: SColors.lightBlueAccent,
            shape: RoundedRectangleBorder(
              borderRadius: BorderRadius.circular(25),
            ),
@@ -323,7 +325,7 @@ class Greets extends StatelessWidget {
            style: TextStyle(
                fontSize: 16,
                fontWeight: FontWeight.w500,
-               color: Colors.white),
+               color: SColors.white),
          ),
        ),
      ),

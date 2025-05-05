@@ -1,6 +1,7 @@
-import 'package:agora/widgets/AppBarCustom.dart';
-import 'package:agora/widgets/PostUi.dart';
-import 'package:agora/widgets/VisitorsAvatar.dart';
+import 'package:agora/constants/app_colors.dart';
+import 'package:agora/widgets/Main_widgets/AppBarCustom.dart';
+import 'package:agora/widgets/Main_widgets/PostUi.dart';
+import 'package:agora/widgets/Main_widgets/VisitorsAvatar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -22,9 +23,9 @@ class _MySavedState extends State<MySaved> with TickerProviderStateMixin {
           DefaultTabController(
             length: 2,
             child: TabBar(
-              indicatorColor: Colors.lightBlueAccent,
-              labelColor: Colors.lightBlueAccent,
-              unselectedLabelColor: Colors.black38,
+              indicatorColor: SColors.lightBlueAccent,
+              labelColor: SColors.lightBlueAccent,
+              unselectedLabelColor: SColors.black,
               controller: tabController3,
               tabs: [
                 Tab(
@@ -66,10 +67,10 @@ class _MySavedState extends State<MySaved> with TickerProviderStateMixin {
                         padding: EdgeInsets.only(left: 20,right: 20),
                         margin: EdgeInsets.symmetric(vertical: 10),
                         decoration: BoxDecoration(
-                          color: Colors.white,
+                          color: SColors.white,
                           borderRadius: BorderRadius.circular(15),
                           boxShadow: [
-                            BoxShadow(color: Colors.grey.shade300, blurRadius: 5, spreadRadius: 2),
+                            BoxShadow(color: SColors.grey.withOpacity(0.3), blurRadius: 5, spreadRadius: 2),
                           ],
                         ),
                         child: Column(
@@ -95,7 +96,7 @@ class _MySavedState extends State<MySaved> with TickerProviderStateMixin {
                               alignment: Alignment.topLeft,
                               child: Text(
                                 'Islamabad,Pakistan',
-                                style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: Colors.grey[700]),
+                                style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: SColors.grey),
                               ),
                             ),
                             SizedBox(height: 10),
@@ -103,7 +104,7 @@ class _MySavedState extends State<MySaved> with TickerProviderStateMixin {
                               alignment: Alignment.topLeft,
                               child: Text(
                                 'Thu 24 Nov, 2023 05:00 pm',
-                                style: TextStyle(fontSize: 12, color: Colors.grey[600]),
+                                style: TextStyle(fontSize: 12, color: SColors.grey),
                               ),
                             ),
                             SizedBox(height: 10),
@@ -148,10 +149,10 @@ class _MySavedState extends State<MySaved> with TickerProviderStateMixin {
                         padding: EdgeInsets.only(left: 20,right: 20),
                         margin: EdgeInsets.symmetric(vertical: 10),
                         decoration: BoxDecoration(
-                          color: Colors.white,
+                          color: SColors.white,
                           borderRadius: BorderRadius.circular(15),
                           boxShadow: [
-                            BoxShadow(color: Colors.grey.shade300, blurRadius: 5, spreadRadius: 2),
+                            BoxShadow(color: SColors.grey.withOpacity(0.3), blurRadius: 5, spreadRadius: 2),
                           ],
                         ),
                         child: Column(
@@ -185,7 +186,7 @@ class _MySavedState extends State<MySaved> with TickerProviderStateMixin {
                               alignment: Alignment.topLeft,
                               child: Text(
                                 'Thu 24 Nov, 2023 05:00 pm',
-                                style: TextStyle(fontSize: 12, color: Colors.grey[600]),
+                                style: TextStyle(fontSize: 12, color: SColors.grey.withOpacity(0.7)),
                               ),
                             ),
                             SizedBox(height: 10),

@@ -1,6 +1,6 @@
 import 'package:agora/Views/Privacy%20Settings/widget/BlockedUsersCont.dart';
+import 'package:agora/widgets/Main_widgets/AppBarCustom.dart';
 import 'package:flutter/material.dart';
-import '../../widgets/AppBarCustom.dart';
 
 class BlockedUsers extends StatefulWidget {
   const BlockedUsers({super.key});

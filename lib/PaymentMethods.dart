@@ -1,5 +1,7 @@
-import 'package:agora/widgets/AppBarCustom.dart';
-import 'package:agora/widgets/PaymentContainer.dart';
+
+import 'package:agora/constants/app_colors.dart';
+import 'package:agora/widgets/Main_widgets/AppBarCustom.dart';
+import 'package:agora/widgets/Main_widgets/PaymentContainer.dart';
 import 'package:flutter/material.dart';
 
 class PaymentMethods extends StatelessWidget {
@@ -38,7 +40,7 @@ class PaymentMethods extends StatelessWidget {
                 child: Text(
                   "Add new card",
                   style: TextStyle(
-                      color: Colors.blue,
+                      color: SColors.info,
                       fontWeight: FontWeight.w500,
                       fontSize: 16),
                 )),

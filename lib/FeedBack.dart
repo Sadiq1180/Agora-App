@@ -1,4 +1,5 @@
-import 'package:agora/widgets/AppBarCustom.dart';
+import 'package:agora/constants/app_colors.dart';
+import 'package:agora/widgets/Main_widgets/AppBarCustom.dart';
 import 'package:flutter/material.dart';
 
 class FeedBack extends StatelessWidget {
@@ -36,7 +37,7 @@ class FeedBack extends StatelessWidget {
               width: 345,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.lightBlueAccent,
+                  backgroundColor: SColors.lightBlueAccent,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(25),
                   ),
@@ -47,7 +48,7 @@ class FeedBack extends StatelessWidget {
                   style: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w500,
-                      color: Colors.white),
+                      color: SColors.white),
                 ),
               ),
             ),

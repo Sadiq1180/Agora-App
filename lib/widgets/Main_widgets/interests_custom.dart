@@ -1,3 +1,6 @@
+// ignore_for_file: deprecated_member_use
+
+import 'package:agora/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class InterestsCustomWidget extends StatelessWidget {
@@ -18,7 +21,7 @@ class InterestsCustomWidget extends StatelessWidget {
               style: TextStyle(
                 fontSize: 14,
                 fontWeight: FontWeight.w500,
-                color: Colors.black,
+                color: SColors.black,
               ),
             ),
           ),
@@ -31,7 +34,7 @@ class InterestsCustomWidget extends StatelessWidget {
                 height: 30,
                 width: 90,
                 decoration: BoxDecoration(
-                  color: Colors.grey[200],
+                  color: SColors.grey.withOpacity(0.2),
                   borderRadius: BorderRadius.circular(5),
                 ),
                 child: Center(
@@ -45,7 +48,7 @@ class InterestsCustomWidget extends StatelessWidget {
                 height: 30,
                 width: 90,
                 decoration: BoxDecoration(
-                  color: Colors.grey[200],
+                  color: SColors.grey.withOpacity(0.2),
                   borderRadius: BorderRadius.circular(5),
                 ),
                 child: Center(
@@ -59,7 +62,7 @@ class InterestsCustomWidget extends StatelessWidget {
                 height: 30,
                 width: 90,
                 decoration: BoxDecoration(
-                  color: Colors.grey[200],
+                  color: SColors.grey.withOpacity(0.2),
                   borderRadius: BorderRadius.circular(5),
                 ),
                 child: Center(
@@ -77,7 +80,7 @@ class InterestsCustomWidget extends StatelessWidget {
                 height: 30,
                 width: 90,
                 decoration: BoxDecoration(
-                  color: Colors.grey[200],
+                  color: SColors.grey.withOpacity(0.2),
                   borderRadius: BorderRadius.circular(5),
                 ),
                 child: Center(
@@ -91,7 +94,7 @@ class InterestsCustomWidget extends StatelessWidget {
                 height: 30,
                 width: 90,
                 decoration: BoxDecoration(
-                  color: Colors.grey[200],
+                  color:  SColors.grey.withOpacity(0.2),
                   borderRadius: BorderRadius.circular(5),
                 ),
                 child: Center(
@@ -105,7 +108,7 @@ class InterestsCustomWidget extends StatelessWidget {
                 height: 30,
                 width: 90,
                 decoration: BoxDecoration(
-                  color: Colors.grey[200],
+                  color:  SColors.grey.withOpacity(0.2),
                   borderRadius: BorderRadius.circular(5),
                 ),
                 child: Center(
@@ -123,7 +126,7 @@ class InterestsCustomWidget extends StatelessWidget {
                 height: 30,
                 width: 90,
                 decoration: BoxDecoration(
-                  color: Colors.grey[200],
+                  color:  SColors.grey.withOpacity(0.2),
                   borderRadius: BorderRadius.circular(5),
                 ),
                 child: Center(

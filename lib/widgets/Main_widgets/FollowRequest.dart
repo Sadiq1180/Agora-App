@@ -1,3 +1,4 @@
+import 'package:agora/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class FollowRequest extends StatefulWidget {
@@ -37,7 +38,7 @@ class _FollowRequestState extends State<FollowRequest> {
         padding: EdgeInsets.symmetric(horizontal: 5.5, vertical: 6.5),
         margin: EdgeInsets.symmetric(horizontal: 10),
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: SColors.white,
           borderRadius: BorderRadius.circular(15),
         ),
         child: Row(
@@ -85,7 +86,7 @@ class _FollowRequestState extends State<FollowRequest> {
                 child: ElevatedButton(
                   onPressed: widget.onPressed ?? () {},
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.lightBlueAccent,
+                    backgroundColor: SColors.lightBlueAccent,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
                     ),
@@ -95,7 +96,7 @@ class _FollowRequestState extends State<FollowRequest> {
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.center,
-                    style: TextStyle(color: Colors.white),
+                    style: TextStyle(color: SColors.white),
                   ),
                 ),
               ),

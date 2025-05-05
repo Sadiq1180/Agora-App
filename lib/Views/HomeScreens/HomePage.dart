@@ -1,7 +1,7 @@
 import 'package:agora/Notifications.dart';
 import 'package:agora/constants/app_colors.dart';
-import 'package:agora/widgets/CustomAppBar.dart';
-import 'package:agora/widgets/PostUi.dart';
+import 'package:agora/widgets/Main_widgets/CustomAppBar.dart';
+import 'package:agora/widgets/Main_widgets/PostUi.dart';
 import 'package:flutter/material.dart';
 import 'Create Events/EventDetails.dart';
 import 'CreatePoll/CreatePoll.dart';

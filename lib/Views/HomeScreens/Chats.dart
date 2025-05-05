@@ -1,6 +1,7 @@
 import 'package:agora/Notifications.dart';
 import 'package:agora/TextMessage.dart';
-import 'package:agora/widgets/CustomAppBar.dart';
+import 'package:agora/constants/app_colors.dart';
+import 'package:agora/widgets/Main_widgets/CustomAppBar.dart';
 import 'package:flutter/material.dart';
 
 class Chats extends StatefulWidget {
@@ -79,8 +80,8 @@ class _ChatsState extends State<Chats> {
                       decoration: InputDecoration(
                         contentPadding: const EdgeInsets.symmetric(vertical: 12),
                         prefixIcon:
-                        const Icon(Icons.search_sharp, color: Colors.grey),
-                        fillColor: Colors.white,
+                        const Icon(Icons.search_sharp, color: SColors.grey),
+                        fillColor: SColors.white,
                         filled: true,
                         hintText: "Search names, locations, tags, groups",
                         hintStyle: const TextStyle(
@@ -101,12 +102,13 @@ class _ChatsState extends State<Chats> {
                   height: 40,
                   width: 44,
                   decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: SColors.white,
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: IconButton(
-                    icon: const Icon(Icons.vertical_distribute, color: Colors.blue),
-                    onPressed: () {},
+                    icon: const Icon(Icons.vertical_distribute, color: SColors.lightBlue),
+                    onPressed: () {
+                    },
                   ),
                 ),
               ),
@@ -130,7 +132,7 @@ class _ChatsState extends State<Chats> {
                   child: const Text(
                     "Requests",
                     style: TextStyle(
-                        fontSize: 16, fontWeight: FontWeight.w500, color: Colors.black),
+                        fontSize: 16, fontWeight: FontWeight.w500, color: SColors.black),
                   ),
                 ),
               ),
@@ -208,7 +210,7 @@ class _ChatsState extends State<Chats> {
               width: 50,
               height: 50,
               decoration: const BoxDecoration(
-                color: Colors.blue,
+                color: SColors.primaryLight,
                 shape: BoxShape.circle,
               ),
               child: IconButton(

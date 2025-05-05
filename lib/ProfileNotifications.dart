@@ -1,5 +1,7 @@
-import 'package:agora/widgets/AppBarCustom.dart';
-import 'package:agora/widgets/SettingWidget.dart';
+
+import 'package:agora/constants/app_colors.dart';
+import 'package:agora/widgets/Main_widgets/AppBarCustom.dart';
+import 'package:agora/widgets/Main_widgets/SettingWidget.dart';
 import 'package:flutter/material.dart';
 
 class ProfileNotifications extends StatefulWidget {
@@ -27,9 +29,9 @@ class _ProfileNotificationsState extends State<ProfileNotifications> {
           return SettingWidget(
             title: key,
             trailingWidget: Switch(
-              activeColor: Colors.blue,
+              activeColor: SColors.info,
               inactiveThumbColor: Colors.grey,
-              thumbColor: MaterialStateProperty.all(Colors.white),
+              thumbColor: MaterialStateProperty.all(SColors.white),
               value: switchStates[key]!,
               onChanged: (value) {
                 setState(() {

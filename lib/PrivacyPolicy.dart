@@ -1,4 +1,7 @@
-import 'package:agora/widgets/AppBarCustom.dart';
+// ignore_for_file: deprecated_member_use
+
+import 'package:agora/constants/app_colors.dart';
+import 'package:agora/widgets/Main_widgets/AppBarCustom.dart';
 import 'package:flutter/material.dart';
 
 class PrivacyPolicy extends StatelessWidget {
@@ -35,7 +38,7 @@ class PrivacyPolicy extends StatelessWidget {
               style: TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.w300,
-                  color: Colors.black),
+                  color: SColors.black),
             ),
           ),
           Padding(
@@ -45,7 +48,7 @@ class PrivacyPolicy extends StatelessWidget {
               style: TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.w300,
-                  color: Colors.black54),
+                  color: SColors.black.withOpacity(0.5)),
             ),
           ),
           Padding(
@@ -55,7 +58,7 @@ class PrivacyPolicy extends StatelessWidget {
               style: TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.w300,
-                  color: Colors.black),
+                  color: SColors.black),
             ),
           ),
           Padding(
@@ -66,7 +69,7 @@ class PrivacyPolicy extends StatelessWidget {
               style: TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.w300,
-                  color: Colors.black54),
+                  color: SColors.black.withOpacity(0.5)),
             ),
           ),
           Padding(
@@ -76,7 +79,7 @@ class PrivacyPolicy extends StatelessWidget {
               style: TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.w300,
-                  color: Colors.black),
+                  color: SColors.black),
             ),
           ),
           Padding(
@@ -88,11 +91,11 @@ class PrivacyPolicy extends StatelessWidget {
                   style: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w300,
-                      color: Colors.black54),
+                      color: SColors.black.withOpacity(0.5)),
                 ),
                 Text(
                   "Privacy Policy",
-                  style: TextStyle(color: Colors.blue),
+                  style: TextStyle(color: SColors.info),
                 ),
               ],
             ),
@@ -101,7 +104,7 @@ class PrivacyPolicy extends StatelessWidget {
             padding: const EdgeInsets.only(left: 20.0, right: 20),
             child: Text(
               "to understand how we collect, use, and protect your personal information.",
-              style: TextStyle(fontSize: 14, fontWeight: FontWeight.w300,color: Colors.black54),
+              style: TextStyle(fontSize: 14, fontWeight: FontWeight.w300,color: SColors.black.withOpacity(0.5)),
             ),
           ),
           Padding(
@@ -111,7 +114,7 @@ class PrivacyPolicy extends StatelessWidget {
               style: TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.w300,
-                  color: Colors.black),
+                  color: SColors.black),
             ),
           ),
           Padding(
@@ -121,7 +124,7 @@ class PrivacyPolicy extends StatelessWidget {
               style: TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.w300,
-                  color: Colors.black54),
+                  color: SColors.black.withOpacity(0.5)),
             ),
           ),
           Padding(
@@ -131,7 +134,7 @@ class PrivacyPolicy extends StatelessWidget {
               style: TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.w300,
-                  color: Colors.black),
+                  color: SColors.black),
             ),
           ),
           Padding(
@@ -141,7 +144,7 @@ class PrivacyPolicy extends StatelessWidget {
               style: TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.w300,
-                  color: Colors.black54),
+                  color: SColors.black.withOpacity(0.5)),
             ),
           )
         ],

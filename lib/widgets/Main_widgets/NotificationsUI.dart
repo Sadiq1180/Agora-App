@@ -1,4 +1,5 @@
-import 'package:agora/widgets/CircularAvatar.dart';
+import 'package:agora/constants/app_colors.dart';
+import 'package:agora/widgets/Main_widgets/CircularAvatar.dart';
 import 'package:flutter/material.dart';
 
 class NotificationsUI extends StatelessWidget {
@@ -23,7 +24,7 @@ class NotificationsUI extends StatelessWidget {
       width: 335,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
-        color: Colors.white,
+        color: SColors.white,
       ),
       child: Row(
         children: [

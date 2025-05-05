@@ -1,4 +1,4 @@
-import 'package:agora/widgets/GroupsUi.dart';
+import 'package:agora/widgets/Main_widgets/GroupsUi.dart';
 import 'package:flutter/material.dart';
 
 class TabBarEvents extends StatefulWidget {

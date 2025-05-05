@@ -55,28 +55,28 @@ class MainProfileCustomWidgett extends StatelessWidget {
                   style: TextStyle(
                       fontSize: 10,
                       fontWeight: FontWeight.w300,
-                      color: Colors.white),
+                      color: SColors.white),
                 ),
                 Text(
                   "Upcoming Programmer",
                   style: TextStyle(
                       fontSize: 10,
                       fontWeight: FontWeight.w300,
-                      color: Colors.white),
+                      color: SColors.white),
                 ),
                 Text(
                   "Python Developer",
                   style: TextStyle(
                       fontSize: 10,
                       fontWeight: FontWeight.w300,
-                      color: Colors.white),
+                      color: SColors.white),
                 ),
                 Text(
                   "#coding #python #Artificialintelligence",
                   style: TextStyle(
                       fontSize: 10,
                       fontWeight: FontWeight.w300,
-                      color: Colors.white),
+                      color: SColors.white),
                 ),
               ],
             ),

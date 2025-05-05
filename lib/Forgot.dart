@@ -76,7 +76,7 @@ class _ForgotState extends State<Forgot> {
                         builder: (context) => Verification()));
                   },
                   style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.lightBlueAccent),
+                      backgroundColor: SColors.lightBlueAccent),
                   child: Text("Send Code"),
                 ),
               )

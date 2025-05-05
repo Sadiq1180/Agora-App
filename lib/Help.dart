@@ -1,4 +1,5 @@
-import 'package:agora/widgets/AppBarCustom.dart';
+import 'package:agora/constants/app_colors.dart';
+import 'package:agora/widgets/Main_widgets/AppBarCustom.dart';
 import 'package:flutter/material.dart';
 
 class Help extends StatelessWidget {
@@ -47,7 +48,7 @@ class Help extends StatelessWidget {
                 style: TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.w300,
-                    color: Colors.blue),
+                    color: SColors.lightBlue),
               ),
             ),
             // Padding(
@@ -81,11 +82,11 @@ class Help extends StatelessWidget {
                     maxWidth: 335,
                     maxHeight: 48,
                   ),
-                  fillColor: Colors.white,
+                  fillColor: SColors.white,
                   filled: true,
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8),
-                    borderSide: BorderSide(color: Colors.grey),
+                    borderSide: BorderSide(color: SColors.grey),
                   ),
                   hintText: "First Name",
                   hintStyle:
@@ -104,11 +105,11 @@ class Help extends StatelessWidget {
                     maxWidth: 335,
                     maxHeight: 48,
                   ),
-                  fillColor: Colors.white,
+                  fillColor: SColors.white,
                   filled: true,
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8),
-                    borderSide: BorderSide(color: Colors.grey),
+                    borderSide: BorderSide(color: SColors.grey),
                   ),
                   hintText: "Last Name",
                   hintStyle:
@@ -126,11 +127,11 @@ class Help extends StatelessWidget {
                   keyboardType: TextInputType.multiline,
                   maxLines: 15,
                   decoration: InputDecoration(
-                    fillColor: Colors.white,
+                    fillColor: SColors.white,
                     filled: true,
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(12),
-                      borderSide: const BorderSide(color: Colors.grey),
+                      borderSide: BorderSide(color: SColors.grey),
                     ),
                     hintText: "Comment",
                     hintStyle: const TextStyle(
@@ -147,7 +148,7 @@ class Help extends StatelessWidget {
                 width: 345,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.lightBlueAccent,
+                    backgroundColor: SColors.lightBlueAccent,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(25),
                     ),
@@ -158,7 +159,7 @@ class Help extends StatelessWidget {
                     style: TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w500,
-                        color: Colors.white),
+                        color: SColors.white),
                   ),
                 ),
               ),

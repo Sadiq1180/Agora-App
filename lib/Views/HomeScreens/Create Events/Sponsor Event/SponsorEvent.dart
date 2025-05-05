@@ -1,4 +1,5 @@
 
+import 'package:agora/constants/app_colors.dart';
 import 'package:agora/widgets/Main_widgets/AppBarCustom.dart';
 import 'package:agora/widgets/Main_widgets/ElevatedButton.dart';
 import 'package:flutter/material.dart';
@@ -70,11 +71,11 @@ class _SponsorEventState extends State<SponsorEvent> {
                   hintText: "Enter the name for your campaign",
                   hintStyle:
                   TextStyle(fontSize: 12, fontWeight: FontWeight.w300),
-                  fillColor: Colors.white,
+                  fillColor: SColors.white,
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
                     borderSide: BorderSide(
-                      color: Colors.grey,
+                      color: SColors.grey,
                       width: 1.0,
                     ),
                   ),
@@ -90,10 +91,10 @@ class _SponsorEventState extends State<SponsorEvent> {
             Padding(
               padding: const EdgeInsets.only(right: 20, left: 20, top: 5),
               child: DropdownButtonFormField(
-                  dropdownColor: Colors.white,
+                  dropdownColor: SColors.white,
                   icon: Icon(Icons.keyboard_arrow_down),
                   decoration: InputDecoration(
-                    fillColor: Colors.white,
+                    fillColor: SColors.white,
                     filled: true,
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
@@ -170,9 +171,9 @@ class _SponsorEventState extends State<SponsorEvent> {
               child: Container(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: SColors.white,
                   borderRadius: BorderRadius.circular(10),
-                  border: Border.all(color: Colors.grey),
+                  border: Border.all(color: SColors.grey),
                 ),
                 child: DropdownButtonHideUnderline(
                   child: DropdownButton<String>(
@@ -234,10 +235,10 @@ class _SponsorEventState extends State<SponsorEvent> {
             Padding(
               padding: const EdgeInsets.only(right: 20, left: 20, top: 5),
               child: DropdownButtonFormField(
-                  dropdownColor: Colors.white,
+                  dropdownColor: SColors.white,
                   icon: Icon(Icons.keyboard_arrow_down),
                   decoration: InputDecoration(
-                    fillColor: Colors.white,
+                    fillColor: SColors.white,
                     filled: true,
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
@@ -274,7 +275,7 @@ class _SponsorEventState extends State<SponsorEvent> {
                 width: 320,
                 padding: EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                  border: Border.all(color: Colors.blue.shade200),
+                  border: Border.all(color: SColors.border),
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Wrap(
@@ -287,14 +288,14 @@ class _SponsorEventState extends State<SponsorEvent> {
                       EdgeInsets.symmetric(horizontal: 5, vertical: 6),
                       label: Text(
                         interest,
-                        style: TextStyle(color: Colors.white),
+                        style: TextStyle(color: SColors.white),
                       ),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
                       ),
-                      backgroundColor: Colors.lightBlueAccent,
+                      backgroundColor: SColors.lightBlueAccent,
                       deleteIcon:
-                      Icon(Icons.close, color: Colors.white, size: 18),
+                      Icon(Icons.close, color: SColors.white, size: 18),
                       onDeleted: () {
                         setState(() {
                           interests.remove(interest);
@@ -318,7 +319,7 @@ class _SponsorEventState extends State<SponsorEvent> {
                 width: 320,
                 padding: EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                  border: Border.all(color: Colors.blue.shade200),
+                  border: Border.all(color: SColors.border),
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Wrap(
@@ -329,14 +330,14 @@ class _SponsorEventState extends State<SponsorEvent> {
                       padding: EdgeInsets.symmetric(horizontal: 5, vertical: 6),
                       label: Text(
                         interest,
-                        style: TextStyle(color: Colors.white),
+                        style: TextStyle(color: SColors.white),
                       ),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
                       ),
-                      backgroundColor: Colors.lightBlueAccent,
+                      backgroundColor: SColors.lightBlueAccent,
                       deleteIcon:
-                      Icon(Icons.close, color: Colors.white, size: 18),
+                      Icon(Icons.close, color: SColors.white, size: 18),
                       onDeleted: () {
                         setState(() {
                           interests.remove(interest);
@@ -359,7 +360,7 @@ class _SponsorEventState extends State<SponsorEvent> {
                 width: 320,
                 padding: EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                  border: Border.all(color: Colors.blue.shade200),
+                  border: Border.all(color: SColors.border),
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Wrap(
@@ -370,14 +371,14 @@ class _SponsorEventState extends State<SponsorEvent> {
                       padding: EdgeInsets.symmetric(horizontal: 5, vertical: 6),
                       label: Text(
                         interest,
-                        style: TextStyle(color: Colors.white),
+                        style: TextStyle(color: SColors.white),
                       ),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
                       ),
-                      backgroundColor: Colors.grey,
+                      backgroundColor: SColors.grey,
                       deleteIcon:
-                      Icon(Icons.close, color: Colors.white, size: 18),
+                      Icon(Icons.close, color: SColors.white, size: 18),
                       onDeleted: () {
                         setState(() {
                           interests.remove(interest);
@@ -396,7 +397,7 @@ class _SponsorEventState extends State<SponsorEvent> {
         padding: const EdgeInsets.only(left: 20.0, right: 20, bottom: 20),
         child: CustomElevatedButton(
           text: "Next",
-          color: Colors.lightBlueAccent,
+          color: SColors.lightBlueAccent,
           onPressed: () {
             Navigator.of(context).push(
               MaterialPageRoute(

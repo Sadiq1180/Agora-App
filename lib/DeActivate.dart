@@ -1,5 +1,5 @@
 import 'package:agora/login.dart';
-import 'package:agora/widgets/AppBarCustom.dart';
+import 'package:agora/widgets/Main_widgets/AppBarCustom.dart';
 import 'package:flutter/material.dart';
 
 class DeActivate extends StatelessWidget {

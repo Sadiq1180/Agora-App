@@ -1,3 +1,4 @@
+import 'package:agora/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class Switch extends StatefulWidget {
@@ -11,8 +12,8 @@ class Switch extends StatefulWidget {
     super.key,
     required this.value,
     required this.onChanged,
-    this.activeColor = Colors.blue,
-    this.inactiveThumbColor = Colors.grey,
+    this.activeColor = SColors.info,
+    this.inactiveThumbColor = SColors.grey,
     this.inactiveTrackColor = Colors.black12,
   });
 

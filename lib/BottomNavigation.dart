@@ -1,6 +1,7 @@
 import 'package:agora/Views/HomeScreens/Chats.dart';
 import 'package:agora/Discover.dart';
 import 'package:agora/UserDetails.dart';
+import 'package:agora/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 
 import 'Views/HomeScreens/HomePage.dart';
@@ -37,11 +38,11 @@ class _BottomNavigationState extends State<BottomNavigation> {
           currentIndex: myIndex,
 
           // change color on click
-          backgroundColor: Colors.white,
-          unselectedItemColor: Colors.black45,
-          selectedItemColor: Colors.blue,
+          backgroundColor: SColors.white,
+          unselectedItemColor: SColors.black.withOpacity(0.5),
+          selectedItemColor: SColors.info,
           type: BottomNavigationBarType.fixed,
-          iconSize: 30,
+          iconSize: 24,
 
           // unselectedLabelStyle: TextStyle(fontSize: 12,fontWeight: FontWeight.w300),
           // selectedLabelStyle: TextStyle(fontSize: 12,fontWeight: FontWeight.w300),
@@ -50,26 +51,26 @@ class _BottomNavigationState extends State<BottomNavigation> {
                 backgroundColor: Colors.blueAccent,
                 icon: Icon(
                   myIndex == 0 ? Icons.home : Icons.home_outlined,
-                  color: myIndex == 0 ? Colors.blue : Colors.black,
+                  color: myIndex == 0 ? SColors.info : SColors.black,
                 ),
                 label: "Home"),
             BottomNavigationBarItem(
               icon: Icon(
                 myIndex == 1 ? Icons.search : Icons.search_sharp,
-                color: myIndex == 1 ? Colors.blue : Colors.black,
+                color: myIndex == 1 ? SColors.info : SColors.black,
               ),
               label: "Discover",
             ),
             BottomNavigationBarItem(
                 icon: Icon(
                   myIndex == 2 ? Icons.chat : Icons.chat_outlined,
-                  color: myIndex == 2 ? Colors.blue : Colors.black,
+                  color: myIndex == 2 ? SColors.info : SColors.black,
                 ),
                 label: "Chats"),
             BottomNavigationBarItem(
                 icon: Icon(
                   myIndex == 3 ? Icons.person : Icons.person_outline,
-                  color: myIndex == 3 ? Colors.blue : Colors.black,
+                  color: myIndex == 3 ? SColors.info : SColors.black,
                 ),
                 label: "Profile"),
           ]),

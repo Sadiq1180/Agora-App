@@ -1,6 +1,6 @@
 import 'package:agora/BottomNavigation.dart';
 import 'package:agora/constants/app_colors.dart';
-import 'package:agora/widgets/FollowRequest.dart';
+import 'package:agora/widgets/Main_widgets/FollowRequest.dart';
 import 'package:flutter/material.dart';
 
 class Follow extends StatefulWidget {
@@ -84,7 +84,7 @@ class _FollowState extends State<Follow> {
                 ElevatedButton(
                     onPressed: () => {},
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.lightBlueAccent,
+                      backgroundColor: SColors.lightBlueAccent,
                       padding:
                           EdgeInsets.symmetric(horizontal: 140, vertical: 15),
                       elevation: 3,

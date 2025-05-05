@@ -1,3 +1,4 @@
+import 'package:agora/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class AppBarCustom extends StatelessWidget implements PreferredSizeWidget {
@@ -38,9 +39,9 @@ class AppBarCustom extends StatelessWidget implements PreferredSizeWidget {
           width: 29,
           height: 29,
           decoration: BoxDecoration(
-            color: Colors.white,
+            color: SColors.white,
             borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: Colors.grey),
+            border: Border.all(color: SColors.grey),
             // boxShadow: [
             //   BoxShadow(
             //     color: Colors.black.withOpacity(0.1),
@@ -53,7 +54,7 @@ class AppBarCustom extends StatelessWidget implements PreferredSizeWidget {
             child: IconButton(
               onPressed: onBackPressed ?? () => Navigator.pop(context),
               icon: const Icon(Icons.arrow_back_ios_new,
-                  size: 18, color: Colors.black),
+                  size: 18, color: SColors.black),
               splashRadius: 20,
             ),
           ),

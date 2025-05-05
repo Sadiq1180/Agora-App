@@ -1,3 +1,4 @@
+import 'package:agora/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,10 +18,10 @@ class ProfileContainer extends StatelessWidget {
       width: 250,
       padding: EdgeInsets.all(12),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: SColors.white,
         borderRadius: BorderRadius.circular(15),
         boxShadow: [
-          BoxShadow(color: Colors.grey.shade300, blurRadius: 5, spreadRadius: 2),
+          BoxShadow(color: SColors.grey.withOpacity(0.3), blurRadius: 5, spreadRadius: 2),
         ],
       ),
       child: Column(
@@ -52,7 +53,7 @@ class ProfileContainer extends StatelessWidget {
           ),
           Text(
             'Flutter & C# Expert',
-            style: TextStyle(fontSize: 12, color: Colors.grey[600]),
+            style: TextStyle(fontSize: 12, color: SColors.grey.withOpacity(0.5)),
           ),
           SizedBox(height: 10),
 
@@ -60,9 +61,9 @@ class ProfileContainer extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              Icon(Icons.thumb_up, color: Colors.blue),
+              Icon(Icons.thumb_up, color: SColors.info),
               SizedBox(width: 10),
-              Icon(Icons.comment, color: Colors.green),
+              Icon(Icons.comment, color: SColors.green),
             ],
           ),
         ],

@@ -1,5 +1,6 @@
-import 'package:agora/widgets/AppBarCustom.dart';
-import 'package:agora/widgets/ElevatedButton.dart';
+
+import 'package:agora/widgets/Main_widgets/AppBarCustom.dart';
+import 'package:agora/widgets/Main_widgets/ElevatedButton.dart';
 import 'package:flutter/material.dart';
 
 import 'Paymentss.dart';
@@ -136,33 +137,6 @@ class _SponsorPostState extends State<SponsorPost> {
               child: Text("Total Budget",
                   style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500)),
             ),
-            // Padding(
-            //   padding: const EdgeInsets.only(left: 20.0,right: 20),
-            //   child: TextFormField(
-            //     decoration: InputDecoration(
-            //       border: OutlineInputBorder(
-            //         borderRadius: BorderRadius.circular(10),
-            //       ),
-            //       prefixIcon: DropdownButtonHideUnderline(
-            //         child: DropdownButton<String>(
-            //           value: _value4,
-            //           items: ['\$', '50', '100', '150'].map((String value) {
-            //             return DropdownMenuItem<String>(
-            //               value: value,
-            //               child: Text(value),
-            //             );
-            //           }).toList(),
-            //           onChanged: (newValue) {
-            //             // handle change
-            //           },
-            //         ),
-            //       ),
-            //     ),
-            //     keyboardType: TextInputType.number,
-            //     // initialValue: '50',
-            //   ),
-            // ),
-
             Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
         child: Container(

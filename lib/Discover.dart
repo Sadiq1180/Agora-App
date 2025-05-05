@@ -1,8 +1,9 @@
 import 'package:agora/GroupView.dart';
 import 'package:agora/Notifications.dart';
-import 'package:agora/widgets/CustomAppBar.dart';
-import 'package:agora/widgets/FollowRequest.dart';
-import 'package:agora/widgets/GroupsUi.dart';
+import 'package:agora/constants/app_colors.dart';
+import 'package:agora/widgets/Main_widgets/CustomAppBar.dart';
+import 'package:agora/widgets/Main_widgets/FollowRequest.dart';
+import 'package:agora/widgets/Main_widgets/GroupsUi.dart';
 import 'package:flutter/material.dart';
 
 class Discover extends StatefulWidget {
@@ -123,12 +124,12 @@ class _DiscoverState extends State<Discover> {
                       height: 40,
                       width: 44,
                       decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: SColors.white,
                         borderRadius: BorderRadius.circular(12),
                       ),
                       child: IconButton(
                         icon:
-                            Icon(Icons.vertical_distribute, color: Colors.blue),
+                            Icon(Icons.vertical_distribute, color: SColors.primary),
                         onPressed: () {},
                       ),
                     ),
@@ -173,7 +174,7 @@ class _DiscoverState extends State<Discover> {
                 child: ElevatedButton(
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.white,
+                    backgroundColor: SColors.white,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15),
                       side: BorderSide(color: Colors.blue),
@@ -185,7 +186,7 @@ class _DiscoverState extends State<Discover> {
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.center,
-                    style: TextStyle(color: Colors.black, fontSize: 12),
+                    style: TextStyle(color: SColors.black, fontSize: 12),
                   ),
                 ),
               ),
@@ -208,7 +209,7 @@ class _DiscoverState extends State<Discover> {
                       style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w500,
-                          color: Colors.blue),
+                          color: SColors.info),
                     ),
                   ),
                 ],
@@ -241,7 +242,7 @@ class _DiscoverState extends State<Discover> {
                       style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w500,
-                          color: Colors.blue),
+                          color: SColors.info),
                     ),
                   ),
                 ],
@@ -297,7 +298,7 @@ class _DiscoverState extends State<Discover> {
                       style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w500,
-                          color: Colors.blue),
+                          color: SColors.info),
                     ),
                   ),
                 ],

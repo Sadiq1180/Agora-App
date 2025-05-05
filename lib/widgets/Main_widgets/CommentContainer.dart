@@ -1,3 +1,4 @@
+import 'package:agora/constants/app_colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -13,13 +14,13 @@ class CommentContainer extends StatelessWidget {
         borderRadius: BorderRadius.circular(15),
         boxShadow: [
           BoxShadow(
-            color: Colors.grey.withOpacity(0.5),
+            color: SColors.grey.withOpacity(0.5),
             spreadRadius: 1,
             blurRadius: 2,
             offset: Offset(0, 1),
           )
         ],
-        color: Colors.white,
+        color: SColors.white,
       ),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 10),
@@ -42,7 +43,7 @@ class CommentContainer extends StatelessWidget {
                     ),
                     Text(
                       "Message me if you're looking \n for a workout partner",
-                      style: TextStyle(fontSize: 14, color: Colors.black54),
+                      style: TextStyle(fontSize: 14, color: SColors.black.withOpacity(0.6)),
                     ),
                   ],
                 ),
@@ -59,7 +60,7 @@ class CommentContainer extends StatelessWidget {
                       },
                       icon: Icon(Icons.thumb_up),
                     ),
-                    TextButton(onPressed: (){}, child: Text("Reply",style: TextStyle(color: Colors.blue,)),)
+                    TextButton(onPressed: (){}, child: Text("Reply",style: TextStyle(color: SColors.primary,)),)
                   ],
                 ),
               ],

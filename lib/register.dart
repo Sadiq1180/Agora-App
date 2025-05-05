@@ -1,4 +1,7 @@
 import 'package:agora/Purpose.dart';
+import 'package:agora/constants/password_field.dart';
+import 'package:agora/widgets/Main_widgets/custom_divider.dart';
+import 'package:agora/widgets/Main_widgets/custom_textfield.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -52,116 +55,36 @@ class _registerState extends State<register> {
           SizedBox(
             height: 25,
           ),
-          //////////Full Name///////
+          //////////Registeration Form///////
           Padding(
             padding: const EdgeInsets.only(left: 15, right: 15),
             child: Column(children: [
-              SizedBox(
-                width: 350,
-                height: 55,
-                child: TextField(
-                  controller: nameController,
-                  decoration: InputDecoration(
-                    enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10)),
-                    // focusedBorder: OutlineInputBorder(
-                    //     borderRadius: BorderRadius.circular(20)),
-                    border: OutlineInputBorder(),
-                    hintText: "Full Name",
-                  ),
-                ),
+              STextField(
+                controller: nameController,
+                hintText: "Full Name",
+    
               ),
               SizedBox(
                 height: 20,
               ),
               Column(children: [
-                SizedBox(
-                  width: 350,
-                  height: 55,
-                  child: TextField(
-                    controller: userNameController,
-                    decoration: InputDecoration(
-                      enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10)),
-                      // focusedBorder: OutlineInputBorder(
-                      //     borderRadius: BorderRadius.circular(20)),
-                      border: OutlineInputBorder(),
-                      hintText: "Username",
-                    ),
-                    obscureText: false,
-                  ),
-                ),
+             STextField(
+                controller: userNameController,
+                hintText: "Username",
+    
+              ),
                 SizedBox(
                   height: 20,
                 ),
                 Column(
                   children: [
-                    SizedBox(
-                      width: 350,
-                      height: 55,
-                      child: TextFormField(
-                        controller: _passwordController,
-                        keyboardType: TextInputType.text,
-                        // controller: _userPasswordController,
-                        obscureText: !_passwordVisible,
-                        decoration: InputDecoration(
-                            // labelText: "Password",
-                            enabledBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10)),
-                            // focusedBorder: OutlineInputBorder(
-                            //     borderRadius: BorderRadius.circular(10)),
-                            border: OutlineInputBorder(),
-                            hintText: "Password",
-                            suffixIcon: IconButton(
-                              icon: Icon(
-                                _passwordVisible
-                                    ? Icons.visibility
-                                    : Icons.visibility_off,
-                                color: Colors.black45,
-                              ),
-                              onPressed: () {
-                                setState(() {
-                                  _passwordVisible = !_passwordVisible;
-                                });
-                              },
-                            )),
-                      ),
-                    ),
+                    SPasswordField(controller: _passwordController, hintText: "Password"),
                     SizedBox(
                       height: 20,
                     ),
                     Column(
                       children: [
-                        SizedBox(
-                          width: 350,
-                          height: 55,
-                          child: TextFormField(
-                            keyboardType: TextInputType.text,
-                            // controller: _userPasswordController,
-                            obscureText: !_confirmPassword,
-                            decoration: InputDecoration(
-                                // labelText: "Password",
-                                enabledBorder: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(10)),
-                                // focusedBorder: OutlineInputBorder(
-                                //     borderRadius: BorderRadius.circular(10)),
-                                border: OutlineInputBorder(),
-                                hintText: " Confirm Password",
-                                suffixIcon: IconButton(
-                                  icon: Icon(
-                                    _confirmPassword
-                                        ? Icons.visibility
-                                        : Icons.visibility_off,
-                                    color: Colors.black45,
-                                  ),
-                                  onPressed: () {
-                                    setState(() {
-                                      _confirmPassword = !_confirmPassword;
-                                    });
-                                  },
-                                )),
-                          ),
-                        ),
+                    SPasswordField(controller: _passwordController, hintText: "Confirm Password"),
                         SizedBox(
                           height: 5,
                         ),
@@ -256,8 +179,7 @@ class _registerState extends State<register> {
                         SizedBox(
                           height: 5,
                         ),
-                        Text(
-                            "------------------- Or Sgn in With -------------------"),
+                       CustomDIvider(),
                         SizedBox(
                           height: 10,
                         ),
@@ -355,3 +277,4 @@ class _registerState extends State<register> {
         ]));
   }
 }
+

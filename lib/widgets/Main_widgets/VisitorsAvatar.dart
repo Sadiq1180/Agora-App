@@ -1,5 +1,6 @@
+import 'package:agora/constants/app_colors.dart';
+import 'package:agora/widgets/Main_widgets/CircularAvatar.dart';
 import 'package:flutter/material.dart';
-import 'package:agora/widgets/CircularAvatar.dart';
 
 class VisitorsAvatar extends StatelessWidget {
   final String title;
@@ -43,7 +44,7 @@ class VisitorsAvatar extends StatelessWidget {
               child: Container(
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  border: Border.all(color: Colors.white, width: 2),
+                  border: Border.all(color: SColors.white, width: 2),
                 ),
                 child: CircularAvatar(size: avatarSize, image: entry.value),
               ),
@@ -57,14 +58,14 @@ class VisitorsAvatar extends StatelessWidget {
                   alignment: Alignment.centerLeft,
                   decoration: const BoxDecoration(
                     shape: BoxShape.circle,
-                    color: Colors.grey,
+                    color: SColors.grey,
                   ),
                   child: Text(
                     "+$extraCount",
                     style: const TextStyle(
                         fontSize: 10,
                         fontWeight: FontWeight.bold,
-                        color: Colors.white),
+                        color: SColors.white),
                   ),
                 ),
               ),
