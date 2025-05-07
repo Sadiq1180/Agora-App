@@ -1,4 +1,7 @@
 import 'package:agora/constants/app_colors.dart';
+import 'package:agora/constants/app_gallery.dart';
+import 'package:agora/navigations/navigator_key.dart';
+import 'package:agora/navigations/route_generator.dart';
 import 'package:flutter/material.dart';
 import 'login.dart';
 
@@ -13,11 +16,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      navigatorKey: navigatorKey,
+      onGenerateRoute: RouteGenerator.generateRoute,
+      //  initialRoute: 'login',
       home: Home(),
     );
   }
 }
+
 class Home extends StatefulWidget {
+  static const String routeName = 'login';
   const Home({super.key});
 
   @override
@@ -31,7 +39,7 @@ class _HomeState extends State<Home> {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/images/image 7.png"),
+            image: AssetImage(SImages.afterSplashBanner),
             fit: BoxFit.cover,
           ),
         ),
@@ -52,20 +60,18 @@ class _HomeState extends State<Home> {
               Text(
                 "Meet others who share similar",
                 style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 16,
-                  fontWeight: FontWeight.w300
-                ),
+                    color: Colors.white,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w300),
                 textAlign: TextAlign.center,
               ),
               SizedBox(height: 6),
               Text(
                 "interests, hobbies, locations & more.",
                 style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 16,
-                    fontWeight: FontWeight.w300
-                ),
+                    color: Colors.white,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w300),
                 textAlign: TextAlign.center,
               ),
               SizedBox(height: 15),
@@ -77,28 +83,25 @@ class _HomeState extends State<Home> {
               SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(builder: (ctx) => login()),
-                  );
+                  Navigator.pushNamed(context, login.routeName);
                 },
                 style: ElevatedButton.styleFrom(
-                  foregroundColor:SColors.white,  // Text color
-                  backgroundColor:SColors.lightBlueAccent, // Button color
-                  padding: EdgeInsets.symmetric(horizontal: 130, vertical: 15), // Padding around the text
+                  foregroundColor: SColors.white,
+                  backgroundColor: SColors.lightBlueAccent,
+                  padding: EdgeInsets.symmetric(horizontal: 130, vertical: 15),
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30), // Rounded corners
+                    borderRadius: BorderRadius.circular(30),
                   ),
-                  elevation: 5,  // Shadow effect
+                  elevation: 5,
                 ),
                 child: Text(
-                  "Continue",  // Button text
+                  "Continue",
                   style: TextStyle(
-                    fontSize: 16,  // Font size
-                    fontWeight: FontWeight.w600,  // Bold text
+                    fontSize: 16,
+                    fontWeight: FontWeight.w600,
                   ),
                 ),
               ),
-
               SizedBox(height: 20)
             ],
           ),

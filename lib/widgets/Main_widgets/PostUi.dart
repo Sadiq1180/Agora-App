@@ -1,4 +1,5 @@
 import 'package:agora/constants/app_colors.dart';
+import 'package:agora/constants/app_gallery.dart';
 import 'package:flutter/material.dart';
 
 class PostUi extends StatelessWidget {
@@ -188,7 +189,7 @@ class PostUi extends StatelessWidget {
                 CircleAvatar(
                   radius: 25,
                   backgroundImage:
-                      AssetImage('assets/images/follow images/img_1.png'),
+                      AssetImage(SImages.createPostImage4),
                 ),
                 SizedBox(width: 10),
                 Expanded(

@@ -15,6 +15,7 @@ import 'Views/Privacy Settings/PrivacySettings.dart';
 import 'TermsConditions.dart';
 
 class ProfileSetting extends StatelessWidget {
+  static const String routeName = 'ProfileSetting';
   const ProfileSetting({super.key});
 
   @override
@@ -28,23 +29,11 @@ class ProfileSetting extends StatelessWidget {
               padding: const EdgeInsets.only(top: 10.0),
               child: InkWell(
                 onTap: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (context) => const EditProfile(
-                          // userName: "Muhammad Ali",
-                          // userImage: "assets/images/follow images/Ali.png",
-                          // userDescription: "@Muhammad Ali",
-
-                      ),
-                    ),
-                  );
+                  Navigator.pushNamed(context, EditProfile.routeName);
                 },
                 child: SettingWidget(
                   title: "Edit Profile",
-                  onTap: () {
-                    // Navigator.of(context).push(MaterialPageRoute(
-                    //     builder: (context) => const MainProfileEdit()));
-                  },
+                  onTap: () {},
                 ),
               ),
             ),
@@ -57,8 +46,7 @@ class ProfileSetting extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => const ProfileNotifications()));
+                Navigator.pushNamed(context, ProfileNotifications.routeName);
               },
               child: SettingWidget(
                 title: "Notifications",
@@ -70,8 +58,7 @@ class ProfileSetting extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () {
-                Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => const MySaved()));
+                Navigator.pushNamed(context,MySaved.routeName);
               },
               child: SettingWidget(
                 title: "My Saved",
@@ -83,8 +70,9 @@ class ProfileSetting extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () {
-                Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => const Languages()));
+                Navigator.pushNamed(context, Languages.routeName);
+                // Navigator.of(context).push(
+                //     MaterialPageRoute(builder: (context) => const Languages()));
               },
               child: SettingWidget(
                 title: "Languages",
@@ -96,8 +84,7 @@ class ProfileSetting extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => const PrivacySettings()));
+                 Navigator.pushNamed(context, PrivacySettings.routeName);
               },
               child: SettingWidget(
                 title: "Privacy Settings",
@@ -109,8 +96,7 @@ class ProfileSetting extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => const PaymentMethods()));
+                Navigator.pushNamed(context, PaymentMethods.routeName);
               },
               child: SettingWidget(
                 title: "Payment Methods",
@@ -126,8 +112,7 @@ class ProfileSetting extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => const TermsConditions()));
+                Navigator.pushNamed(context, TermsConditions.routeName);
               },
               child: SettingWidget(
                 title: "Terms & Conditions",
@@ -139,8 +124,7 @@ class ProfileSetting extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => const PrivacyPolicy()));
+                Navigator.pushNamed(context, PrivacyPolicy.routeName);
               },
               child: SettingWidget(
                 title: "Privacy Policy",
@@ -152,8 +136,7 @@ class ProfileSetting extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () {
-                Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => const FeedBack()));
+                 Navigator.pushNamed(context,FeedBack.routeName);
               },
               child: SettingWidget(
                 title: "Feedback",
@@ -178,8 +161,9 @@ class ProfileSetting extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => const DeActivate()));
+                 Navigator.pushNamed(context, DeActivate.routeName);
+                // Navigator.of(context).push(MaterialPageRoute(
+                //     builder: (context) => const DeActivate()));
               },
               child: SettingWidget(
                 title: "Log Out",

@@ -2,6 +2,7 @@ import 'package:agora/widgets/Main_widgets/AppBarCustom.dart';
 import 'package:flutter/material.dart';
 
 class eventss extends StatefulWidget {
+  static const String routeName = 'eventss';
   const eventss({super.key});
 
   @override

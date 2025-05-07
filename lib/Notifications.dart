@@ -1,7 +1,9 @@
+import 'package:agora/constants/app_gallery.dart';
 import 'package:agora/widgets/Main_widgets/NotificationsUI.dart';
 import 'package:flutter/material.dart';
 
 class Notifications extends StatefulWidget {
+  static const String routeName = 'Notifications';
   const Notifications({super.key});
 
   @override
@@ -29,19 +31,19 @@ class _NotificationsState extends State<Notifications> {
                 ),
               ),
               NotificationsUI(
-                image: "assets/images/follow images/Ali.png",
+                image: SImages.ali,
                 title: "Ali Follows you",
                 subtitle: "Ali has followed you you can follow back",
                 timestamp: "10:05",
               ),
               NotificationsUI(
-                image: "assets/images/follow images/UiUx2.png",
+                image: SImages.uiUX,
                 title: "UiUx2 Follows you",
                 subtitle: "UiUx2 has followed you you can follow back",
                 timestamp: "09:00",
               ),
               NotificationsUI(
-                image: "assets/images/follow images/unknown profile.jpg",
+                image: SImages.unknownProfileImage,
                 title: "Sami Follows you",
                 subtitle: "Sami has followed you you can follow back",
                 timestamp: "09:50",
@@ -54,20 +56,20 @@ class _NotificationsState extends State<Notifications> {
                 ),
               ),
               NotificationsUI(
-                image: "assets/images/follow images/Abdullah.png",
+                image: SImages.abdullah,
                 title: "Abdullah Follows you",
                 subtitle: "Abdullah has followed you you can follow back",
                 timestamp: "09:00",
               ),
               NotificationsUI(
-                image: "assets/images/follow images/Ahmad.png",
+                image: SImages.ahmad,
                 title: "Alex Trumen  has posted a new photo",
                 subtitle: "Music Fest Gala is happening at F-9 Park, Islamabad",
                 timestamp: "09:20",
 
               ),
               NotificationsUI(
-                image: "assets/images/image 7.png",
+                image: SImages.bannerImage2,
                 title: "Event happening near you at F-9  Park",
                 subtitle: "Sami has followed you you can follow back",
                 timestamp: "09:50",

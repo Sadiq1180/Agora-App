@@ -5,6 +5,7 @@ import 'package:agora/widgets/Main_widgets/SettingWidget.dart';
 import 'package:flutter/material.dart';
 
 class ProfileNotifications extends StatefulWidget {
+  static const String routeName = 'ProfileNotifications';
   const ProfileNotifications({super.key});
 
   @override

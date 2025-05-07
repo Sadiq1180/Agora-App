@@ -8,6 +8,7 @@ import 'CreateEvent2.dart';
 // import '../../../utils.dart';
 
 class EventDetails extends StatefulWidget {
+  static const String routeName = 'EventDetails';
   const EventDetails({super.key});
 
   @override

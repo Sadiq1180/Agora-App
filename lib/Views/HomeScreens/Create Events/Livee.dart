@@ -1,3 +1,4 @@
+import 'package:agora/constants/app_colors.dart';
 import 'package:agora/widgets/Main_widgets/AppBarCustom.dart';
 import 'package:agora/widgets/Main_widgets/ElevatedButton.dart';
 import 'package:flutter/material.dart';
@@ -5,6 +6,7 @@ import 'package:flutter/services.dart';
 import 'Sponsor Event/SponsorEvent.dart';
 
 class Livee extends StatelessWidget {
+  static const String routeName = 'Livee';
   const Livee({super.key});
 
   @override
@@ -78,11 +80,11 @@ class Livee extends StatelessWidget {
                   decoration: InputDecoration(
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(12),
-                      borderSide: BorderSide(color: Colors.blue),
+                      borderSide: BorderSide(color: SColors.info),
                     ),
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(12),
-                      borderSide: BorderSide(color: Colors.blue),
+                      borderSide: BorderSide(color: SColors.primary),
                     ),
                     hintStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.w300),
                     contentPadding: EdgeInsets.all(15),
@@ -99,8 +101,9 @@ class Livee extends StatelessWidget {
         child: CustomElevatedButton(
           text: 'Complete',
           onPressed: () {
-            Navigator.of(context)
-                .push(MaterialPageRoute(builder: (context) => SponsorEvent()));
+            // Navigator.of(context)
+            //     .push(MaterialPageRoute(builder: (context) => SponsorEvent()));
+            Navigator.pushNamed(context, SponsorEvent.routeName);
           },
         ),
       ),

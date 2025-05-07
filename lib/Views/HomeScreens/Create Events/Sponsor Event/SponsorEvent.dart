@@ -8,6 +8,7 @@ import 'SponsorPayment.dart';
 
 
 class SponsorEvent extends StatefulWidget {
+  static const String routeName = 'SponsorEvent';
   const SponsorEvent({super.key});
 
   @override
@@ -399,11 +400,7 @@ class _SponsorEventState extends State<SponsorEvent> {
           text: "Next",
           color: SColors.lightBlueAccent,
           onPressed: () {
-            Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (context) => SponsorPayment(),
-              ),
-            );
+            Navigator.pushNamed(context,SponsorPayment.routeName);
           },
         ),
       ),

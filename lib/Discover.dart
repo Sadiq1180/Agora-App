@@ -1,12 +1,14 @@
 import 'package:agora/GroupView.dart';
 import 'package:agora/Notifications.dart';
 import 'package:agora/constants/app_colors.dart';
+import 'package:agora/constants/app_gallery.dart';
 import 'package:agora/widgets/Main_widgets/CustomAppBar.dart';
 import 'package:agora/widgets/Main_widgets/FollowRequest.dart';
 import 'package:agora/widgets/Main_widgets/GroupsUi.dart';
 import 'package:flutter/material.dart';
 
 class Discover extends StatefulWidget {
+  static const String routeName = 'Discover';
   const Discover({super.key});
 
   @override
@@ -16,21 +18,21 @@ class Discover extends StatefulWidget {
 class _DiscoverState extends State<Discover> {
   List<Map<String, dynamic>> groups = [
     {
-      "groupImage": "assets/images/image 10.png",
+      "groupImage":SImages.discoverImage1,
       "name": "Flutter Development",
       "members": 234,
       "postsPerDay": 12,
       "mutualFriends": 23,
     },
     {
-      "groupImage": "assets/images/image 7.png",
+      "groupImage": SImages.afterSplashBanner,
       "name": "UI/UX Designers",
       "members": 180,
       "postsPerDay": 8,
       "mutualFriends": 15,
     },
     {
-      "groupImage": "assets/images/follow images/img_1.png",
+      "groupImage": SImages.person3,
       "name": "Full Stack Devs",
       "members": 320,
       "postsPerDay": 14,
@@ -39,14 +41,14 @@ class _DiscoverState extends State<Discover> {
   ];
   List<Map<String, dynamic>> groupsNearby = [
     {
-      "groupImage": "assets/images/Homepage images/uiUX.png",
+      "groupImage":SImages.discoverImage4,
       "name": "UI/UX Designers",
       "members": 234,
       "postsPerDay": 12,
       "mutualFriends": 23,
     },
     {
-      "groupImage": "assets/images/Homepage images/computer.jpg",
+      "groupImage": SImages.discoverImage5,
       "name": "Software Company",
       "members": 534,
       "postsPerDay": 30,
@@ -55,14 +57,14 @@ class _DiscoverState extends State<Discover> {
   ];
   List<Map<String, dynamic>> eventsNearby = [
     {
-      "groupImage": "assets/images/follow images/unknown profile.jpg",
+      "groupImage": SImages.unknownProfileImage,
       "name": "Fitness",
       "members": 234,
       "postsPerDay": 12,
       "mutualFriends": 23,
     },
     {
-      "groupImage": "assets/images/Homepage images/computer.jpg",
+      "groupImage": SImages.discoverImage5,
       "name": "Programmers meetup",
       "members": 534,
       "postsPerDay": 30,
@@ -101,7 +103,7 @@ class _DiscoverState extends State<Discover> {
                           decoration: InputDecoration(
                             contentPadding: EdgeInsets.symmetric(vertical: 12),
                             prefixIcon:
-                                Icon(Icons.search_sharp, color: Colors.grey),
+                                Icon(Icons.search_sharp, color: SColors.grey),
                             fillColor: Colors.white24,
                             filled: true,
                             hintText: "Search names, locations, tags, groups",
@@ -150,9 +152,9 @@ class _DiscoverState extends State<Discover> {
               SizedBox(height: 15),
               FollowRequest(
                 name: "Ihsan Khan",
-                username: "@sadiqali",
-                bio: "UI designer with one month of experience at Section Soft",
-                profileImage: "assets/images/follow images/person1.png",
+                username: "@ihsan",
+                bio: "Flutter UI/UX designer with five months of experience at Section Soft",
+                profileImage: SImages.person1,
                 onPressed: () {},
               ),
               SizedBox(height: 13),
@@ -160,13 +162,13 @@ class _DiscoverState extends State<Discover> {
                 name: "Muhammad Ali",
                 username: "@sadistic",
                 bio: "Web developer specializing in design and implementation",
-                profileImage: "assets/images/follow images/person2.png",
+                profileImage: SImages.person2,
                 onPressed: () {},
               ),
               SizedBox(height: 13),
               FollowRequest(name: "Fawad"),
               SizedBox(height: 13),
-              FollowRequest(name: "Sami"),
+              FollowRequest(name: "Sami",profileImage: SImages.person3),
               SizedBox(height: 15),
               SizedBox(
                 width: 94,
@@ -217,10 +219,10 @@ class _DiscoverState extends State<Discover> {
               SizedBox(height: 15),
               InkWell(
                   onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => GroupView()));
+                    Navigator.pushNamed(context, GroupView.routeName);                    // Navigator.push(
+                    //     context,
+                    //     MaterialPageRoute(
+                    //         builder: (context) => GroupView()));
                   },
                   child: GroupsUi(groups: groups)),
               SizedBox(height: 20),
@@ -270,7 +272,7 @@ class _DiscoverState extends State<Discover> {
                       style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w500,
-                          color: Colors.blue),
+                          color: SColors.primary),
                     ),
                   ),
                 ],
@@ -361,7 +363,7 @@ class _DiscoverState extends State<Discover> {
               ),
               ClipRRect(
                 child: Image.asset(
-                  "assets/images/map.png",
+                 SImages.mapImage,
                   width: 310,
                   height: 421,
                 ),

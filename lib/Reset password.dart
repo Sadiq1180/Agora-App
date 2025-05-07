@@ -3,6 +3,7 @@ import 'package:agora/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class ResetPassword extends StatefulWidget {
+  static const String routeName = 'Reset_Password';
   const ResetPassword({super.key});
 
   @override
@@ -193,8 +194,9 @@ class _ResetPasswordState extends State<ResetPassword> {
                     style: ElevatedButton.styleFrom(
                         backgroundColor: SColors.lightBlueAccent),
                     onPressed: () {
-                      Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => Confirmation()));
+                      Navigator.pushNamed(context, Confirmation.routeName);
+                      // Navigator.of(context).push(MaterialPageRoute(
+                      //     builder: (context) => Confirmation()));
                     },
                     child: Text("Reset Password",
                         style: TextStyle(

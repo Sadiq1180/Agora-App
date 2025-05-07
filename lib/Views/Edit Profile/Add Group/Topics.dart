@@ -4,6 +4,7 @@ import 'package:agora/widgets/Main_widgets/AppBarCustom.dart';
 import 'package:flutter/material.dart';
 
 class Topics extends StatefulWidget {
+  static const String routeName = 'Topics';
   const Topics({super.key});
 
   @override
@@ -107,8 +108,9 @@ class _TopicsState extends State<Topics> {
                 ),
               ),
               onPressed: () {
-                Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (context) => About_AddGrp()));
+                Navigator.pushNamed(context,About_AddGrp.routeName);
+                // Navigator.of(context)
+                //     .push(MaterialPageRoute(builder: (context) => About_AddGrp()));
               },
               child: Text("Next", style: TextStyle(color: SColors.white))),
         ),

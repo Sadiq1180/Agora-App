@@ -3,6 +3,7 @@ import 'package:agora/widgets/Main_widgets/AppBarCustom.dart';
 import 'package:flutter/material.dart';
 
 class FeedBack extends StatelessWidget {
+  static const String routeName = 'FeedBack';
   const FeedBack({super.key});
 
   @override

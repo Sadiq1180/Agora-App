@@ -1,11 +1,13 @@
 import 'package:agora/Follow.dart';
 import 'package:agora/Forgot.dart';
 import 'package:agora/constants/app_colors.dart';
+import 'package:agora/constants/app_gallery.dart';
 import 'package:agora/register.dart';
 import 'package:agora/widgets/Main_widgets/custom_divider.dart';
 import 'package:flutter/material.dart';
 
 class login extends StatefulWidget {
+    static const String routeName = 'login';
   const login({super.key});
 
   @override
@@ -31,7 +33,7 @@ class _loginState extends State<login> {
             Center(
               ///////////////TOP IMAGE//////////
               child: Image.asset(
-                'assets/images/agora.png',
+               SImages.agoraLogo,
                 height: 136,
                 width: 138,
               ),
@@ -120,8 +122,9 @@ class _loginState extends State<login> {
                 alignment: Alignment(0.97, 0),
                 child: TextButton(
                   onPressed: () => {
-                    Navigator.of(context).push(
-                        MaterialPageRoute(builder: (context) => Forgot())),
+                     Navigator.pushNamed(context,Forgot.routeName)
+                    // Navigator.of(context).push(
+                    //     MaterialPageRoute(builder: (context) => Forgot())),
                   },
                   child: Text(
                     "Forgot Password?",
@@ -175,6 +178,7 @@ class _loginState extends State<login> {
             SizedBox(
               height: 20,
             ),
+            ///Di
             CustomDIvider(),
 
             SizedBox(
@@ -199,7 +203,7 @@ class _loginState extends State<login> {
                       children: [
                         Image.asset(
                           alignment: Alignment.bottomLeft,
-                          "assets/images/google logo.png",
+                          SImages.googleLogo,
                           height: 30,
                           // width: 120,
                         ),
@@ -232,7 +236,7 @@ class _loginState extends State<login> {
                       children: [
                         Image.asset(
                           alignment: Alignment.bottomLeft,
-                          "assets/images/apple logo.png",
+                          SImages.appleLogo,
                           height: 30,
                           //width: 120,
                         ),
@@ -261,9 +265,10 @@ class _loginState extends State<login> {
                 ),
                 TextButton(
                     onPressed: () {
-                      Navigator.of(context).push(
-                        MaterialPageRoute(builder: (context) => register()),
-                      );
+                      Navigator.pushNamed(context, register.routeName);
+                      // Navigator.of(context).push(
+                      //   MaterialPageRoute(builder: (context) => register()),
+                      // );
                     },
                     child: Text("Register")),
               ],

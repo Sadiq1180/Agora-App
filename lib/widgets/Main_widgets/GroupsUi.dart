@@ -1,4 +1,5 @@
 import 'package:agora/constants/app_colors.dart';
+import 'package:agora/constants/app_gallery.dart';
 import 'package:flutter/material.dart';
 
 class GroupsUi extends StatelessWidget {
@@ -111,17 +112,17 @@ class SpotsNearby extends StatelessWidget {
 
   final List<Map<String, String>> spots = [
     {
-      "image": "assets/images/Homepage images/Rectangle 42.png",
+      "image": SImages.rectangle42,
       "name": "Khalid Copy Shop",
       "address": "Bakers Street, Shop 102, San Francisco"
     },
     {
-      "image": "assets/images/follow images/img_1.png",
+      "image": SImages.createPostImage4,
       "name": "Magic Body Building",
       "address": "Islamabad Pakistan"
     },
     {
-      "image": "assets/images/image 10.png",
+      "image": SImages.image10,
       "name": "Magic Body Building",
       "address": "Islamabad Pakistan"
     },
@@ -152,7 +153,7 @@ class SpotsNearby extends StatelessWidget {
                   child: Image.asset(
                     spots[index]["image"]!,
                     height: 95,
-                    width: 127,
+                    width: double.infinity,
                     fit: BoxFit.cover,
                   ),
                 ),

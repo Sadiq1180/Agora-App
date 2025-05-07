@@ -4,6 +4,7 @@ import 'package:agora/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class Forgot extends StatefulWidget {
+  static const String routeName = 'Forgot';
   const Forgot({super.key});
 
   @override
@@ -72,8 +73,9 @@ class _ForgotState extends State<Forgot> {
                 height: 50,
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => Verification()));
+                    Navigator.pushNamed(context, Verification.routeName);
+                    // Navigator.of(context).push(MaterialPageRoute(
+                    //     builder: (context) => Verification()));
                   },
                   style: ElevatedButton.styleFrom(
                       backgroundColor: SColors.lightBlueAccent),

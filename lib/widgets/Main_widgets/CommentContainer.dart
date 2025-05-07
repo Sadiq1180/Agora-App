@@ -1,5 +1,7 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:agora/constants/app_colors.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:agora/constants/app_gallery.dart';
 import 'package:flutter/material.dart';
 
 class CommentContainer extends StatelessWidget {
@@ -14,6 +16,7 @@ class CommentContainer extends StatelessWidget {
         borderRadius: BorderRadius.circular(15),
         boxShadow: [
           BoxShadow(
+            // ignore: duplicate_ignore
             color: SColors.grey.withOpacity(0.5),
             spreadRadius: 1,
             blurRadius: 2,
@@ -31,7 +34,7 @@ class CommentContainer extends StatelessWidget {
               children: [
                 CircleAvatar(
                   radius: 25,
-                  backgroundImage: AssetImage("assets/images/follow images/Abdullah.png"),
+                  backgroundImage: AssetImage(SImages.abdullah),
                 ),
                 const SizedBox(width: 10),
                 Column(

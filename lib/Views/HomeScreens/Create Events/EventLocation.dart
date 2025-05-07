@@ -1,9 +1,11 @@
+import 'package:agora/constants/app_colors.dart';
 import 'package:agora/widgets/Main_widgets/AppBarCustom.dart';
 import 'package:flutter/material.dart';
 
 import 'Livee.dart';
 
 class EventLocation extends StatelessWidget {
+  static const String routeName = 'EventLocation';  
   const EventLocation({super.key});
 
   @override
@@ -61,16 +63,17 @@ class EventLocation extends StatelessWidget {
           padding: const EdgeInsets.only(left: 20.0, right: 20, bottom: 20),
           child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.lightBlueAccent,
+                backgroundColor: SColors.lightBlueAccent,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(25),
                 ),
               ),
               onPressed: () {
-                Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (context) => Livee()));
+                // Navigator.of(context)
+                //     .push(MaterialPageRoute(builder: (context) => Livee()));
+                Navigator.pushNamed(context, Livee.routeName);
               },
-              child: Text("Publish", style: TextStyle(color: Colors.white))),
+              child: Text("Publish", style: TextStyle(color: SColors.white))),
         ),
       ),
     );

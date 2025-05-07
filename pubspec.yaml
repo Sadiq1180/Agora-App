@@ -1,74 +1,37 @@
 name: agora
-description: "A new Flutter project."
-# The following line prevents the package from being accidentally published to
-# pub.dev using `flutter pub publish`. This is preferred for private packages.
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+description: A new Flutter project.
+publish_to: 'none' # Prevent accidental publishing to pub.dev
 
-# The following defines the version and build number for your application.
-# A version number is three numbers separated by dots, like 1.2.43
-# followed by an optional build number separated by a +.
-# Both the version and the builder number may be overridden in flutter
-# build by specifying --build-name and --build-number, respectively.
-# In Android, build-name is used as versionName while build-number used as versionCode.
-# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
-# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
-# Read more about iOS versioning at
-# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
-# In Windows, build-name is used as the major, minor, and patch parts
-# of the product and file versions while build-number is used as the build suffix.
+# App versioning: major.minor.patch+build
 version: 1.0.0+1
 
 environment:
   sdk: ^3.6.0
 
-# Dependencies specify other packages that your package needs in order to work.
-# To automatically upgrade your package dependencies to the latest versions
-# consider running `flutter pub upgrade --major-versions`. Alternatively,
-# dependencies can be manually updated by changing the version numbers below to
-# the latest version available on pub.dev. To see which dependencies have newer
-# versions available, run `flutter pub outdated`.
 dependencies:
   flutter:
     sdk: flutter
 
-
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.8
-  pinput: ^5.0.1
-  image_picker: ^1.1.2
-  another_flushbar: ^1.10.28
-  flutter_polls: ^0.1.6
-  logger: ^2.5.0
+  # Commonly used packages
+  cupertino_icons: ^1.0.8           # iOS-style icons
+  pinput: ^5.0.1                    # OTP input fields
+  image_picker: ^1.1.2             # Pick images from gallery or camera
+  another_flushbar: ^1.10.28       # Toast-like bars for feedback
+  flutter_polls: ^0.1.6            # Poll widget support
+  logger: ^2.5.0                   # Advanced logging
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_svg: ^2.0.17
-#  fl_chart: ^0.66.0  # Check for latest version
 
+  flutter_svg: ^2.0.17             # Render SVG images
+  flutter_lints: ^5.0.0            # Recommended lint rules for Dart & Flutter
 
-
-  # The "flutter_lints" package below contains a set of recommended lints to
-  # encourage good coding practices. The lint set provided by the package is
-  # activated in the `analysis_options.yaml` file located at the root of your
-  # package. See that file for information about deactivating specific lint
-  # rules and activating additional ones.
-  flutter_lints: ^5.0.0
-
-# For information on the generic Dart part of this file, see the
-# following page: https://dart.dev/tools/pub/pubspec
-
-# The following section is specific to Flutter packages.
 flutter:
 
-  # The following line ensures that the Material Icons font is
-  # included with your application, so that you can use the icons in
-  # the material Icons class.
-  uses-material-design: true
+  uses-material-design: true       # Include Material icons and themes
 
-  # To add assets to your application, add an assets section, like this:
-
+  # Asset definitions
   assets:
     - assets/images/image 7.png
     - assets/images/Frame 243.png
@@ -78,32 +41,18 @@ flutter:
     - assets/images/google logo.png
     - assets/images/apple logo.png
     - assets/images/Ellipse 729.png
+
+    # Follow Images
     - assets/images/follow images/person1.png
     - assets/images/follow images/img.png
     - assets/images/follow images/person2.png
     - assets/images/follow images/img_1.png
-    - assets/images/confirmation image/Star 8.svg
-    - assets/images/confirmation image/Star 9.png
-    - assets/images/confirmation image/Star 8.png
-    - assets/images/Homepage images/Oval.png
-    - assets/images/Homepage images/Oval2.png
-    - assets/images/Homepage images/Oval3.png
-    - assets/images/Homepage images/Rectangle 42.png
     - assets/images/follow images/unknown profile.jpg
     - assets/images/follow images/Rectangle 110482.png
-    - assets/images/Homepage images/computer.jpg
-    - assets/images/Homepage images/uiUX.png
-    - assets/images/map.png
-    ####chats images####
     - assets/images/follow images/Ali.png
     - assets/images/follow images/Abdullah.png
     - assets/images/follow images/Ahmad.png
     - assets/images/follow images/UiUx2.png
-    ###### events images####
-    - assets/images/Event Images/event.png
-    - assets/images/Event Images/event2.png
-    - assets/images/Event Images/event3.png
-    ##### profile  images
     - assets/images/follow images/2.png
     - assets/images/follow images/3.png
     - assets/images/follow images/4.png
@@ -111,18 +60,39 @@ flutter:
     - assets/images/follow images/6.png
     - assets/images/follow images/7.png
     - assets/images/follow images/8.png
-    #Gallery Images
+
+    # Confirmation Images
+    - assets/images/confirmation image/Star 8.svg
+    - assets/images/confirmation image/Star 9.png
+    - assets/images/confirmation image/Star 8.png
+
+    # Homepage Images
+    - assets/images/Homepage images/Oval.png
+    - assets/images/Homepage images/Oval2.png
+    - assets/images/Homepage images/Oval3.png
+    - assets/images/Homepage images/Rectangle 42.png
+    - assets/images/Homepage images/computer.jpg
+    - assets/images/Homepage images/uiUX.png
+    - assets/images/Homepage images/Group 82.png
+
+    # Gallery Images
     - assets/images/Gallery1.png
     - assets/images/Gallery2.png
     - assets/images/Gallery3.png
     - assets/images/Gallery4.png
-    - assets/images/Homepage images/Group 82.png
-    ###Payment Methods Images
+
+    # Event Images
+    - assets/images/Event Images/event.png
+    - assets/images/Event Images/event2.png
+    - assets/images/Event Images/event3.png
+
+    # Payment Method Images
     - assets/images/Appl.png
     - assets/images/Google.png
     - assets/images/MasterCard.png
     - assets/images/PayPal.png
-    ####Svg pictures
+
+    # SVG Icons
     - assets/images/Svg/Vector.svg
     - assets/images/Svg/Vector1.svg
     - assets/images/Svg/edit.svg
@@ -131,45 +101,25 @@ flutter:
     - assets/images/Svg/activity.svg
     - assets/images/Svg/adm.svg
     - assets/images/Svg/rem.svg
-    ### Campaign image
+
+    # Campaign and Analytics
     - assets/images/CompaignDetails.png
     - assets/images/chart.png
     - assets/images/spent.png
-    ###Create Post Images
+
+    # Create Post Images
     - assets/images/CreatePostImag/crPost1.png
     - assets/images/CreatePostImag/crPost2.png
     - assets/images/CreatePostImag/crPost3.png
     - assets/images/AsifWedd.png
-    ## CARD
+
+    # Miscellaneous
+    - assets/images/map.png
     - assets/images/CARD.png
 
-  # An image asset can refer to one or more resolution-specific "variants", see
-  # https://flutter.dev/to/resolution-aware-images
-
-  # For details regarding adding assets from package dependencies, see
-  # https://flutter.dev/to/asset-from-package
-
-  # To add custom fonts to your application, add a fonts section here,
-  # in this "flutter" section. Each entry in this list should have a
-  # "family" key with the font family name, and a "fonts" key with a
-  # list giving the asset and other descriptors for the font. For
-  # example:
-
-
-
+  # Custom font configuration
   fonts:
     - family: Urbanist
       fonts:
         - asset: assets/fonts/Urbanist/Urbanist-Bold.ttf
         - asset: assets/fonts/Urbanist/Urbanist-Medium.ttf
-
-
-#           style: italic
-  #   - family: Trajan Pro
-  #     fonts:
-  #       - asset: fonts/TrajanPro.ttf
-  #       - asset: fonts/TrajanPro_Bold.ttf
-  #         weight: 700
-  #
-  # For details regarding fonts from package dependencies,
-  # see https://flutter.dev/to/font-from-package

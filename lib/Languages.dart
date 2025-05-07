@@ -1,9 +1,11 @@
 
+import 'package:agora/constants/app_colors.dart';
 import 'package:agora/widgets/Main_widgets/AppBarCustom.dart';
 import 'package:agora/widgets/Main_widgets/SettingWidget.dart';
 import 'package:flutter/material.dart';
 
 class Languages extends StatefulWidget {
+  static const String routeName = 'Languages';
   const Languages({super.key});
 
   @override
@@ -47,9 +49,9 @@ class _LanguagesState extends State<Languages> {
                 return SettingWidget(
                   title: key,
                   trailingWidget: Radio<String>(
-                    activeColor: Colors.blue,
+                    activeColor: SColors.info,
                      fillColor: MaterialStateProperty.all(Colors.blue),
-                    hoverColor: Colors.blue,
+                    hoverColor: SColors.info,
                     materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
                     value: key,
                     groupValue: _selectedLanguage,

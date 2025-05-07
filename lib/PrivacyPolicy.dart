@@ -5,6 +5,7 @@ import 'package:agora/widgets/Main_widgets/AppBarCustom.dart';
 import 'package:flutter/material.dart';
 
 class PrivacyPolicy extends StatelessWidget {
+  static const String routeName = 'PrivacyPolicy';
   const PrivacyPolicy({super.key});
 
   @override

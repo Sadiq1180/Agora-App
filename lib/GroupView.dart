@@ -1,5 +1,5 @@
-
 import 'package:agora/constants/app_colors.dart';
+import 'package:agora/constants/app_gallery.dart';
 import 'package:agora/widgets/Main_widgets/CircularAvatar.dart';
 import 'package:agora/widgets/Main_widgets/GroupsMainContainer.dart';
 import 'package:agora/widgets/Main_widgets/PostUi.dart';
@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 import 'JoinedGroup.dart';
 
 class GroupView extends StatefulWidget {
+  static const String routeName = 'GroupView';
   const GroupView({super.key});
 
   @override
@@ -45,7 +46,7 @@ class _GroupViewState extends State<GroupView> {
               child: Column(
                 children: [
                   GroupsMainContainer(
-                    image: 'assets/images/Event Images/event.png',
+                    image: SImages.eventImage1,
                     title: "Asif Wedding Program",
                     description:
                         "So Guys here I have created this group and we will discuss things here."
@@ -54,17 +55,18 @@ class _GroupViewState extends State<GroupView> {
                     location: "Karachi, Pakistan. Private Group",
                     membersCount: 100,
                     admins: [
-                      "assets/images/follow images/Abdullah.png",
-                      "assets/images/follow images/Ahmad.png",
-                      "assets/images/follow images/Ali.png"
+                      SImages.abdullah,
+                      SImages.ahmad,
+                      SImages.ali,
                     ],
                     members: [
-                      "assets/images/follow images/img_1.png",
-                      "assets/images/follow images/img.png",
-                      "assets/images/follow images/person1.png",
-                      "assets/images/follow images/person1.png",
-                      "assets/images/follow images/person1.png",
-                      "assets/images/follow images/person1.png",
+                      SImages.createPostImage4,
+                      SImages.sadiq,
+                      SImages.person1,
+                      SImages.person2,
+                      SImages.person3,
+                      SImages.ali,
+                      SImages.abdullah,
                     ],
                   ),
 
@@ -82,12 +84,14 @@ class _GroupViewState extends State<GroupView> {
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(content: Text("Group Joined")),
                       );
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => JoinedGroup(), // Navigate to JoinedGroup screen
-                        ),
-                      );
+                      // Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(
+                      //     builder: (context) =>
+                      //         JoinedGroup(), // Navigate to JoinedGroup screen
+                      //   ),
+                      // );
+                      Navigator.pushNamed(context, JoinedGroup.routeName);
                     },
                     child: Text(
                       "Join Group",
@@ -169,7 +173,7 @@ class _GroupViewState extends State<GroupView> {
                         children: [
                           CircularAvatar(
                             size: 20,
-                            image: "assets/images/follow images/Ahmad.png",
+                            image: SImages.ahmad,
                           ),
                           SizedBox(width: 10),
                           Expanded(
@@ -238,7 +242,7 @@ class _GroupViewState extends State<GroupView> {
                         children: [
                           CircularAvatar(
                             size: 20,
-                            image: "assets/images/follow images/Abdullah.png",
+                            image: SImages.abdullah,
                           ),
                           SizedBox(width: 10),
                           Expanded(
@@ -306,7 +310,7 @@ class _GroupViewState extends State<GroupView> {
                         children: [
                           CircularAvatar(
                             size: 20,
-                            image: "assets/images/follow images/Ali.png",
+                            image: SImages.ali,
                           ),
                           SizedBox(width: 10),
                           Expanded(
@@ -382,13 +386,12 @@ class _GroupViewState extends State<GroupView> {
                         postImageHeight: 150,
                         postImageWidth: 150,
                         showCommentBox: false,
-                        profileImage:
-                            "assets/images/follow images/Abdullah.png",
+                        profileImage: SImages.abdullah,
                         username: "Ahmad ali",
                         withPerson: "Muhammad",
                         location: "Karachi, Pakistan",
                         postText: "feeling good today",
-                        postImage: "assets/images/follow images/img_1.png",
+                        postImage: SImages.createPostImage4,
                         likes: 20,
                         comments: 50),
                   )

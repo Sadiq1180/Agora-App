@@ -4,6 +4,7 @@ import 'package:agora/widgets/Main_widgets/AppBarCustom.dart';
 import 'package:flutter/material.dart';
 
 class Location extends StatelessWidget {
+  static const String routeName = 'Location';
   const Location({super.key});
 
   @override
@@ -59,8 +60,9 @@ class Location extends StatelessWidget {
                 ),
               ),
               onPressed: () {
-                Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (context) => Topics()));
+                 Navigator.pushNamed(context, Topics.routeName);
+                // Navigator.of(context)
+                //     .push(MaterialPageRoute(builder: (context) => Topics()));
               },
               child: Text("Next", style: TextStyle(color: SColors.white))),
         ),

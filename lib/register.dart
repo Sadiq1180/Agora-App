@@ -1,4 +1,5 @@
 import 'package:agora/Purpose.dart';
+import 'package:agora/constants/app_gallery.dart';
 import 'package:agora/constants/password_field.dart';
 import 'package:agora/widgets/Main_widgets/custom_divider.dart';
 import 'package:agora/widgets/Main_widgets/custom_textfield.dart';
@@ -6,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class register extends StatefulWidget {
+  static const String routeName = 'register';
   const register({super.key});
 
   @override
@@ -33,7 +35,7 @@ class _registerState extends State<register> {
           ),
           Center(
             child: Image.asset(
-              "assets/images/agora.png",
+              SImages.agoraLogo,
               height: 136,
               width: 138,
             ),
@@ -158,10 +160,11 @@ class _registerState extends State<register> {
                               elevation: 2,
                             ),
                             onPressed: () {
-                              Navigator.of(context).push(
-                                MaterialPageRoute(
-                                    builder: (context) => Purpose()),
-                              );
+                              Navigator.pushNamed(context, Purpose.routeName);
+                              // Navigator.of(context).push(
+                              //   MaterialPageRoute(
+                              //       builder: (context) => Purpose()),
+                              // );
                             },
                             child: SizedBox(
                               width: 260, // Fixed width to prevent text overflow
@@ -205,7 +208,7 @@ class _registerState extends State<register> {
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Image.asset(
-                                        "assets/images/google logo.png",
+                                      SImages.googleLogo,
                                         height: 30,
                                       ),
                                       SizedBox(
@@ -240,7 +243,7 @@ class _registerState extends State<register> {
                                       children: [
                                         Image.asset(
                                           alignment: Alignment.bottomLeft,
-                                          "assets/images/apple logo.png",
+                                        SImages.appleLogo,
                                           height: 30,
                                           // width: 120,
                                         ),

@@ -1,4 +1,5 @@
 import 'package:agora/BottomNavigation.dart';
+import 'package:agora/constants/app_gallery.dart';
 import 'package:agora/widgets/Main_widgets/AppBarCustom.dart';
 import 'package:agora/widgets/Main_widgets/ElevatedButton.dart';
 import 'package:agora/widgets/Main_widgets/card_number_formater.dart';
@@ -6,8 +7,8 @@ import 'package:another_flushbar/flushbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-
 class AddNewCard extends StatelessWidget {
+  static const String routeName = 'AddNewCard';
   const AddNewCard({super.key});
 
   @override
@@ -21,7 +22,10 @@ class AddNewCard extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 20.0, right: 20, top: 20),
               child: ClipRRect(
-                child: Image.asset("assets/images/CARD.png"),
+                child: Image.asset(
+                  SImages.cardImage,
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
             SizedBox(
@@ -101,8 +105,8 @@ class AddNewCard extends StatelessWidget {
                       padding: const EdgeInsets.only(left: 20.0),
                       child: Text(
                         "CVV",
-                        style:
-                            TextStyle(fontWeight: FontWeight.w500, fontSize: 14),
+                        style: TextStyle(
+                            fontWeight: FontWeight.w500, fontSize: 14),
                       ),
                     ),
                     Padding(
@@ -129,7 +133,9 @@ class AddNewCard extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(width: 10,),
+                    SizedBox(
+                      width: 10,
+                    ),
                   ],
                 ),
                 Column(
@@ -138,7 +144,7 @@ class AddNewCard extends StatelessWidget {
                     Text(
                       "EXP",
                       style:
-                      TextStyle(fontWeight: FontWeight.w500, fontSize: 14),
+                          TextStyle(fontWeight: FontWeight.w500, fontSize: 14),
                     ),
                     SizedBox(
                       height: 50,
@@ -160,7 +166,9 @@ class AddNewCard extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(width: 20,),
+                    SizedBox(
+                      width: 20,
+                    ),
                   ],
                 ),
               ],
@@ -169,11 +177,13 @@ class AddNewCard extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: Padding(
-        padding: const EdgeInsets.only(left: 20.0,right: 20,bottom: 20),
+        padding: const EdgeInsets.only(left: 20.0, right: 20, bottom: 20),
         child: CustomElevatedButton(
           text: 'Add Card',
           onPressed: () {
-            Navigator.of(context).push(MaterialPageRoute(builder:(context)=> BottomNavigation()));
+            // Navigator.of(context).push(
+            //     MaterialPageRoute(builder: (context) => BottomNavigation()));
+            Navigator.pushNamed(context, BottomNavigation.routeName);
             Flushbar(
               message: "Card Added Successfully",
               duration: Duration(seconds: 2),

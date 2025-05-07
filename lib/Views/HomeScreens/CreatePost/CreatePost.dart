@@ -1,4 +1,4 @@
-
+import 'package:agora/constants/app_gallery.dart';
 import 'package:agora/widgets/Main_widgets/AppBarCustom.dart';
 import 'package:agora/widgets/Main_widgets/CircularAvatar.dart';
 import 'package:agora/widgets/Main_widgets/ElevatedButton.dart';
@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'CreatePostLocation.dart';
 
 class CreatePost extends StatefulWidget {
+  static const String routeName = 'CreatePost';
   const CreatePost({super.key});
 
   @override
@@ -32,7 +33,7 @@ class _CreatePostState extends State<CreatePost> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               CircularAvatar(
-                image: "assets/images/follow images/8.png",
+                image: SImages.person3,
                 size: 25,
                 name: 'Ahmad Ali',
                 textStyle: TextStyle(fontWeight: FontWeight.w500, fontSize: 20),
@@ -44,7 +45,7 @@ class _CreatePostState extends State<CreatePost> {
                     children: [
                       ClipRRect(
                         child: Image.asset(
-                          "assets/images/CreatePostImag/crPost1.png",
+                          SImages.createPostImage1,
                           width: 65,
                           height: 65,
                         ),
@@ -75,7 +76,7 @@ class _CreatePostState extends State<CreatePost> {
                     children: [
                       ClipRRect(
                         child: Image.asset(
-                          "assets/images/CreatePostImag/crPost2.png",
+                          SImages.createPostImage2,
                           width: 65,
                           height: 65,
                         ),
@@ -106,7 +107,7 @@ class _CreatePostState extends State<CreatePost> {
                     children: [
                       ClipRRect(
                         child: Image.asset(
-                          "assets/images/CreatePostImag/crPost3.png",
+                          SImages.createPostImage3,
                           width: 65,
                           height: 65,
                         ),
@@ -344,10 +345,14 @@ class _CreatePostState extends State<CreatePost> {
         ),
       ),
       bottomNavigationBar: Padding(
-        padding: const EdgeInsets.only(left: 10.0,right: 10,bottom: 20),
-        child: CustomElevatedButton(text: "Next", onPressed: () {
-          Navigator.of(context).push(MaterialPageRoute(builder: (context) => CreatePostLocation()));
-        }),
+        padding: const EdgeInsets.only(left: 10.0, right: 10, bottom: 20),
+        child: CustomElevatedButton(
+            text: "Next",
+            onPressed: () {
+              Navigator.pushNamed(context, CreatePostLocation.routeName);
+              // Navigator.of(context).push(MaterialPageRoute(
+              //     builder: (context) => CreatePostLocation()));
+            }),
       ),
     );
   }

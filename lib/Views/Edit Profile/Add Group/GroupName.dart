@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'Privacy_AddGrp.dart';
 
 class GroupName extends StatelessWidget {
+  static const String routeName = 'GroupName';
   const GroupName({super.key});
 
   @override
@@ -53,8 +54,9 @@ class GroupName extends StatelessWidget {
                 ),
               ),
               onPressed: () {
-                Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (context) => Privacy_AddGrp()));
+                Navigator.pushNamed(context, Privacy_AddGrp.routeName);
+                // Navigator.of(context)
+                //     .push(MaterialPageRoute(builder: (context) => Privacy_AddGrp()));
               },
               child: Text("Next", style: TextStyle(color: SColors.white))),
         ),

@@ -3,6 +3,7 @@ import 'package:agora/widgets/Main_widgets/AppBarCustom.dart';
 import 'package:flutter/material.dart';
 
 class BlockedUsers extends StatefulWidget {
+  static const String routeName = 'BlockedUsers';
   const BlockedUsers({super.key});
 
   @override

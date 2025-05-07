@@ -9,10 +9,12 @@ class AppBarCustom extends StatelessWidget implements PreferredSizeWidget {
   final Icon? rightIcon;
   final VoidCallback? onRightIconPressed;
   final Widget? leading;
+  final Widget? widget;
 
 
   const AppBarCustom(
       {Key? key,
+      this.widget,
       required this.title,
       this.onBackPressed,
       this.backgroundColor,

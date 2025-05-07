@@ -1,11 +1,13 @@
 import 'dart:typed_data';
 import 'package:agora/constants/app_colors.dart';
+import 'package:agora/constants/app_gallery.dart';
 import 'package:agora/image_picker.dart';
 import 'package:agora/widgets/Main_widgets/AppBarCustom.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
 class EditProfile extends StatefulWidget {
+  static const String routeName = 'EditProfile';
   const EditProfile({super.key});
 
   @override
@@ -50,7 +52,7 @@ class _EditProfileState extends State<EditProfile> {
                         )
                       : CircleAvatar(
                           backgroundImage: AssetImage(
-                              "assets/images/follow images/unknown profile.jpg"),
+                              SImages.unknownProfileImage),
                           radius: 62,
                         ),
                   Positioned(

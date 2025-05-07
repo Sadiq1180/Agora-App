@@ -5,6 +5,7 @@ class SColors {
   static const Color primary = Color(0xFF0A73FF);
   static const Color primaryLight = Color(0xFF64B5F6);
   static const Color primaryDark = Color(0xFF0041C4);
+  static final Color primaryTransparent = const Color(0xFFBBDEFB).withOpacity(0.5);
 
   // Secondary Colors
   static const Color secondary = Color(0xFFFFA726);

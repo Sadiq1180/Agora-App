@@ -1,4 +1,5 @@
 import 'package:agora/Views/HomeScreens/CreatePoll/widget/PostHeaderSection.dart';
+import 'package:agora/constants/app_gallery.dart';
 import 'package:agora/widgets/Main_widgets/AppBarCustom.dart';
 import 'package:agora/widgets/Main_widgets/ElevatedButton.dart';
 import 'package:flutter/material.dart';
@@ -6,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'SponsorPost.dart';
 
 class CreatePooost extends StatelessWidget {
+  static const String routeName = 'CreatePooost';
   const CreatePooost({super.key});
 
   @override
@@ -19,7 +21,7 @@ class CreatePooost extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(left: 20.0, right: 20),
             child: PostHeaderSection(
-                profileImage: 'assets/images/follow images/img_1.png',
+                profileImage: SImages.createPostImage3,
                 username: 'Jack William',
                 withPerson: "Alif & Khalid",
                 location: "Karachi,Pakistan"),
@@ -35,7 +37,7 @@ class CreatePooost extends StatelessWidget {
             padding: const EdgeInsets.only(left: 20.0, right: 20),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(10),
-              child: Image.asset("assets/images/follow images/img_1.png"),
+              child: Image.asset(SImages.createPostImage4),
             ),
           ),
           SizedBox(
@@ -78,7 +80,7 @@ class CreatePooost extends StatelessWidget {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(10),
                           child: Image.asset(
-                            "assets/images/AsifWedd.png",
+                          SImages.createPostImage5,
                             width: 55,
                             height: 48,
                           ),
@@ -132,7 +134,7 @@ class CreatePooost extends StatelessWidget {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(10),
                           child: Image.asset(
-                            "assets/images/AsifWedd.png",
+                       SImages.createPostImage2,
                             width: 55,
                             height: 48,
                           ),
@@ -142,7 +144,7 @@ class CreatePooost extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            "Asif Wedding Program",
+                            "Ahmad Wedding Program",
                             style: TextStyle(
                                 fontSize: 10, fontWeight: FontWeight.w500),
                           ),
@@ -154,7 +156,7 @@ class CreatePooost extends StatelessWidget {
                           ),
                           SizedBox(height: 4),
                           Text(
-                            "12 Members",
+                            "20 Members",
                             style: TextStyle(
                                 fontSize: 6, fontWeight: FontWeight.w300),
                           ),
@@ -173,7 +175,8 @@ class CreatePooost extends StatelessWidget {
             alignment: Alignment.bottomCenter,
             child: TextButton(
                 onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context) =>SponsorPost()));
+                  // Navigator.of(context).push(MaterialPageRoute(builder: (context) =>SponsorPost()));
+                  Navigator.pushNamed(context, SponsorPost.routeName);
                 },
                 child: Text(
                   "Sponsor Post",

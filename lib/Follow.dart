@@ -1,9 +1,11 @@
 import 'package:agora/BottomNavigation.dart';
 import 'package:agora/constants/app_colors.dart';
+import 'package:agora/constants/app_gallery.dart';
 import 'package:agora/widgets/Main_widgets/FollowRequest.dart';
 import 'package:flutter/material.dart';
 
 class Follow extends StatefulWidget {
+  static const String routeName = 'Follow';
   const Follow({super.key});
 
   @override
@@ -21,9 +23,10 @@ class _FollowState extends State<Follow> {
               margin: EdgeInsets.only(left: 300, top: 40),
               child: TextButton(
                   onPressed: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => BottomNavigation(),
-                    ));
+                    Navigator.pushNamed(context, BottomNavigation.routeName);
+                    // Navigator.of(context).push(MaterialPageRoute(
+                    //   builder: (context) => BottomNavigation(),
+                    // ));
                   },
                   child: Text(
                     "Skip",
@@ -53,7 +56,7 @@ class _FollowState extends State<Follow> {
               username: "@Sadii",
               bio:
                   "FLutter Ui developer with one month of experience at the section soft",
-              profileImage: "assets/images/follow images/person2.png",
+              profileImage:SImages.person2,
             ),
             SizedBox(
               height: 20,
@@ -63,7 +66,7 @@ class _FollowState extends State<Follow> {
               username: "@sadiqali",
               bio:
                   "Ui designer with one month of experience at the section soft",
-              profileImage: "assets/images/follow images/person1.png",
+              profileImage:SImages.person1,
             ),
             SizedBox(
               height: 20,
@@ -73,7 +76,7 @@ class _FollowState extends State<Follow> {
               username: "@sadistic",
               bio:
                   "Web developer and the field of design in the field of design and implementation",
-              profileImage: "assets/images/follow images/person2.png",
+              profileImage: SImages.unknownProfileImage,
             ),
             SizedBox(
               height: 60,

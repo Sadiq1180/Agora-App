@@ -1,12 +1,14 @@
+import 'package:agora/BottomNavigation.dart';
 import 'package:agora/Views/HomeScreens/CreatePoll/widget/PostHeaderSection.dart';
+import 'package:agora/constants/app_gallery.dart';
 import 'package:agora/widgets/Main_widgets/AppBarCustom.dart';
 import 'package:agora/widgets/Main_widgets/CircularAvatar.dart';
 import 'package:agora/widgets/Main_widgets/VisitorsAvatar.dart';
 import 'package:another_flushbar/flushbar.dart';
 import 'package:flutter/material.dart';
 
-
 class CreatePoll1 extends StatefulWidget {
+  static const String routeName = 'CreatePoll1';
   const CreatePoll1({super.key});
 
   @override
@@ -33,12 +35,14 @@ class _CreatePoll1State extends State<CreatePoll1> {
       groupValue1 = value;
     });
   }
+
   int? groupValue2;
   void onChanged2(int? value) {
     setState(() {
       groupValue2 = value;
     });
   }
+
   int? groupValue3;
   void onChanged3(int? value) {
     setState(() {
@@ -58,7 +62,7 @@ class _CreatePoll1State extends State<CreatePoll1> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 PostHeaderSection(
-                  profileImage: 'assets/images/follow images/Ali.png',
+                  profileImage: SImages.person2,
                   username: 'Ahmad Ali',
                   withPerson: 'Muhammad Ali',
                   location: 'Islamabad,Pakistan',
@@ -82,7 +86,7 @@ class _CreatePoll1State extends State<CreatePoll1> {
                       Row(
                         children: [
                           CircularAvatar(
-                            image: 'assets/images/follow images/Ali.png',
+                            image: SImages.person1,
                             size: 15,
                           ),
                           const SizedBox(width: 4),
@@ -118,9 +122,9 @@ class _CreatePoll1State extends State<CreatePoll1> {
                             child: VisitorsAvatar(
                               avatarSize: 8,
                               avatars: [
+                                "assets/images/follow images/Abdullah.png",
                                 "assets/images/google logo.png",
                                 "assets/images/Gallery1.png",
-                                "assets/images/follow images/Abdullah.png",
                                 "assets/images/follow images/Ahmad.png",
                                 "assets/images/Gallery1.png",
                               ],
@@ -137,7 +141,7 @@ class _CreatePoll1State extends State<CreatePoll1> {
                       Row(
                         children: [
                           CircularAvatar(
-                            image: 'assets/images/follow images/Ali.png',
+                            image: SImages.createPostImage3,
                             size: 15,
                           ),
                           const SizedBox(width: 4),
@@ -175,9 +179,9 @@ class _CreatePoll1State extends State<CreatePoll1> {
                               avatars: [
                                 "assets/images/google logo.png",
                                 "assets/images/Gallery1.png",
+                                "assets/images/Gallery1.png",
                                 "assets/images/follow images/Abdullah.png",
                                 "assets/images/follow images/Ahmad.png",
-                                "assets/images/Gallery1.png",
                               ],
                               title: '',
                             ),
@@ -192,7 +196,7 @@ class _CreatePoll1State extends State<CreatePoll1> {
                       Row(
                         children: [
                           CircularAvatar(
-                            image: 'assets/images/follow images/Ali.png',
+                            image: SImages.createPostImage4,
                             size: 15,
                           ),
                           const SizedBox(width: 4),
@@ -228,10 +232,10 @@ class _CreatePoll1State extends State<CreatePoll1> {
                             child: VisitorsAvatar(
                               avatarSize: 8,
                               avatars: [
-                                "assets/images/google logo.png",
-                                "assets/images/Gallery1.png",
                                 "assets/images/follow images/Abdullah.png",
                                 "assets/images/follow images/Ahmad.png",
+                                "assets/images/Gallery1.png",
+                                "assets/images/google logo.png",
                                 "assets/images/Gallery1.png",
                               ],
                               title: '',
@@ -267,9 +271,7 @@ class _CreatePoll1State extends State<CreatePoll1> {
                         borderRadius: BorderRadius.circular(10),
                       ).show(context);
 
-                      // Navigator.of(context).push(
-                      //   MaterialPageRoute(builder: (context) => PollScreen()),
-                      // );
+  Navigator.pushNamed(context, BottomNavigation.routeName);
                     },
                     child: const Text(
                       "Post Poll",

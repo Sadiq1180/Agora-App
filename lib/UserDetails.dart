@@ -4,6 +4,7 @@ import 'package:agora/Views/Edit%20Profile/Analytics.dart';
 import 'package:agora/Views/Edit%20Profile/EditProfile.dart';
 import 'package:agora/Views/TabBar%20View/Prompts.dart';
 import 'package:agora/Views/TabBar%20View/TabBarEvents.dart';
+import 'package:agora/constants/app_gallery.dart';
 import 'package:agora/widgets/Main_widgets/CircularAvatar.dart';
 import 'package:agora/widgets/Main_widgets/GroupsUi.dart';
 import 'package:agora/widgets/Main_widgets/TabBarImages.dart';
@@ -14,6 +15,7 @@ import 'package:flutter/material.dart';
 import 'Greets.dart';
 
 class UserDetails extends StatefulWidget {
+  static const String routeName = 'Location';
   final String userName;
   final String userImage;
   final String userDescription;
@@ -61,34 +63,28 @@ class _UserDetailsState extends State<UserDetails>
         actions: [
           GestureDetector(
               onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => Location()));},
-              child: SvgPicture.asset("assets/images/Svg/add.svg")),
+                Navigator.pushNamed(context, Location.routeName);
+              },
+              child: SvgPicture.asset(SImages.add)),
           SizedBox(width: 2),
           Padding(
             padding: const EdgeInsets.only(bottom: 5.0),
             child: GestureDetector(
                 onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => ProfileSetting()));
+                  Navigator.pushNamed(context, ProfileSetting.routeName);
                 },
-                child: SvgPicture.asset("assets/images/Svg/setting-2.svg")),
+                child: SvgPicture.asset(SImages.setting)),
           ),
           SizedBox(width: 8),
           Padding(
               padding: const EdgeInsets.only(bottom: 5.0),
               child: GestureDetector(
                   onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => Analytics()));
+                     Navigator.pushNamed(context, Analytics.routeName);
+                    // Navigator.push(context,
+                    //     MaterialPageRoute(builder: (context) => Analytics()));
                   },
-                  child: SvgPicture.asset("assets/images/Svg/activity.svg"))),
+                  child: SvgPicture.asset(SImages.activity))),
           SizedBox(width: 20),
         ],
       ),
@@ -137,7 +133,7 @@ class _UserDetailsState extends State<UserDetails>
                                                 EditProfile()));
                                   },
                                   child: SvgPicture.asset(
-                                    "assets/images/Svg/edit.svg",
+                                    SImages.edit,
                                     width: 20,
                                     height: 15,
                                     fit: BoxFit.scaleDown,
@@ -271,21 +267,21 @@ class _UserDetailsState extends State<UserDetails>
                   GroupsUi(
                     groups: [
                       {
-                        "groupImage": "assets/images/image 10.png",
+                        "groupImage": SImages.image10,
                         "name": "Flutter Development",
                         "members": 234,
                         "postsPerDay": 12,
                         "mutualFriends": 23,
                       },
                       {
-                        "groupImage": "assets/images/image 10.png",
+                        "groupImage": SImages.image10,
                         "name": "Flutter Development",
                         "members": 234,
                         "postsPerDay": 12,
                         "mutualFriends": 23,
                       },
                       {
-                        "groupImage": "assets/images/image 10.png",
+                        "groupImage": SImages.image10,
                         "name": "Flutter Development",
                         "members": 234,
                         "postsPerDay": 12,
@@ -642,12 +638,14 @@ class _UserDetailsState extends State<UserDetails>
 }
 
 extension on Widget {
+  // ignore: unused_element
   Widget centered() {
     return Center(
       child: this,
     );
   }
 
+  // ignore: unused_element
   Widget padded(EdgeInsets padding) {
     return Padding(padding: padding, child: this);
   }

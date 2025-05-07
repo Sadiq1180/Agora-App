@@ -3,6 +3,7 @@ import 'package:agora/widgets/Main_widgets/AppBarCustom.dart';
 import 'package:flutter/material.dart';
 
 class CompaignDetails extends StatefulWidget {
+  static const String routeName = 'CompaignDetails';
   const CompaignDetails({super.key});
 
   @override
@@ -11,20 +12,19 @@ class CompaignDetails extends StatefulWidget {
 
 class _CompaignDetailsState extends State<CompaignDetails>
     with SingleTickerProviderStateMixin {
-  late TabController tabController4;
+  late TabController tabController;
   String selectedDay = "Today";
   final List<String> daysList = ["Today", "Yesterday", "07 days", "30 days"];
 
   @override
   void initState() {
     super.initState();
-    tabController4 =
-        TabController(length: 3, vsync: this); // Initialize TabController
+    tabController = TabController(length: 3, vsync: this);
   }
 
   @override
   void dispose() {
-    tabController4.dispose(); // Dispose of TabController to avoid memory leaks
+    tabController.dispose();
     super.dispose();
   }
 
@@ -32,13 +32,13 @@ class _CompaignDetailsState extends State<CompaignDetails>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBarCustom(
-        title: "Compaign Details",
+        title: "Campaign Details",
         rightIcon: const Icon(Icons.more_vert),
       ),
       body: SingleChildScrollView(
         child: Column(
           children: [
-            // Dropdown for selecting days
+            // Dropdown for day selection
             Padding(
               padding: const EdgeInsets.only(left: 250.0),
               child: Container(
@@ -59,25 +59,25 @@ class _CompaignDetailsState extends State<CompaignDetails>
                     items: daysList.map((String value) {
                       return DropdownMenuItem<String>(
                         value: value,
-                        child:
-                            Text(value, style: const TextStyle(fontSize: 12)),
+                        child: Text(value, style: const TextStyle(fontSize: 12)),
                       );
                     }).toList(),
                   ),
                 ),
               ),
             ),
+
             const SizedBox(height: 10),
 
-            // Campaign Results Container
+            // Results Container
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Container(
-                height: 600, // Increased height to fit all charts
+                height: 600,
                 width: 335,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15),
                   color: SColors.white,
+                  borderRadius: BorderRadius.circular(15),
                   boxShadow: [
                     BoxShadow(
                       color: SColors.grey.withOpacity(0.5),
@@ -88,114 +88,68 @@ class _CompaignDetailsState extends State<CompaignDetails>
                   ],
                 ),
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    // Title
-                    Padding(
-                      padding: const EdgeInsets.only(left: 10.0, top: 10),
-                      child: Align(
-                        alignment: Alignment.centerLeft,
-                        child: Text(
-                          "Results",
-                          style: TextStyle(
-                              fontSize: 14, fontWeight: FontWeight.w500),
-                        ),
+                    const Padding(
+                      padding: EdgeInsets.only(left: 10.0, top: 10),
+                      child: Text(
+                        "Results",
+                        style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
                       ),
                     ),
                     const SizedBox(height: 10),
-
-                    // Table Header
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 10.0),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: const [
-                          Text('Reach',
-                              style: TextStyle(
-                                  fontSize: 12, fontWeight: FontWeight.w300)),
-                          Text('RSVP',
-                              style: TextStyle(
-                                  fontSize: 12, fontWeight: FontWeight.w300)),
-                          Text('Comments',
-                              style: TextStyle(
-                                  fontSize: 12, fontWeight: FontWeight.w300)),
-                          Text('Shares',
-                              style: TextStyle(
-                                  fontSize: 12, fontWeight: FontWeight.w300)),
-                          Text('Spent',
-                              style: TextStyle(
-                                  fontSize: 12, fontWeight: FontWeight.w300)),
+                          Text('Reach', style: TextStyle(fontSize: 12)),
+                          Text('RSVP', style: TextStyle(fontSize: 12)),
+                          Text('Comments', style: TextStyle(fontSize: 12)),
+                          Text('Shares', style: TextStyle(fontSize: 12)),
+                          Text('Spent', style: TextStyle(fontSize: 12)),
                         ],
                       ),
                     ),
                     const SizedBox(height: 10),
-
-                    // Table Data
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 10.0),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: const [
-                          Text('10,152',
-                              style: TextStyle(
-                                  fontSize: 16, fontWeight: FontWeight.w500)),
-                          Text('10',
-                              style: TextStyle(
-                                  fontSize: 16, fontWeight: FontWeight.w500)),
-                          Text('52',
-                              style: TextStyle(
-                                  fontSize: 16, fontWeight: FontWeight.w500)),
-                          Text('101',
-                              style: TextStyle(
-                                  fontSize: 16, fontWeight: FontWeight.w500)),
-                          Text("\$13.6",
-                              style: TextStyle(
-                                  fontSize: 16, fontWeight: FontWeight.w500)),
+                          Text('10,152', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500)),
+                          Text('10', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500)),
+                          Text('52', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500)),
+                          Text('101', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500)),
+                          Text("\$13.6", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500)),
                         ],
                       ),
                     ),
                     const SizedBox(height: 10),
-
-                    // "Spent" Title
-                    Padding(
-                      padding: const EdgeInsets.only(left: 10.0),
-                      child: Align(
-                        alignment: Alignment.centerLeft,
-                        child: Text("Spent",
-                            style: TextStyle(
-                                fontSize: 12, fontWeight: FontWeight.w500)),
-                      ),
+                    const Padding(
+                      padding: EdgeInsets.only(left: 10.0),
+                      child: Text("Spent", style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500)),
                     ),
                     const SizedBox(height: 10),
-
-                    // Charts Section
                     Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        // First Chart Row
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Image.asset("assets/images/chart.png",
-                                width: 230, height: 180),
+                            Image.asset("assets/images/chart.png", width: 230, height: 180),
                             const SizedBox(width: 10),
-                            Image.asset("assets/images/spent.png",
-                                width: 70, height: 100),
+                            Image.asset("assets/images/spent.png", width: 70, height: 100),
                           ],
                         ),
                         const SizedBox(height: 10),
-
-                        // Second Chart Row
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Image.asset("assets/images/chart.png",
-                                width: 230, height: 180),
+                            Image.asset("assets/images/chart.png", width: 230, height: 180),
                             const SizedBox(width: 10),
-                            Image.asset("assets/images/spent.png",
-                                width: 70, height: 100),
+                            Image.asset("assets/images/spent.png", width: 70, height: 100),
                           ],
                         ),
-                        const SizedBox(height: 10),
                       ],
                     ),
                   ],
@@ -205,15 +159,15 @@ class _CompaignDetailsState extends State<CompaignDetails>
 
             const SizedBox(height: 20),
 
-            // Demographics Section with TabBar
+            // Demographics Section
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Container(
                 height: 300,
                 width: 335,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15),
                   color: SColors.white,
+                  borderRadius: BorderRadius.circular(15),
                   boxShadow: [
                     BoxShadow(
                       color: SColors.grey.withOpacity(0.5),
@@ -225,20 +179,15 @@ class _CompaignDetailsState extends State<CompaignDetails>
                 ),
                 child: Column(
                   children: [
-                    // Title
-                    Padding(
-                      padding: const EdgeInsets.only(left: 10.0, top: 10),
+                    const Padding(
+                      padding: EdgeInsets.only(left: 10.0, top: 10),
                       child: Align(
                         alignment: Alignment.centerLeft,
-                        child: Text("Demographics",
-                            style: TextStyle(
-                                fontSize: 14, fontWeight: FontWeight.w500)),
+                        child: Text("Demographics", style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500)),
                       ),
                     ),
-
-                    // TabBar
                     TabBar(
-                      controller: tabController4,
+                      controller: tabController,
                       labelColor: SColors.black,
                       unselectedLabelColor: SColors.grey,
                       indicatorColor: SColors.primary,
@@ -248,49 +197,13 @@ class _CompaignDetailsState extends State<CompaignDetails>
                         Tab(text: "Men"),
                       ],
                     ),
-
-                    // TabBarView
                     Expanded(
                       child: TabBarView(
-                        controller: tabController4,
+                        controller: tabController,
                         children: [
-                          Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 20),
-                            child: Column(
-                              children: [
-                                // "Spent" Title
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 10.0),
-                                  child: Align(
-                                    alignment: Alignment.centerLeft,
-                                    child: Text("Spent",
-                                        style: TextStyle(
-                                            fontSize: 12,
-                                            fontWeight: FontWeight.w500)),
-                                  ),
-                                ),
-                                const SizedBox(height: 10),
-
-                                // Charts Section
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        Image.asset("assets/images/chart.png",
-                                            width: 230, height: 180),
-                                        const SizedBox(width: 10),
-                                        Image.asset("assets/images/spent.png",
-                                            width: 40, height: 100),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ),
+                          _buildDemographicsTab(),
+                          _buildDemographicsTab(),
+                          _buildDemographicsTab(),
                         ],
                       ),
                     ),
@@ -300,6 +213,32 @@ class _CompaignDetailsState extends State<CompaignDetails>
             ),
           ],
         ),
+      ),
+    );
+  }
+
+  Widget _buildDemographicsTab() {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20),
+      child: Column(
+        children: [
+          const Padding(
+            padding: EdgeInsets.only(left: 10.0),
+            child: Align(
+              alignment: Alignment.centerLeft,
+              child: Text("Spent", style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500)),
+            ),
+          ),
+          const SizedBox(height: 10),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset("assets/images/chart.png", width: 230, height: 180),
+              const SizedBox(width: 10),
+              Image.asset("assets/images/spent.png", width: 40, height: 100),
+            ],
+          ),
+        ],
       ),
     );
   }

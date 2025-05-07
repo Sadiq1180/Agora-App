@@ -3,6 +3,7 @@ import 'package:agora/widgets/Main_widgets/AppBarCustom.dart';
 import 'package:flutter/material.dart';
 
 class Help extends StatelessWidget {
+  static const String routeName = 'Help';
   const Help({super.key});
 
   @override

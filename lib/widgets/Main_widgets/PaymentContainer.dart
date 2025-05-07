@@ -80,7 +80,7 @@ class PaymentContainer extends StatelessWidget {
                   ElevatedButton(
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
-                          backgroundColor: SColors.error,
+                          backgroundColor: const Color.fromARGB(255, 226, 95, 95),
                           padding:
                               EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                           textStyle: TextStyle(

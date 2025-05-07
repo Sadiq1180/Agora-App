@@ -1,4 +1,5 @@
 import 'package:agora/Views/Privacy%20Settings/OnlineStatus.dart';
+import 'package:agora/constants/app_colors.dart';
 import 'package:agora/widgets/Main_widgets/AppBarCustom.dart';
 import 'package:agora/widgets/Main_widgets/SettingWidget.dart';
 import 'package:flutter/material.dart';
@@ -10,6 +11,7 @@ import 'ProfileLocking.dart';
 import 'eventss.dart';
 
 class PrivacySettings extends StatefulWidget {
+  static const String routeName = 'PrivacySettings';
   const PrivacySettings({super.key});
 
   @override
@@ -28,12 +30,11 @@ class _PrivacySettingsState extends State<PrivacySettings> {
               padding: const EdgeInsets.only(top: 20.0),
               child: GestureDetector(
                 onTap: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => const ProfileLocking()));
+                   Navigator.pushNamed(context, ProfileLocking.routeName);
                 },
                 child: SettingWidget(
                   title: 'Profile Locking',
-                  dividerColor: Colors.grey,
+                  dividerColor: SColors.grey,
 
                 ),
               ),
@@ -42,8 +43,7 @@ class _PrivacySettingsState extends State<PrivacySettings> {
               padding: const EdgeInsets.only(top: 20.0),
               child: GestureDetector(
                 onTap: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) =>  Greetss()));
+                   Navigator.pushNamed(context, Greetss.routeName);
                 },
                 child: SettingWidget(
                   title: 'Greets',
@@ -56,8 +56,7 @@ class _PrivacySettingsState extends State<PrivacySettings> {
               padding: const EdgeInsets.only(top: 20.0),
               child: GestureDetector(
                 onTap: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) =>  Onlinestatus()));
+                   Navigator.pushNamed(context, Onlinestatus.routeName);
                 },
                 child: SettingWidget(
                   title: 'Online Status',
@@ -70,8 +69,9 @@ class _PrivacySettingsState extends State<PrivacySettings> {
               padding: const EdgeInsets.only(top: 20.0),
               child: GestureDetector(
                 onTap: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) =>  Groupss()));
+                   Navigator.pushNamed(context, Groupss.routeName);
+                  // Navigator.of(context).push(MaterialPageRoute(
+                  //     builder: (context) =>  Groupss()));
                 },
                 child: SettingWidget(
                   title: ' Groups',
@@ -84,8 +84,9 @@ class _PrivacySettingsState extends State<PrivacySettings> {
               padding: const EdgeInsets.only(top: 20.0),
               child: GestureDetector(
                 onTap: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) =>  eventss()));
+                   Navigator.pushNamed(context,eventss.routeName);
+                  // Navigator.of(context).push(MaterialPageRoute(
+                  //     builder: (context) =>  eventss()));
                 },
                 child: SettingWidget(
                   title: 'Events',
@@ -98,8 +99,9 @@ class _PrivacySettingsState extends State<PrivacySettings> {
               padding: const EdgeInsets.only(top: 20.0),
               child: GestureDetector(
                 onTap: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) =>  Posts()));
+                   Navigator.pushNamed(context, Posts.routeName);
+                  // Navigator.of(context).push(MaterialPageRoute(
+                  //     builder: (context) =>  Posts()));
                 },
                 child: SettingWidget(
                   title: 'Posts',
@@ -112,8 +114,9 @@ class _PrivacySettingsState extends State<PrivacySettings> {
               padding: const EdgeInsets.only(top: 20.0),
               child: GestureDetector(
                 onTap: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) =>  BlockedUsers()));
+                   Navigator.pushNamed(context, BlockedUsers.routeName);
+                  // Navigator.of(context).push(MaterialPageRoute(
+                  //     builder: (context) =>  BlockedUsers()));
                 },
                 child: SettingWidget(
                   title: 'Blocked Users',

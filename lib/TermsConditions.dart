@@ -2,6 +2,7 @@ import 'package:agora/widgets/Main_widgets/AppBarCustom.dart';
 import 'package:flutter/material.dart';
 
 class TermsConditions extends StatelessWidget {
+  static const String routeName = 'TermsConditions';
   const TermsConditions({super.key});
 
   @override

@@ -3,6 +3,7 @@ import 'package:agora/widgets/Main_widgets/AppBarCustom.dart';
 import 'package:flutter/material.dart';
 
 class AdminView extends StatelessWidget {
+  static const String routeName = 'Admin_View';
   const AdminView({super.key});
 
   @override

@@ -1,10 +1,12 @@
 import 'package:agora/Admin%20List/AdminsView.dart';
 import 'package:agora/constants/app_colors.dart';
+import 'package:agora/constants/app_gallery.dart';
 import 'package:agora/widgets/Main_widgets/CircularAvatar.dart';
 import 'package:agora/widgets/Main_widgets/GroupsMainContainer.dart';
 import 'package:flutter/material.dart';
 
 class JoinedGroup extends StatefulWidget {
+  static const String routeName = 'Joined_Group';
   const JoinedGroup({super.key});
 
   @override
@@ -42,8 +44,9 @@ class _GroupViewState extends State<JoinedGroup> {
                 children: [
                   GestureDetector(
                     onTap: () {
-                      Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) =>  AdminView()));
+                      Navigator.pushNamed(context,AdminView.routeName);
+                      // Navigator.of(context).push(MaterialPageRoute(
+                      //     builder: (context) =>  AdminView()));
                     },
                     child: GroupsMainContainer(
                       image: 'assets/images/Event Images/event.png',
@@ -315,7 +318,7 @@ class _GroupViewState extends State<JoinedGroup> {
                                 children: [
                                   CircleAvatar(
                                     radius: 20,
-                                    backgroundImage: AssetImage("assets/images/follow images/Ahmad.png"),
+                                    backgroundImage: AssetImage(SImages.ahmad),
                                   ),
                                   SizedBox(width: 8),
                                   Text(
@@ -363,7 +366,7 @@ class _GroupViewState extends State<JoinedGroup> {
                                 height: 250,
                                 decoration: BoxDecoration(
                                   image: DecorationImage(
-                                    image: AssetImage("assets/images/Banners.png"),
+                                    image: AssetImage(SImages.bannersImage),
                                     fit: BoxFit.cover,
                                   ),
                                   color: SColors.grey,

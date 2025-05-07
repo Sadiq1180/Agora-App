@@ -1,3 +1,4 @@
+import 'package:agora/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 
 import 'CreateEvent3.dart';
@@ -40,13 +41,14 @@ class _CreateEvent2State extends State<CreateEvent2> {
                     width: 150,
                     height: 50,
                     child: DropdownButtonFormField(
+                    
                       icon: Icon(Icons.keyboard_arrow_down),
                       decoration: InputDecoration(
                         contentPadding: EdgeInsets.symmetric(horizontal: 12, vertical: 10),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
                           borderSide: BorderSide(
-                            color: Colors.blue,
+                            color: SColors.primaryLight,
                             width: 1,
                           ),
                         ),
@@ -94,20 +96,24 @@ class _CreateEvent2State extends State<CreateEvent2> {
                   width: 150,
                   height: 50,
                   child: TextField(
+                    keyboardType: TextInputType.number,
+                    maxLength: 4,
+                    
                     decoration: InputDecoration(
+                      counterText: "",
                       prefixIcon: Icon(Icons.attach_money),
                       hintText: "00:00",
                       hintStyle: TextStyle(fontWeight: FontWeight.w300, fontSize: 12),
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
                         borderSide: BorderSide(
-                          color: Colors.blue,
+                          color: SColors.info,
                         ),
                       ),
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
                         borderSide: BorderSide(
-                          color: Colors.blue,
+                          color: SColors.info,
                         ),
                       ),
                     ),

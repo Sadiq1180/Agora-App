@@ -1,4 +1,4 @@
-
+import 'package:agora/constants/app_colors.dart';
 import 'package:agora/widgets/Main_widgets/AppBarCustom.dart';
 import 'package:agora/widgets/Main_widgets/ElevatedButton.dart';
 import 'package:flutter/material.dart';
@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'Paymentss.dart';
 
 class SponsorPost extends StatefulWidget {
+  static const String routeName = 'SponsorPost';
   const SponsorPost({super.key});
 
   @override
@@ -69,11 +70,11 @@ class _SponsorPostState extends State<SponsorPost> {
                   hintText: "Enter the name for your campaign",
                   hintStyle:
                       TextStyle(fontSize: 12, fontWeight: FontWeight.w300),
-                  fillColor: Colors.white,
+                  fillColor: SColors.white,
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
                     borderSide: BorderSide(
-                      color: Colors.grey,
+                      color: SColors.grey,
                       width: 1.0,
                     ),
                   ),
@@ -89,10 +90,10 @@ class _SponsorPostState extends State<SponsorPost> {
             Padding(
               padding: const EdgeInsets.only(right: 20, left: 20, top: 5),
               child: DropdownButtonFormField(
-                  dropdownColor: Colors.white,
+                  dropdownColor: SColors.white,
                   icon: Icon(Icons.keyboard_arrow_down),
                   decoration: InputDecoration(
-                    fillColor: Colors.white,
+                    fillColor: SColors.white,
                     filled: true,
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
@@ -138,59 +139,59 @@ class _SponsorPostState extends State<SponsorPost> {
                   style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500)),
             ),
             Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-        child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 10),
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(10),
-            border: Border.all(color: Colors.grey),
-          ),
-          child: DropdownButtonHideUnderline(
-            child: DropdownButton<String>(
-              value: _value4,
-              isExpanded: true,
-              icon: SizedBox.shrink(),
-              onChanged: (String? newValue) {
-                setState(() {
-                  _value4 = newValue!;
-                });
-              },
-              items: ["50", "100", "150"].map((value) {
-                return DropdownMenuItem(
-                  value: value,
-                  child: Text(
-                    value,
-                    style: const TextStyle(fontWeight: FontWeight.w300),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+              child: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                decoration: BoxDecoration(
+                  color: SColors.white,
+                  borderRadius: BorderRadius.circular(10),
+                  border: Border.all(color: SColors.grey),
+                ),
+                child: DropdownButtonHideUnderline(
+                  child: DropdownButton<String>(
+                    value: _value4,
+                    isExpanded: true,
+                    icon: SizedBox.shrink(),
+                    onChanged: (String? newValue) {
+                      setState(() {
+                        _value4 = newValue!;
+                      });
+                    },
+                    items: ["50", "100", "150"].map((value) {
+                      return DropdownMenuItem(
+                        value: value,
+                        child: Text(
+                          value,
+                          style: const TextStyle(fontWeight: FontWeight.w300),
+                        ),
+                      );
+                    }).toList(),
+                    selectedItemBuilder: (context) {
+                      return ["50", "100", "150"].map((value) {
+                        return Row(
+                          children: [
+                            const Icon(
+                              Icons.attach_money,
+                              size: 20,
+                            ),
+                            const SizedBox(width: 5),
+                            const Icon(
+                              Icons.keyboard_arrow_down,
+                            ),
+                            const SizedBox(width: 10),
+                            Text(
+                              value,
+                              style:
+                                  const TextStyle(fontWeight: FontWeight.w300),
+                            ),
+                          ],
+                        );
+                      }).toList();
+                    },
                   ),
-                );
-              }).toList(),
-              selectedItemBuilder: (context) {
-                return ["50", "100", "150"].map((value) {
-                  return Row(
-                    children: [
-                      const Icon(
-                        Icons.attach_money,
-                        size: 20,
-                      ),
-                      const SizedBox(width: 5),
-                      const Icon(
-                        Icons.keyboard_arrow_down,
-                      ),
-                      const SizedBox(width: 10),
-                      Text(
-                        value,
-                        style:
-                        const TextStyle(fontWeight: FontWeight.w300),
-                      ),
-                    ],
-                  );
-                }).toList();
-              },
+                ),
+              ),
             ),
-          ),
-        ),
-      ),
             SizedBox(height: 10),
             Padding(
               padding: const EdgeInsets.only(left: 20.0),
@@ -206,10 +207,10 @@ class _SponsorPostState extends State<SponsorPost> {
             Padding(
               padding: const EdgeInsets.only(right: 20, left: 20, top: 5),
               child: DropdownButtonFormField(
-                  dropdownColor: Colors.white,
+                  dropdownColor: SColors.white,
                   icon: Icon(Icons.keyboard_arrow_down),
                   decoration: InputDecoration(
-                    fillColor: Colors.white,
+                    fillColor: SColors.white,
                     filled: true,
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
@@ -246,7 +247,7 @@ class _SponsorPostState extends State<SponsorPost> {
                 width: 320,
                 padding: EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                  border: Border.all(color: Colors.blue.shade200),
+                  border: Border.all(color: SColors.blue.withOpacity(0.2)),
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Wrap(
@@ -259,14 +260,14 @@ class _SponsorPostState extends State<SponsorPost> {
                               EdgeInsets.symmetric(horizontal: 5, vertical: 6),
                           label: Text(
                             interest,
-                            style: TextStyle(color: Colors.white),
+                            style: TextStyle(color: SColors.white),
                           ),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10),
                           ),
-                          backgroundColor: Colors.lightBlueAccent,
+                          backgroundColor: SColors.lightBlueAccent,
                           deleteIcon:
-                              Icon(Icons.close, color: Colors.white, size: 18),
+                              Icon(Icons.close, color: SColors.white, size: 18),
                           onDeleted: () {
                             setState(() {
                               interests.remove(interest);
@@ -290,7 +291,7 @@ class _SponsorPostState extends State<SponsorPost> {
                 width: 320,
                 padding: EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                  border: Border.all(color: Colors.blue.shade200),
+                  border: Border.all(color: SColors.blue.withOpacity(0.2)),
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Wrap(
@@ -301,14 +302,14 @@ class _SponsorPostState extends State<SponsorPost> {
                       padding: EdgeInsets.symmetric(horizontal: 5, vertical: 6),
                       label: Text(
                         interest,
-                        style: TextStyle(color: Colors.white),
+                        style: TextStyle(color: SColors.white),
                       ),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
                       ),
-                      backgroundColor: Colors.lightBlueAccent,
+                      backgroundColor: SColors.lightBlueAccent,
                       deleteIcon:
-                          Icon(Icons.close, color: Colors.white, size: 18),
+                          Icon(Icons.close, color: SColors.white, size: 18),
                       onDeleted: () {
                         setState(() {
                           interests.remove(interest);
@@ -331,7 +332,7 @@ class _SponsorPostState extends State<SponsorPost> {
                 width: 320,
                 padding: EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                  border: Border.all(color: Colors.blue.shade200),
+                  border: Border.all(color: SColors.blue.withOpacity(0.2)),
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Wrap(
@@ -342,14 +343,14 @@ class _SponsorPostState extends State<SponsorPost> {
                       padding: EdgeInsets.symmetric(horizontal: 5, vertical: 6),
                       label: Text(
                         interest,
-                        style: TextStyle(color: Colors.white),
+                        style: TextStyle(color: SColors.white),
                       ),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
                       ),
-                      backgroundColor: Colors.grey,
+                      backgroundColor: SColors.grey,
                       deleteIcon:
-                          Icon(Icons.close, color: Colors.white, size: 18),
+                          Icon(Icons.close, color: SColors.white, size: 18),
                       onDeleted: () {
                         setState(() {
                           interests.remove(interest);
@@ -368,13 +369,9 @@ class _SponsorPostState extends State<SponsorPost> {
         padding: const EdgeInsets.only(left: 20.0, right: 20, bottom: 20),
         child: CustomElevatedButton(
           text: "Next",
-          color: Colors.lightBlueAccent,
+          color: SColors.lightBlueAccent,
           onPressed: () {
-            Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (context) => Paymentss(),
-              ),
-            );
+            Navigator.pushNamed(context, Paymentss.routeName);
           },
         ),
       ),

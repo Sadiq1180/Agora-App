@@ -1,4 +1,5 @@
 import 'package:agora/constants/app_colors.dart';
+import 'package:agora/constants/app_gallery.dart';
 import 'package:flutter/material.dart';
 
 class FollowRequest extends StatefulWidget {
@@ -16,7 +17,7 @@ class FollowRequest extends StatefulWidget {
     super.key,
     this.name = "Name",
     this.username = "@username",
-    this.profileImage = "assets/images/follow images/unknown profile.jpg",
+    this.profileImage = SImages.unknownProfileImage,
     this.bio = "Your bio goes here",
     this.onPressed,
     this.profileImageSize = 35.0,

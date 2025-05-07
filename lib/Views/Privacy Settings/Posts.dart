@@ -2,6 +2,7 @@ import 'package:agora/widgets/Main_widgets/AppBarCustom.dart';
 import 'package:flutter/material.dart';
 
 class Posts extends StatefulWidget {
+  static const String routeName = 'Posts';
   const Posts({super.key});
 
   @override

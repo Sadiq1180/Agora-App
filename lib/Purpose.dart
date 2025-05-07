@@ -1,7 +1,9 @@
 import 'package:agora/Follow.dart';
+import 'package:agora/constants/app_gallery.dart';
 import 'package:flutter/material.dart';
 
 class Purpose extends StatefulWidget {
+  static const String routeName = 'Purpose';
   const Purpose({super.key});
 
   @override
@@ -37,7 +39,7 @@ class _PurposeState extends State<Purpose> {
               decoration: BoxDecoration(
                 image: DecorationImage(
                     image: AssetImage(
-                      "assets/images/agora.png",
+                      SImages.agoraLogo,
                     ),
                     fit: BoxFit.cover,
                     alignment: Alignment.topCenter),
@@ -224,8 +226,7 @@ class _PurposeState extends State<Purpose> {
                 padding: EdgeInsets.symmetric(vertical: 15, horizontal: 130),
               ),
               onPressed: () => {
-                    Navigator.of(context)
-                        .push(MaterialPageRoute(builder: (context) => Follow()))
+                   Navigator.pushNamed(context, Follow.routeName),
                   },
               child: Text(
                 "Continue",

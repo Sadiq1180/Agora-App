@@ -2,11 +2,13 @@ import 'package:agora/Views/HomeScreens/Chats.dart';
 import 'package:agora/Discover.dart';
 import 'package:agora/UserDetails.dart';
 import 'package:agora/constants/app_colors.dart';
+import 'package:agora/constants/app_gallery.dart';
 import 'package:flutter/material.dart';
 
 import 'Views/HomeScreens/HomePage.dart';
 
 class BottomNavigation extends StatefulWidget {
+  static const String routeName = 'BottomNavigation';
   const BottomNavigation({super.key});
 
   @override
@@ -23,7 +25,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
     Chats(),
   UserDetails(
     userName: 'Muhammad Ali',
-    userImage: 'assets/images/follow images/Ali.png',
+    userImage: SImages.followImageAli,
     userDescription: '@Ali',
   ),
   ];

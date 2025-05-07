@@ -1,10 +1,12 @@
 
 import 'package:agora/constants/app_colors.dart';
+import 'package:agora/constants/app_gallery.dart';
 import 'package:agora/widgets/Main_widgets/AppBarCustom.dart';
 import 'package:agora/widgets/Main_widgets/PaymentContainer.dart';
 import 'package:flutter/material.dart';
 
 class PaymentMethods extends StatelessWidget {
+  static const String routeName = 'PaymentMethods';
   const PaymentMethods({super.key});
 
   @override
@@ -15,23 +17,23 @@ class PaymentMethods extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             PaymentContainer(
-              imagePath: 'assets/images/PayPal.png',
+              imagePath: SImages.payPalLogo,
               title: 'PayPal',
               connectionStatus: 'Connected',
             ),
             PaymentContainer(
-              imagePath: 'assets/images/MasterCard.png',
+              imagePath: SImages.masterCardLogo,
               title: 'Master Card',
               subtitle: '**** **** **** 1478',
               connectionStatus: 'Connected',
             ),
             PaymentContainer(
-              imagePath: 'assets/images/Google.png',
+              imagePath: SImages.googleLogo,
               title: 'Google Pay',
               connectionStatus: 'Connected',
             ),
             PaymentContainer(
-              imagePath: 'assets/images/Appl.png',
+              imagePath: SImages.appleLogo,
               title: 'Apple Pay',
               isElevatedButton: true,
             ),

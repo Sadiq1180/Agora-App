@@ -1,9 +1,11 @@
+import 'package:agora/constants/app_colors.dart';
 import 'package:agora/widgets/Main_widgets/ElevatedButton.dart';
 import 'package:flutter/material.dart';
 
 import 'EventLocation.dart';
 
 class CreateEvent3 extends StatefulWidget {
+  static const String routeName = 'CreateEvent3';
   const CreateEvent3({super.key});
 
   @override
@@ -39,13 +41,13 @@ class _CreateEvent3State extends State<CreateEvent3> {
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10),
                 borderSide: BorderSide(
-                  color: Colors.blue,
+                  color: SColors.info,
                 ),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10),
                 borderSide: BorderSide(
-                  color: Colors.blue,
+                  color: SColors.info,
                 ),
               ),
             ),
@@ -87,13 +89,13 @@ class _CreateEvent3State extends State<CreateEvent3> {
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
                   borderSide: BorderSide(
-                    color: Colors.blue,
+                    color: SColors.info,
                   ),
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
                   borderSide: BorderSide(
-                    color: Colors.blue,
+                    color: SColors.info,
                   ),
                 ),
               ),
@@ -139,13 +141,13 @@ class _CreateEvent3State extends State<CreateEvent3> {
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
                   borderSide: BorderSide(
-                    color: Colors.blue,
+                    color: SColors.info,
                   ),
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
                   borderSide: BorderSide(
-                    color: Colors.blue,
+                    color: SColors.info,
                   ),
                 ),
               ),
@@ -204,13 +206,13 @@ class _CreateEvent3State extends State<CreateEvent3> {
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
                   borderSide: BorderSide(
-                    color: Colors.blue,
+                    color: SColors.info,
                   ),
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
                   borderSide: BorderSide(
-                    color: Colors.blue,
+                    color: SColors.info,
                   ),
                 ),
               ),
@@ -218,13 +220,19 @@ class _CreateEvent3State extends State<CreateEvent3> {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(left: 20.0,right: 20.0,bottom: 20.0,top: 30),
-          child: CustomElevatedButton(text: "Next", onPressed: (){
-            Navigator.of(context).push(MaterialPageRoute(builder: (context)=>EventLocation()));
-          },color: Colors.lightBlueAccent,),
+          padding: const EdgeInsets.only(
+              left: 20.0, right: 20.0, bottom: 20.0, top: 30),
+          child: CustomElevatedButton(
+            text: "Next",
+            onPressed: () {
+              Navigator.pushNamed(context,EventLocation.routeName);
+              // Navigator.of(context).push(
+              //     MaterialPageRoute(builder: (context) => EventLocation()));
+            },
+            color: SColors.lightBlueAccent,
+          ),
         )
       ],
     );
   }
-
 }

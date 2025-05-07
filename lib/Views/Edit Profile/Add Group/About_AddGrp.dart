@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'GroupName.dart';
 
 class About_AddGrp extends StatelessWidget {
+  static const String routeName = 'About_AddGrp';
   const About_AddGrp({super.key});
 
   @override
@@ -69,8 +70,7 @@ class About_AddGrp extends StatelessWidget {
                 ),
               ),
               onPressed: () {
-                Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (context) => GroupName()));
+                Navigator.pushNamed(context, GroupName.routeName);
               },
               child: Text("Next", style: TextStyle(color: SColors.white))),
         ),

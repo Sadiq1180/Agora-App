@@ -1,8 +1,10 @@
 import 'package:agora/constants/app_colors.dart';
+import 'package:agora/constants/app_gallery.dart';
 import 'package:agora/login.dart';
 import 'package:flutter/material.dart';
 
 class Confirmation extends StatelessWidget {
+  static const String routeName = 'Confirmation';
   const Confirmation({super.key});
 
   @override
@@ -17,11 +19,11 @@ class Confirmation extends StatelessWidget {
                   top: 214.0,
                 ),
                 child:
-                    Image.asset("assets/images/confirmation image/Star 8.png"),
+                    Image.asset(SImages.starImage1),
               )),
           Padding(
             padding: const EdgeInsets.only(left: 70),
-            child: Image.asset("assets/images/confirmation image/Star 9.png"),
+            child: Image.asset(SImages.starImage2),
           ),
           SizedBox(
             height: 36,
@@ -69,8 +71,9 @@ class Confirmation extends StatelessWidget {
                   elevation: 3,
                 ),
                 onPressed: () {
-                  Navigator.of(context)
-                      .push(MaterialPageRoute(builder: (context) => login()));
+                  Navigator.pushNamed(context, login.routeName);
+                  // Navigator.of(context)
+                  //     .push(MaterialPageRoute(builder: (context) => login()));
                 },
                 child: Text("Back to login",style: TextStyle(color: SColors.white,fontWeight: FontWeight.w300),)),
           )

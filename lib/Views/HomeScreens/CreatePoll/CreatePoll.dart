@@ -1,9 +1,12 @@
+import 'package:agora/Views/HomeScreens/CreatePoll/PollLocation.dart';
+import 'package:agora/constants/app_colors.dart';
+import 'package:agora/constants/app_gallery.dart';
 import 'package:agora/widgets/Main_widgets/AppBarCustom.dart';
 import 'package:agora/widgets/Main_widgets/CircularAvatar.dart';
 import 'package:flutter/material.dart';
-import 'PollLocation.dart';
 
 class CreatePoll extends StatefulWidget {
+  static const String routeName = 'CreatePoll';
   const CreatePoll({super.key});
 
   @override
@@ -32,12 +35,12 @@ class _CreatePollState extends State<CreatePoll> {
               width: 29,
               height: 29,
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: SColors.white,
                 borderRadius: BorderRadius.circular(12),
-                border: Border.all(color: Colors.grey),
+                border: Border.all(color: SColors.grey),
               ),
               child: const Center(
-                child: Icon(Icons.close, size: 18, color: Colors.black),
+                child: Icon(Icons.close, size: 18, color: SColors.black),
               ),
             ),
           ),
@@ -51,7 +54,7 @@ class _CreatePollState extends State<CreatePoll> {
             Padding(
               padding: const EdgeInsets.only(left: 15.0, top: 10),
               child: CircularAvatar(
-                image: "assets/images/follow images/8.png",
+                image: SImages.person3,
                 size: 30,
                 name: 'Ahmad Ali',
                 textStyle: TextStyle(fontWeight: FontWeight.w500, fontSize: 20),
@@ -71,9 +74,9 @@ class _CreatePollState extends State<CreatePoll> {
                 padding: EdgeInsets.only(left: 10, right: 10),
                 width: 335,
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: SColors.white,
                   borderRadius: BorderRadius.circular(10),
-                  border: Border.all(color: Colors.grey),
+                  border: Border.all(color: SColors.grey),
                 ),
                 child: Column(
                   children: [
@@ -93,11 +96,11 @@ class _CreatePollState extends State<CreatePoll> {
                         Transform.scale(
                           scale: 0.7,
                           child: Switch(
-                            activeColor: Colors.blue,
-                            inactiveThumbColor: Colors.grey,
+                            activeColor: SColors.primary,
+                            inactiveThumbColor: SColors.grey,
                             // thumbColor: MaterialStateProperty.all(Colors.white),
                             trackOutlineColor:
-                                MaterialStateProperty.all(Colors.transparent),
+                                MaterialStateProperty.all(SColors.transparent),
                             value: switchStates["Notifications"] ?? false,
                             onChanged: (value) {
                               setState(
@@ -120,14 +123,14 @@ class _CreatePollState extends State<CreatePoll> {
                                     padding: const EdgeInsets.only(left: 5.0),
                                     child: CircularAvatar(
                                       image:
-                                          "assets/images/follow images/8.png",
+                                          SImages.createPostImage3,  
                                       size: 15,
                                     ),
                                   ),
                                   border: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(5),
                                     borderSide: BorderSide(
-                                      color: Colors.grey,
+                                      color: SColors.grey,
                                       width: 1.0,
                                     ),
                                   ))),
@@ -156,7 +159,7 @@ class _CreatePollState extends State<CreatePoll> {
                                   border: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(5),
                                     borderSide: BorderSide(
-                                      color: Colors.grey,
+                                      color: SColors.grey,
                                       width: 1.0,
                                     ),
                                   ))),
@@ -185,7 +188,7 @@ class _CreatePollState extends State<CreatePoll> {
                                   border: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(5),
                                     borderSide: BorderSide(
-                                      color: Colors.grey,
+                                      color: SColors.grey,
                                       width: 1.0,
                                     ),
                                   ))),
@@ -200,7 +203,7 @@ class _CreatePollState extends State<CreatePoll> {
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.blue[300],
-                        foregroundColor: Colors.white,
+                        foregroundColor: SColors.white,
                         padding:
                             EdgeInsets.symmetric(horizontal: 20, vertical: 8),
                         shape: RoundedRectangleBorder(
@@ -248,7 +251,7 @@ class _CreatePollState extends State<CreatePoll> {
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
                         borderSide: BorderSide(
-                          color: Colors.grey,
+                          color: SColors.grey,
                           width: 1.0,
                         ),
                       ))),
@@ -266,10 +269,10 @@ class _CreatePollState extends State<CreatePoll> {
             Padding(
               padding: const EdgeInsets.only(left: 20.0, right: 20, top: 5),
               child: DropdownButtonFormField(
-                  dropdownColor: Colors.white,
+                  dropdownColor: SColors.white,
                   icon: Icon(Icons.keyboard_arrow_down),
                   decoration: InputDecoration(
-                      fillColor: Colors.white,
+                      fillColor: SColors.white,
                       filled: true,
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10))),
@@ -303,10 +306,10 @@ class _CreatePollState extends State<CreatePoll> {
             Padding(
               padding: const EdgeInsets.only(left: 20.0, right: 20, top: 5),
               child: DropdownButtonFormField(
-                  dropdownColor: Colors.white,
+                  dropdownColor: SColors.white,
                   icon: Icon(Icons.keyboard_arrow_down),
                   decoration: InputDecoration(
-                      fillColor: Colors.white,
+                      fillColor: SColors.white,
                       filled: true,
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10))),
@@ -340,10 +343,10 @@ class _CreatePollState extends State<CreatePoll> {
             Padding(
               padding: const EdgeInsets.only(left: 20.0, right: 20, top: 5),
               child: DropdownButtonFormField(
-                  dropdownColor: Colors.white,
+                  dropdownColor: SColors.white,
                   icon: Icon(Icons.keyboard_arrow_down),
                   decoration: InputDecoration(
-                      fillColor: Colors.white,
+                      fillColor: SColors.white,
                       filled: true,
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10))),
@@ -393,12 +396,12 @@ class _CreatePollState extends State<CreatePoll> {
                           padding:
                               EdgeInsets.symmetric(horizontal: 8, vertical: 5),
                           label: Text(interest,
-                              style: TextStyle(color: Colors.white)),
+                              style: TextStyle(color: SColors.white)),
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(15)),
-                          backgroundColor: Colors.lightBlueAccent,
+                          backgroundColor: SColors.lightBlueAccent,
                           deleteIcon:
-                              Icon(Icons.close, color: Colors.white, size: 18),
+                              Icon(Icons.close, color: SColors.white, size: 18),
                           onDeleted: () {
                             setState(() {
                               interests.remove(interest);
@@ -419,19 +422,20 @@ class _CreatePollState extends State<CreatePoll> {
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
             fixedSize: Size(310, 45),
-            backgroundColor: Colors.lightBlueAccent,
+            backgroundColor: SColors.lightBlueAccent,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(25),
             ),
           ),
           onPressed: () {
-            Navigator.of(context)
-                .push(MaterialPageRoute(builder: (context) =>PollLocation()));
+             Navigator.pushNamed(context, PollLocation.routeName);
+            // Navigator.of(context)
+            //     .push(MaterialPageRoute(builder: (context) =>PollLocation()));
           },
           child: Text(
             "Next",
             style: TextStyle(
-                fontSize: 16, fontWeight: FontWeight.w500, color: Colors.white),
+                fontSize: 16, fontWeight: FontWeight.w500, color: SColors.white),
           ),
         ),
       ),

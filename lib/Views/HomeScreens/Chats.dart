@@ -1,6 +1,7 @@
 import 'package:agora/Notifications.dart';
 import 'package:agora/TextMessage.dart';
 import 'package:agora/constants/app_colors.dart';
+import 'package:agora/constants/app_gallery.dart';
 import 'package:agora/widgets/Main_widgets/CustomAppBar.dart';
 import 'package:flutter/material.dart';
 
@@ -17,37 +18,37 @@ class _ChatsState extends State<Chats> {
       "name": "Ali",
       "message": "Hey, how are you?",
       "time": "10:30 AM",
-      "image": "assets/images/follow images/Ali.png"
+      "image": SImages.unknownProfileImage
     },
     {
       "name": "Friends Group",
       "message": "Typing...",
       "time": "11:15 AM",
-      "image": "assets/images/image 10.png"
+      "image": SImages.family
     },
     {
       "name": "Abdullah",
       "message": "How is your day?",
       "time": "12:00 PM",
-      "image": "assets/images/follow images/Abdullah.png"
+      "image": SImages.abdullah
     },
     {
       "name": "Jonathon Grey",
       "message": "Fixed Time for Meeting",
       "time": "12:00 PM",
-      "image": "assets/images/follow images/Ahmad.png"
+      "image": SImages.person3
     },
     {
       "name": "Ahmad",
       "message": "Fixed Time for Meeting",
       "time": "12:00 PM",
-      "image": "assets/images/follow images/img_1.png"
+      "image": SImages.ahmad
     },
     {
       "name": "Ali",
       "message": "Hey, how are you?",
       "time": "10:30 AM",
-      "image": "assets/images/follow images/Ali.png"
+      "image": SImages.ali
     },
   ];
 
@@ -60,10 +61,7 @@ class _ChatsState extends State<Chats> {
         actionIcon: Icons.add,
         onActionPressed: () {},
         onNotificationPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => const Notifications()),
-          );
+          Navigator.pushNamed(context, Notifications.routeName);
         },
       ),
       body: Column(
@@ -78,9 +76,10 @@ class _ChatsState extends State<Chats> {
                     width: 260,
                     child: TextFormField(
                       decoration: InputDecoration(
-                        contentPadding: const EdgeInsets.symmetric(vertical: 12),
+                        contentPadding:
+                            const EdgeInsets.symmetric(vertical: 12),
                         prefixIcon:
-                        const Icon(Icons.search_sharp, color: SColors.grey),
+                            const Icon(Icons.search_sharp, color: SColors.grey),
                         fillColor: SColors.white,
                         filled: true,
                         hintText: "Search names, locations, tags, groups",
@@ -106,9 +105,9 @@ class _ChatsState extends State<Chats> {
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: IconButton(
-                    icon: const Icon(Icons.vertical_distribute, color: SColors.lightBlue),
-                    onPressed: () {
-                    },
+                    icon: const Icon(Icons.vertical_distribute,
+                        color: SColors.lightBlue),
+                    onPressed: () {},
                   ),
                 ),
               ),
@@ -132,7 +131,9 @@ class _ChatsState extends State<Chats> {
                   child: const Text(
                     "Requests",
                     style: TextStyle(
-                        fontSize: 16, fontWeight: FontWeight.w500, color: SColors.black),
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                        color: SColors.black),
                   ),
                 ),
               ),
@@ -157,12 +158,14 @@ class _ChatsState extends State<Chats> {
                     );
                   },
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 8),
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 15, vertical: 8),
                     child: Row(
                       children: [
                         CircleAvatar(
                           radius: 30,
-                          backgroundImage: AssetImage(chatData[index]["image"]!),
+                          backgroundImage:
+                              AssetImage(chatData[index]["image"]!),
                         ),
                         Expanded(
                           child: Padding(
@@ -173,16 +176,19 @@ class _ChatsState extends State<Chats> {
                                 Text(
                                   chatData[index]["name"]!,
                                   style: const TextStyle(
-                                      fontWeight: FontWeight.w500, fontSize: 16),
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 16),
                                 ),
                                 Row(
                                   children: [
-                                    const Icon(Icons.done_all, color: Colors.blue, size: 15),
+                                    const Icon(Icons.done_all,
+                                        color: Colors.blue, size: 15),
                                     const SizedBox(width: 5),
                                     Text(
                                       chatData[index]["message"]!,
                                       style: const TextStyle(
-                                          fontSize: 13, fontWeight: FontWeight.w300),
+                                          fontSize: 13,
+                                          fontWeight: FontWeight.w300),
                                     ),
                                   ],
                                 ),

@@ -1,8 +1,8 @@
 import 'package:agora/BottomNavigation.dart';
 import 'package:agora/constants/app_colors.dart';
+import 'package:agora/constants/app_gallery.dart';
 import 'package:agora/widgets/Main_widgets/CommentContainer.dart';
 import 'package:agora/widgets/Main_widgets/VisitorsAvatar.dart';
-
 import 'package:flutter/material.dart';
 
 class Greets extends StatelessWidget {
@@ -161,9 +161,9 @@ class Greets extends StatelessWidget {
                     height: 130,
                     width: 114,
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(7),
-                      image: DecorationImage(image: AssetImage("assets/images/Gallery1.png"))
-                    ),
+                        borderRadius: BorderRadius.circular(7),
+                        image: DecorationImage(
+                            image: AssetImage(SImages.greets1))),
                   ),
                   SizedBox(width: 7),
                   Container(
@@ -172,7 +172,7 @@ class Greets extends StatelessWidget {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(7),
                       image: DecorationImage(
-                        image: AssetImage("assets/images/Gallery2.png"),
+                        image: AssetImage(SImages.greets2),
                       ),
                     ),
                   ),
@@ -187,10 +187,8 @@ class Greets extends StatelessWidget {
                           // image: DecorationImage(
                           //     image: AssetImage("assets/images/Gallery3.png"),),
                         ),
-                         clipBehavior: Clip.antiAliasWithSaveLayer,
-                        child: Image.asset('assets/images/Gallery3.png'),
-
-
+                        clipBehavior: Clip.antiAliasWithSaveLayer,
+                        child: Image.asset(SImages.greets3),
                       ),
                       SizedBox(height: 3),
                       Container(
@@ -199,7 +197,8 @@ class Greets extends StatelessWidget {
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(7),
                           image: DecorationImage(
-                              image: AssetImage("assets/images/Gallery4.png"),),
+                            image: AssetImage(SImages.greets4),
+                          ),
                         ),
                       ),
                     ],
@@ -209,18 +208,15 @@ class Greets extends StatelessWidget {
               SizedBox(height: 20),
 
               ////////visitors avatar
-              VisitorsAvatar(
-                title: 'Visitors',
-                avatars: [
-                  "assets/images/google logo.png",
-                  "assets/images/Gallery1.png",
-                  "assets/images/follow images/Abdullah.png",
-                  "assets/images/follow images/Ahmad.png",
-                  "assets/images/Gallery1.png",
-                ],
-              ),
+              VisitorsAvatar(title: 'Visitors', avatars: [
+                SImages.googleLogo,
+                SImages.appleLogo,
+                SImages.abdullah,
+                SImages.followImage5,
+                SImages.visitorsAvatar
+              ]),
               SizedBox(height: 10),
-              Image.asset("assets/images/Homepage images/Group 82.png"),
+              Image.asset(SImages.rectangle2),
               SizedBox(height: 10),
               Text("Comments",
                   style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500)),
@@ -280,7 +276,8 @@ class Greets extends StatelessWidget {
                         content: Text(
                           "Network Error Go back",
                           style: TextStyle(
-                              color: SColors.white, fontWeight: FontWeight.w600),
+                              color: SColors.white,
+                              fontWeight: FontWeight.w600),
                         ),
                       ));
                     },
@@ -307,28 +304,31 @@ class Greets extends StatelessWidget {
           ),
         ),
       ),
-     bottomNavigationBar:  Padding(
-       padding:  EdgeInsets.all(8.0),
-       child: ElevatedButton(
-         style: ElevatedButton.styleFrom(
-           fixedSize: Size(310, 45),
-           backgroundColor: SColors.lightBlueAccent,
-           shape: RoundedRectangleBorder(
-             borderRadius: BorderRadius.circular(25),
-           ),
-         ),
-         onPressed: () {
-           Navigator.of(context).push(MaterialPageRoute(builder: (context)=>BottomNavigation()));
-         },
-         child: Text(
-           "Add to Profile",
-           style: TextStyle(
-               fontSize: 16,
-               fontWeight: FontWeight.w500,
-               color: SColors.white),
-         ),
-       ),
-     ),
+      bottomNavigationBar: Padding(
+        padding: EdgeInsets.all(8.0),
+        child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            fixedSize: Size(310, 45),
+            backgroundColor: SColors.lightBlueAccent,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(25),
+            ),
+          ),
+          onPressed: (
+            
+          ) {
+            Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => BottomNavigation()));
+          },
+          child: Text(
+            "Add to Profile",
+            style: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.w500,
+                color: SColors.white),
+          ),
+        ),
+      ),
     );
   }
 }

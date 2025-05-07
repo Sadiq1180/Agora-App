@@ -1,10 +1,11 @@
+import 'package:agora/constants/app_colors.dart';
 import 'package:agora/widgets/Main_widgets/AppBarCustom.dart';
 import 'package:flutter/material.dart';
 
 import 'CreatePooost.dart';
 
-
 class CreatePostLocation extends StatefulWidget {
+  static const String routeName = 'CreatePostLocation';
   const CreatePostLocation({super.key});
 
   @override
@@ -15,7 +16,7 @@ class _CreatePostLocationState extends State<CreatePostLocation> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBarCustom(title:'Select Location'),
+      appBar: AppBarCustom(title: 'Select Location'),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
@@ -30,16 +31,16 @@ class _CreatePostLocationState extends State<CreatePostLocation> {
                   child: Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      border: Border.all(color: Colors.white),
-                      color: Colors.lightBlueAccent,
+                      border: Border.all(color: SColors.white),
+                      color: SColors.lightBlueAccent,
                     ),
                     child: Center(
                       child: IconButton(
-                        onPressed:(){},
+                        onPressed: () {},
                         icon: const Icon(
                           Icons.gps_fixed_sharp,
                           size: 27,
-                          color: Colors.white,
+                          color: SColors.white,
                         ),
                         splashRadius: 20,
                       ),
@@ -47,23 +48,34 @@ class _CreatePostLocationState extends State<CreatePostLocation> {
                   ),
                 ),
               ),
-              SizedBox(width: 5,),
+              SizedBox(
+                width: 5,
+              ),
               Container(
                   height: 47,
                   width: 275,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    border: Border.all(color: Colors.grey),
+                    border: Border.all(color: SColors.grey),
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(" Search Location",style: TextStyle(fontSize: 10,fontWeight: FontWeight.w300),),
-                      SizedBox(height: 8,),
-                      Text(" Current Location",style: TextStyle(fontSize: 12,fontWeight: FontWeight.w500),),
+                      Text(
+                        " Search Location",
+                        style: TextStyle(
+                            fontSize: 10, fontWeight: FontWeight.w300),
+                      ),
+                      SizedBox(
+                        height: 8,
+                      ),
+                      Text(
+                        " Current Location",
+                        style: TextStyle(
+                            fontSize: 12, fontWeight: FontWeight.w500),
+                      ),
                     ],
-                  )
-              ),
+                  )),
             ],
           ),
           //TextField in place of the search bar
@@ -92,13 +104,16 @@ class _CreatePostLocationState extends State<CreatePostLocation> {
           // ),
           SizedBox(height: 33),
           Padding(
-            padding: const EdgeInsets.only(left: 20.0,right: 20),
+            padding: const EdgeInsets.only(left: 20.0, right: 20),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Icon(Icons.history_toggle_off_outlined),
                 SizedBox(width: 6),
-                Text("Street 123, House 06, G10/4, Islamabad",style: TextStyle(fontSize: 12,fontWeight: FontWeight.w500),),
+                Text(
+                  "Street 123, House 06, G10/4, Islamabad",
+                  style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
+                ),
               ],
             ),
           ),
@@ -106,13 +121,16 @@ class _CreatePostLocationState extends State<CreatePostLocation> {
             height: 27.5,
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 20.0,right: 20),
+            padding: const EdgeInsets.only(left: 20.0, right: 20),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Icon(Icons.history_toggle_off_outlined),
                 SizedBox(width: 6),
-                Text("930 Elise Forest, Deonburgh 65032",style: TextStyle(fontSize: 12,fontWeight: FontWeight.w500),),
+                Text(
+                  "930 Elise Forest, Deonburgh 65032",
+                  style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
+                ),
               ],
             ),
           ),
@@ -120,13 +138,16 @@ class _CreatePostLocationState extends State<CreatePostLocation> {
             height: 27.5,
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 20.0,right: 20),
+            padding: const EdgeInsets.only(left: 20.0, right: 20),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Icon(Icons.history_toggle_off_outlined),
                 SizedBox(width: 6),
-                Text("596 Margarete Shoals, Parisianberg 16921-7349",style: TextStyle(fontSize: 12,fontWeight: FontWeight.w500),),
+                Text(
+                  "596 Margarete Shoals, Parisianberg 16921-7349",
+                  style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
+                ),
               ],
             ),
           ),
@@ -134,13 +155,16 @@ class _CreatePostLocationState extends State<CreatePostLocation> {
             height: 27.5,
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 20.0,right: 20),
+            padding: const EdgeInsets.only(left: 20.0, right: 20),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Icon(Icons.history_toggle_off_outlined),
                 SizedBox(width: 6),
-                Text("7042 Ankunding Oval, Georgetown 31106-0174",style: TextStyle(fontSize: 12,fontWeight: FontWeight.w500),),
+                Text(
+                  "7042 Ankunding Oval, Georgetown 31106-0174",
+                  style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
+                ),
               ],
             ),
           ),
@@ -148,17 +172,19 @@ class _CreatePostLocationState extends State<CreatePostLocation> {
             height: 27.5,
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 20.0,right: 20),
+            padding: const EdgeInsets.only(left: 20.0, right: 20),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Icon(Icons.history_toggle_off_outlined),
                 SizedBox(width: 6),
-                Text("894 Yost Course, North Eloise 62516-1485",style: TextStyle(fontSize: 12,fontWeight: FontWeight.w500),),
+                Text(
+                  "894 Yost Course, North Eloise 62516-1485",
+                  style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
+                ),
               ],
             ),
           ),
-
         ],
       ),
       bottomNavigationBar: Padding(
@@ -166,7 +192,7 @@ class _CreatePostLocationState extends State<CreatePostLocation> {
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
             fixedSize: Size(310, 45),
-            backgroundColor: Colors.lightBlueAccent,
+            backgroundColor: SColors.lightBlueAccent,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(25),
             ),
@@ -180,19 +206,19 @@ class _CreatePostLocationState extends State<CreatePostLocation> {
             //   margin: EdgeInsets.all(8),
             //   borderRadius: BorderRadius.circular(8),
             // ).show(context);
-            Navigator.of(context)
-                .push(MaterialPageRoute(builder: (context) =>CreatePooost()));
+            // Navigator.of(context)
+            //     .push(MaterialPageRoute(builder: (context) => CreatePooost()));
+            Navigator.pushNamed(context, CreatePooost.routeName);
           },
           child: Text(
             "Done",
             style: TextStyle(
-                fontSize: 16, fontWeight: FontWeight.w500, color: Colors.white),
+                fontSize: 16,
+                fontWeight: FontWeight.w500,
+                color: SColors.white),
           ),
         ),
       ),
     );
   }
 }
-
-
-

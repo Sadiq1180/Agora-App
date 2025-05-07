@@ -3,6 +3,7 @@ import 'package:agora/widgets/Main_widgets/AppBarCustom.dart';
 import 'package:flutter/material.dart';
 
 class Privacy_AddGrp extends StatefulWidget {
+  static const String routeName = 'Privacy_AddGrp';
   const Privacy_AddGrp({super.key});
 
   @override

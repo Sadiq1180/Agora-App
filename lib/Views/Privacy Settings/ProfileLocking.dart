@@ -1,3 +1,4 @@
+import 'package:agora/constants/app_colors.dart';
 import 'package:agora/widgets/Main_widgets/AppBarCustom.dart';
 import 'package:agora/widgets/Main_widgets/SettingWidget.dart';
 import 'package:flutter/cupertino.dart';
@@ -5,6 +6,7 @@ import 'package:flutter/material.dart';
 
 
 class ProfileLocking extends StatefulWidget {
+  static const String routeName = 'ProfileLocking';
   const ProfileLocking({super.key});
 
   @override
@@ -25,11 +27,11 @@ class _ProfileLockingState extends State<ProfileLocking> {
             (key) {
               return SettingWidget(
                 title: key,
-                dividerColor: Colors.blue,
+                dividerColor: SColors.primary,
                 trailingWidget: Switch(
-                  activeColor: Colors.blue,
-                  inactiveThumbColor: Colors.grey,
-                  thumbColor: MaterialStateProperty.all(Colors.white),
+                  activeColor: SColors.primary,
+                  inactiveThumbColor: SColors.grey,
+                  thumbColor: MaterialStateProperty.all(SColors.white),
                   value: switchStates[key]!,
                   onChanged: (value) {
                     setState(() {

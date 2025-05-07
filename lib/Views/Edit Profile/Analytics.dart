@@ -6,6 +6,7 @@ import 'package:agora/widgets/Main_widgets/TabItem.dart';
 import 'package:flutter/material.dart';
 
 class Analytics extends StatefulWidget {
+  static const String routeName = 'Analytics';
   const Analytics({super.key});
 
   @override
@@ -14,7 +15,7 @@ class Analytics extends StatefulWidget {
 
 class _AnalyticsState extends State<Analytics> with TickerProviderStateMixin {
   late TabController tabController3;
-  ///for drop down menu buttons
+
   String selectedDay = "Today";
   final List<String> daysList = ["Today", "Yesterday", "07 days", "30 days"];
 
@@ -35,36 +36,33 @@ class _AnalyticsState extends State<Analytics> with TickerProviderStateMixin {
     return Scaffold(
       appBar: AppBarCustom(
         title: "Analytics",
-        rightIcon: Icon(Icons.search, size: 25),
+        rightIcon: const Icon(Icons.search, size: 25),
       ),
       body: Padding(
-        padding:  EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-             Text(
+            const Text(
               "Campaigns",
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
             ),
-            //TabBar and drop menu Hide underline button inside a container
+            const SizedBox(height: 10),
             Row(
               children: [
-                  Flexible(
+                Expanded(
                   child: TabBar(
                     controller: tabController3,
-                    isScrollable: false,
                     indicatorColor: SColors.primary,
                     labelColor: SColors.primary,
                     unselectedLabelColor: SColors.grey,
-                    tabs: [
+                    tabs: const [
                       TabItem(title: 'Posts'),
                       TabItem(title: 'Events'),
                     ],
                   ),
                 ),
-                SizedBox(width: 50),
-                //  Spacer(), // Push dropdown to right
-
+                const SizedBox(width: 16),
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 8),
                   decoration: BoxDecoration(
@@ -76,9 +74,11 @@ class _AnalyticsState extends State<Analytics> with TickerProviderStateMixin {
                       value: selectedDay,
                       icon: const Icon(Icons.keyboard_arrow_down),
                       onChanged: (String? newValue) {
-                        setState(() {
-                          selectedDay = newValue!;
-                        });
+                        if (newValue != null) {
+                          setState(() {
+                            selectedDay = newValue;
+                          });
+                        }
                       },
                       items: daysList.map((String value) {
                         return DropdownMenuItem<String>(
@@ -92,35 +92,37 @@ class _AnalyticsState extends State<Analytics> with TickerProviderStateMixin {
               ],
             ),
             const SizedBox(height: 10),
-
-            //  TabBar View
             Expanded(
-              child: GestureDetector(
-                onTap: () {
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => CompaignDetails()));
-                },
-                child: TabBarView(
-                  controller: tabController3,
-                  children: [
-                    ListView.builder(
-                      padding: const EdgeInsets.all(10),
-                      itemCount: 7, // Number of posts
-                      itemBuilder: (context, index) {
-                        return  CampaignCard(); // Display multiple cards
-                      },
-                    ),
-                    ListView.builder(
-                      padding: const EdgeInsets.all(10),
-                      itemCount: 3, // Number of posts
-                      itemBuilder: (context, index) {
-                        return  CampaignCard(); // Display multiple cards
-                      },
-                    ),
-                  ],
-                ),
+              child: TabBarView(
+                controller: tabController3,
+                children: [
+                  ListView.builder(
+                    padding: const EdgeInsets.all(10),
+                    itemCount: 7,
+                    itemBuilder: (context, index) {
+                      return GestureDetector(
+                        onTap: () {
+                          Navigator.pushNamed(context, CompaignDetails.routeName);
+                        },
+                        child: const CampaignCard(),
+                      );
+                    },
+                  ),
+                  ListView.builder(
+                    padding: const EdgeInsets.all(10),
+                    itemCount: 3,
+                    itemBuilder: (context, index) {
+                      return GestureDetector(
+                        onTap: () {
+                          Navigator.pushNamed(context, CompaignDetails.routeName);
+                        },
+                        child: const CampaignCard(),
+                      );
+                    },
+                  ),
+                ],
               ),
             ),
-
           ],
         ),
       ),

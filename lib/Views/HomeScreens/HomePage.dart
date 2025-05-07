@@ -1,5 +1,6 @@
 import 'package:agora/Notifications.dart';
 import 'package:agora/constants/app_colors.dart';
+import 'package:agora/constants/app_gallery.dart';
 import 'package:agora/widgets/Main_widgets/CustomAppBar.dart';
 import 'package:agora/widgets/Main_widgets/PostUi.dart';
 import 'package:flutter/material.dart';
@@ -8,6 +9,7 @@ import 'CreatePoll/CreatePoll.dart';
 import 'CreatePost/CreatePost.dart';
 
 class HomePage extends StatefulWidget {
+  static const String routeName = 'CreatePost';
   const HomePage({super.key});
 
   @override
@@ -33,21 +35,19 @@ class _HomePageState extends State<HomePage> {
             ),
             items: [
               PopupMenuItem(
-                onTap: (){
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => CreatePost()),
-                  );
+                onTap: () {
+                      Navigator.pushNamed(context,CreatePost.routeName);
                 },
                 value: 'Post',
                 child: Text('Post'),
               ),
               PopupMenuItem(
                 onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => CreatePoll()),
-                  );
+                  Navigator.pushNamed(context, CreatePoll.routeName);
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(builder: (context) => CreatePoll()),
+                  // );
                 },
                 value: 'Poll',
                 child: Text('Poll'),
@@ -58,10 +58,11 @@ class _HomePageState extends State<HomePage> {
               ),
               PopupMenuItem(
                 onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => EventDetails()),
-                  );
+                  Navigator.pushNamed(context, EventDetails.routeName);
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(builder: (context) => EventDetails()),
+                  // );
                 },
                 value: 'Events',
                 child: Text('Events'),
@@ -69,16 +70,16 @@ class _HomePageState extends State<HomePage> {
             ],
           ).then(
             (value) {
-              if (value != null) {
-              }
+              if (value != null) {}
             },
           );
         },
         onNotificationPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => Notifications()),
-          );
+          Navigator.pushNamed(context, Notifications.routeName);
+          // Navigator.push(
+          //   context,
+          //   MaterialPageRoute(builder: (context) => Notifications()),
+          // );
         },
       ),
       body: SingleChildScrollView(
@@ -91,21 +92,12 @@ class _HomePageState extends State<HomePage> {
               child: Row(
                 children: [
                   _storyAvatar(isAddStory: true, label: "Your story"),
-                  _storyAvatar(
-                      image: 'assets/images/Homepage images/Oval2.png',
-                      label: "Ahmad Ali"),
-                  _storyAvatar(
-                      image: 'assets/images/image 7.png', label: "Khan"),
-                  _storyAvatar(
-                      image: 'assets/images/follow images/person2.png',
-                      label: "Muhammad"),
-                  _storyAvatar(
-                      image: 'assets/images/google logo.png', label: "Ali"),
-                  _storyAvatar(
-                      image: 'assets/images/Homepage images/Oval.png',
-                      label: "Javed"),
-                  _storyAvatar(
-                      image: 'assets/images/apple logo.png', label: "Zafar"),
+                  _storyAvatar(image: SImages.storyImage1, label: "Ahmad Ali"),
+                  _storyAvatar(image: SImages.storyImage2, label: "Khan"),
+                  _storyAvatar(image: SImages.person2, label: "Muhammad"),
+                  _storyAvatar(image: SImages.googleLogo, label: "Ali"),
+                  _storyAvatar(image: SImages.storyImage2, label: "Javed"),
+                  _storyAvatar(image: SImages.appleLogo, label: "Zafar"),
                 ],
               ),
             ),
@@ -113,11 +105,11 @@ class _HomePageState extends State<HomePage> {
 
             //  Post UI
             PostUi(
-              profileImage: 'assets/images/Homepage images/Oval2.png',
+              profileImage: SImages.person2,
               username: 'Mustafa',
               location: 'Islamabad,Pakistan',
               postText: 'Feeling good today with Ahmad & Ali',
-              postImage: 'assets/images/Homepage images/Rectangle 42.png',
+              postImage: SImages.postImage1,
               likes: 112,
               comments: 200,
               withPerson: 'Asif & Kabir',
@@ -126,12 +118,12 @@ class _HomePageState extends State<HomePage> {
               height: 30,
             ),
             PostUi(
-              profileImage: 'assets/images/follow images/person1.png',
+              profileImage: SImages.person1,
               username: 'Ahmad Ali',
               withPerson: 'Umar',
               location: 'Charsadda',
               postText: 'Kabir & Sami',
-              postImage: 'assets/images/Banners.png',
+              postImage: SImages.postImage2,
               likes: 112,
               comments: 200,
             ),
@@ -139,12 +131,12 @@ class _HomePageState extends State<HomePage> {
               height: 30,
             ),
             PostUi(
-              profileImage: 'assets/images/google logo.png',
+              profileImage: SImages.googleLogo,
               username: 'Mustafa',
               withPerson: 'Shabir',
               location: 'Mardan',
               postText: 'Feeling good today',
-              postImage: 'assets/images/image 10.png',
+              postImage: SImages.postImage1,
               likes: 112,
               comments: 200,
             ),
@@ -155,12 +147,12 @@ class _HomePageState extends State<HomePage> {
               height: 30,
             ),
             PostUi(
-              profileImage: 'assets/images/follow images/person1.png',
+              profileImage: SImages.person1,
               username: 'Ahmad Ali',
               withPerson: 'Umar',
               location: 'Charsadda',
               postText: 'Kabir & Sami',
-              postImage: 'assets/images/Banners.png',
+              postImage: SImages.bannersImage,
               likes: 312,
               comments: 500,
             ),
@@ -180,7 +172,8 @@ class _HomePageState extends State<HomePage> {
           Container(
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              border: Border.all(color: SColors.black.withOpacity(0.4), width: 2),
+              border:
+                  Border.all(color: SColors.black.withOpacity(0.4), width: 2),
             ),
             child: CircleAvatar(
               radius: 35,

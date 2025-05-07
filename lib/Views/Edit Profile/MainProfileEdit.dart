@@ -1,4 +1,5 @@
 import 'package:agora/constants/app_colors.dart';
+import 'package:agora/constants/app_gallery.dart';
 import 'package:agora/widgets/Main_widgets/CircularAvatar.dart';
 import 'package:agora/widgets/Main_widgets/TabBarImages.dart';
 import 'package:agora/widgets/Main_widgets/TabItem.dart';
@@ -132,7 +133,7 @@ class _UserDetailsState extends State<MainProfileEdit>
                             padding: EdgeInsets.only(left: 30.0, top: 10),
                             child: CircularAvatar(
                                 size: 40,
-                                image: "assets/images/follow images/3.png"),
+                                image:SImages.followImage3),
                           ),
                           SizedBox(
                             height: 10,
@@ -173,7 +174,7 @@ class _UserDetailsState extends State<MainProfileEdit>
                             padding: EdgeInsets.only(left: 30.0, top: 10),
                             child: CircularAvatar(
                                 size: 40,
-                                image: "assets/images/follow images/4.png"),
+                                image: SImages.followImage4),
                           ),
                           SizedBox(
                             height: 10,
@@ -214,7 +215,7 @@ class _UserDetailsState extends State<MainProfileEdit>
                             padding: EdgeInsets.only(left: 30.0, top: 10),
                             child: CircularAvatar(
                                 size: 40,
-                                image: "assets/images/follow images/5.png"),
+                                image: SImages.followImage5),
                           ),
                           SizedBox(
                             height: 10,

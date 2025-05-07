@@ -1,6 +1,7 @@
 import 'package:agora/BottomNavigation.dart';
 import 'package:agora/Views/HomeScreens/CreatePost/AddNewCard.dart';
 import 'package:agora/constants/app_colors.dart';
+import 'package:agora/constants/app_gallery.dart';
 import 'package:agora/widgets/Main_widgets/AppBarCustom.dart';
 import 'package:agora/widgets/Main_widgets/ElevatedButton.dart';
 import 'package:agora/widgets/Main_widgets/card_number_formater.dart';
@@ -9,6 +10,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class SponsorCard extends StatelessWidget {
+  static const String routeName = 'SponsorCard';
   const SponsorCard({super.key});
 
   @override
@@ -22,7 +24,7 @@ class SponsorCard extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 20.0, right: 20, top: 20),
               child: ClipRRect(
-                child: Image.asset("assets/images/CARD.png"),
+                child: Image.asset(SImages.cardImage),
               ),
             ),
             SizedBox(

@@ -1,4 +1,5 @@
 import 'package:agora/constants/app_colors.dart';
+import 'package:agora/constants/app_gallery.dart';
 import 'package:agora/widgets/Main_widgets/CircularAvatar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -36,7 +37,7 @@ class memberContainer extends StatelessWidget {
               padding: const EdgeInsets.only(left: 5.0),
               child: CircularAvatar(
                 image:
-                    profileImage ?? "assets/images/follow images/person1.png",
+                    profileImage ?? SImages.person2,
                 size: 30,
               ),
             ),

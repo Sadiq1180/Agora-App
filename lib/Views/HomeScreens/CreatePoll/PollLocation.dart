@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'CreatePoll1.dart';
 
 class PollLocation extends StatefulWidget {
+  static const String routeName = 'PollLocation';
   const PollLocation({super.key});
 
   @override
@@ -147,9 +148,9 @@ class _PollLocationState extends State<PollLocation> {
             ),
           ),
           onPressed: () {
-
-            Navigator.of(context)
-                .push(MaterialPageRoute(builder: (context) =>CreatePoll1()));
+            // Navigator.of(context)
+            //     .push(MaterialPageRoute(builder: (context) =>CreatePoll1()));
+            Navigator.pushNamed(context, CreatePoll1.routeName);
           },
           child: Text(
             "Done",

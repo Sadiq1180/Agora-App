@@ -1,8 +1,10 @@
+import 'package:agora/constants/app_colors.dart';
 import 'package:agora/login.dart';
 import 'package:agora/widgets/Main_widgets/AppBarCustom.dart';
 import 'package:flutter/material.dart';
 
 class DeActivate extends StatelessWidget {
+  static const String routeName = 'DeActivate';
   const DeActivate({super.key});
 
   @override
@@ -95,7 +97,7 @@ class DeActivate extends StatelessWidget {
                   height: 50,
                   child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.red,
+                        backgroundColor: SColors.error,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(25),
                         ),
@@ -166,20 +168,26 @@ class DeActivate extends StatelessWidget {
                                           height: 50,
                                           child: ElevatedButton(
                                             style: ElevatedButton.styleFrom(
-                                              backgroundColor: Colors.red,
+                                              backgroundColor: SColors.error,
                                               shape: RoundedRectangleBorder(
                                                 borderRadius:
                                                     BorderRadius.circular(25),
                                               ),
                                             ),
                                             onPressed: () {
-                                              Navigator.of(context).push(MaterialPageRoute(
-                                                  builder: (context) =>  login()));
+                                              Navigator.pushReplacement(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) => const login(),
+                                                ),
+                                              );
+                                              // Navigator.of(context).push(MaterialPageRoute(
+                                              //     builder: (context) =>  login()));
                                             },
                                             child: const Text(
                                               "Logout",
                                               style: TextStyle(
-                                                  color: Colors.white),
+                                                  color: SColors.white),
                                             ),
                                           ),
                                         ),

@@ -2,6 +2,7 @@ import 'package:agora/widgets/Main_widgets/AppBarCustom.dart';
 import 'package:flutter/material.dart';
 
 class Greetss extends StatefulWidget {
+  static const String routeName = 'Greetss';
   const Greetss({super.key});
 
   @override

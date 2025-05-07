@@ -1,4 +1,5 @@
 import 'package:agora/constants/app_colors.dart';
+import 'package:agora/constants/app_gallery.dart';
 import 'package:flutter/material.dart';
 
 class CircularAvatar extends StatelessWidget {
@@ -42,7 +43,7 @@ class CircularAvatar extends StatelessWidget {
             backgroundColor:
             backgroundColor ?? SColors.grey,
             backgroundImage: image != null ? AssetImage(image!) : const AssetImage(
-                'assets/images/Homepage images/Oval2.png'
+                SImages.storyImage1
             ),
           ),
           if (name != null) ...[
